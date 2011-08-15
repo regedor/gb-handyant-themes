@@ -1,0 +1,8 @@
+--- 
+production: 
+  default_locale: en
+  addthis_pubid: "ra-4db0c70d4e7542c2"
+  title: NEMUM
+  site_name: NEMUM
+  site_header: Núcleo de Estudantes de Medicina da Universidade do Minho
+  force_locale: "true"
