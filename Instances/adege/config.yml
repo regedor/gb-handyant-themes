@@ -1,0 +1,8 @@
+--- 
+  theme: fancynancy
+  default_locale: en
+  addthis_pubid: "ra-4db0c70d4e7542c2"
+  title: ADEGE
+  site_name: ADEGE
+  site_header: Associação de Estudantes de Gestão Universidade do Minho
+  force_locale: "true"
