@@ -5,6 +5,7 @@
 
 body
   background-color: $frontend-background-color
+  background-image: url("/stylesheets/themes/gaeb/images/hex.png")
 
 
 h2.title, h3.archives-month-title
@@ -22,49 +23,64 @@ hr
   margin: $content-margin 0
 
 
-div#header
-  background-color: #FFF
-  border: 2px solid #111
-  margin: 50px auto 0
-  height: 20px
-  padding: 6px 10px 2px $content-margin
-  width: 955px
-
-  span.options
-    float: right
-
-    a:hover
-      border-bottom: 2px solid $default-color
-
-
-div#menu
-  background-color: $menu-default-color
-  background-image: url("/stylesheets/themes/nebaum/images/menu.png")
-  background-repeat: repeat-x
-  border: 2px solid #000
-  margin: auto
-  padding: 12px 0
+div#container
+  border: 1px solid #252525
+  margin: 40px auto 0
   width: 980px
+  @include box-shadow(0, 0, 10px, #222)
+  @include enable-ie-css3
 
-  ul li
-    display: inline
 
-    a
-      border: none
-      color: #FFF
-      padding: 12px 20px
+span.options
+  display: block
+  margin: 15px auto 0
+  width: 980px
+  text-align: right
 
-    a:hover
-      background-color: $menu-hover-color
+  a:hover
+    border-bottom: 2px solid $default-color
+
+
+div#panel
+  background-color: #FFF
+  background-image: url("/stylesheets/themes/gaeb/images/wheel.png")
+  background-position: 100% 70%
+  background-repeat: no-repeat
+  height: 267px
+  position: relative
+
+  div#flash-content
+    padding: 10px 15px
+
+  div#menu
+    background-image: url("/stylesheets/themes/gaeb/images/menu.png")
+    height: 67px
+    left: -10px
+    position: absolute
+    top: 200px
+    width: 1000px
+ 
+    ul
+      padding: 13px 0
+    
+      li
+        display: inline
+ 
+        a
+          border: none
+          color: #FFF
+          margin: 0 0 0 30px
+
+        a:hover
+          @include text-shadow(0, 0, 15px, #000)
+          @include enable-ie-css3
 
 
 div#tag-cloud
   background-color: $tag-cloud-color
-  margin: 0 25px 20px 780px
+  margin: 20px 20px 40px 780px
   min-height: 100px
   padding: 10px 20px
-  position: relative
-  top: $content-margin
   @include round-corners(5px, 5px, 5px, 5px)
   @include enable-ie-css3
 
@@ -76,51 +92,20 @@ div#tag-search-bar
     margin: 10px
 
 
-div#logo
-  background-color: #FFF
-  border-top: 2px solid #111
-  border-right: 2px solid #111
-  border-bottom: 2px solid #111
-  height: 130px
-  margin: 38px 0
-  position: absolute
-  top: 20px
-  width: 270px
-  -webkit-background-clip: padding-box // Fixes bleeding background in WebKit browsers
-  @include round-corners(0, 12px, 12px, 0)
-  @include enable-ie-css3
-
-
-div#flash-content
-  margin: 5px 0
-
-
-div#panel
-  border-left: 2px solid #111
-  border-right: 2px solid #111
-  margin: auto
-  width: 980px
-
-
 div#content.single
   float: left
-  width: 940px
   margin: 20px 20px 30px
+  width: 940px
 
 
 div#content.double
   float: left
-  width: 745px
   margin: 20px 20px 30px
+  width: 745px
 
 
 div#main
   background-color: #FFF
-  border-left: 2px solid #111
-  border-right: 2px solid #111
-  border-bottom: 2px solid #111
-  margin: auto
-  width: 980px
 
 
 div.content-body
@@ -155,13 +140,13 @@ div#flash
       padding: 20px
 
   div.message.error
-    background: url("/stylesheets/themes/nebaum/images/flash/error.png") no-repeat 0 50%
+    background: url("/stylesheets/themes/gaeb/images/flash/error.png") no-repeat 0 50%
 
   div.message.warning
-    background: url("/stylesheets/themes/nebaum/images/flash/warning.png") no-repeat 0 50%
+    background: url("/stylesheets/themes/gaeb/images/flash/warning.png") no-repeat 0 50%
 
   div.message.info, div.message.notice
-    background: url("/stylesheets/themes/nebaum/images/flash/notice.png") no-repeat 0 50%
+    background: url("/stylesheets/themes/gaeb/images/flash/notice.png") no-repeat 0 50%
 
 
 // =============
@@ -170,13 +155,15 @@ div#flash
 
 
 div#announcements
+  border: 1px solid #AAA
+  margin: auto
   overflow: hidden
   position: relative
-  width: 980px
+  width: 940px
 
   a
     display: block
-     
+
   a:hover
     border: none
 
@@ -200,7 +187,7 @@ div#announcement-numbers
 
 div.announcement img
   height: 250px
-  width: 980px
+  width: 940px
 
 
 div.announcement-text
@@ -215,13 +202,3 @@ div.announcement-text
 
   p.title
     padding: 0 0 15px
-
-
-// =====
-// Posts
-// =====
-
-
-div.meta
-  @include round-corners(5px, 5px, 5px, 5px)
-  @include enable-ie-css3
