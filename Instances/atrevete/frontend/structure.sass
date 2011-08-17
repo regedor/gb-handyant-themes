@@ -5,8 +5,9 @@
 
 body
   background-color: $frontend-background-color
-  background-image: url("/stylesheets/themes/atrevete/images/bg_down.png")
+  background-image: url("/images/bg_down.png")
   background-repeat: repeat
+  overflow-x: hidden
 
 
 h2.title, h3.archives-month-title
@@ -25,7 +26,7 @@ hr
 
 
 div#bg-top-back
-  background-image: url("/stylesheets/themes/atrevete/images/bg_top_back.png")
+  background-image: url("/images/bg_top_back.png")
   background-repeat: repeat-x
   position: absolute
   height: 475px
@@ -34,8 +35,18 @@ div#bg-top-back
   @include enable-ie-css3
 
 
+div#target
+  background-image: url("/images/target.png")
+  background-repeat: no-repeat
+  height: 614px
+  left: 200px
+  position: absolute
+  top: -70px
+  width: 614px
+
+
 div#bg-top-front
-  background-image: url("/stylesheets/themes/atrevete/images/bg_top_front.png")
+  background-image: url("/images/bg_top_front.png")
   background-repeat: repeat-x
   height: 240px
   overflow: hidden
@@ -47,11 +58,11 @@ div#bg-top-front
 
 
 div#man-and-arrows
-  background-image: url("/stylesheets/themes/atrevete/images/man_and_arrows.png")
+  background-image: url("/images/man_and_arrows.png")
   float: left
-  height: 208px
-  margin: 15px 50px
-  width: 444px
+  height: 220px
+  margin: 10px 40px
+  width: 520px
 
 
 div.secondary-wrapper
@@ -84,7 +95,7 @@ div#logo
 
 
 div#primary-wrapper
-  background-image: url("/stylesheets/themes/atrevete/images/bg_content.png")
+  background-image: url("/images/bg_content.png")
   background-repeat: repeat
   margin: 130px auto 0
   // HACK????????
@@ -103,21 +114,23 @@ div#menu
     margin: 0 1px 0
 
     a
-      background: url("/stylesheets/themes/atrevete/images/button_idle.png")
+      background: url("/images/button_idle.png")
       padding: 15px 25px
-      // fazer mixin em modos!
-      text-shadow: -1px 0 #444, 0 1px #444, 1px 0 #444, 0 -1px #444
       @include round-corners(8px, 8px, 0, 0)
       @include enable-ie-css3
 
     a:hover
-      background: url("/stylesheets/themes/atrevete/images/button_hover.png")
-      // fazer mixin em modos!
-      text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000
+      background: url("/images/button_hover.png")
 
 
 div#content.single
   float: left
+  margin: 0 40px 30px
+
+
+div#content.double
+  float: left
+  width: 745px
   margin: 0 40px 30px
 
 
@@ -154,66 +167,13 @@ div#flash
       padding: 20px
 
   div.message.error
-    background: url("/stylesheets/themes/atrevete/images/flash/error.png") no-repeat 0 50%
+    background: url("/images/flash/error.png") no-repeat 0 50%
 
   div.message.warning
-    background: url("/stylesheets/themes/atrevete/images/flash/warning.png") no-repeat 0 50%
+    background: url("/images/flash/warning.png") no-repeat 0 50%
 
   div.message.info, div.message.notice
-    background: url("/stylesheets/themes/atrevete/images/flash/notice.png") no-repeat 0 50%
-
-
-ul.list li
-  margin: $content-margin 0
-
-
-dl.list
-  display: inline-block
-
-  dd
-    float: left
-    padding: 1px 0
-    margin: 5px 0
-
-  dt
-    clear: left
-    color: #555
-    float: left
-    font-weight: bold
-    padding: 0
-    margin: 5px 0
-    width: 150px
-
-
-div#archives
-  float: right
-  margin: 10px
-
-  a:hover
-    border-bottom: 3px solid $default-color
-
-
-ul.archives-month
-  margin: 0 0 0 10px
-
-  li
-    margin: 0 0 5px
-
-    a:hover
-      border-bottom: 2px solid $default-color
-
-
-// ==============
-// Social buttons
-// ==============
-
-
-div.social-buttons
-  float: right
-  margin: 0 10px 10px
-
-  div.addthis_toolbox
-    display: inline
+    background: url("/images/flash/notice.png") no-repeat 0 50%
 
 
 // =============
@@ -278,113 +238,6 @@ div.announcement-text
 // =====
 
 
-div.post
-  margin: 0 0 30px
-
-
-div.post-image
-  float: left
-  margin: 0 $content-margin 5px 0
-
-
 div.meta
-  border: 1px solid #1282A0
-  clear: both
-  margin: 0 10px
-  padding: 10px
   @include round-corners(3px, 3px, 3px, 3px)
   @include enable-ie-css3
-
-  a:hover
-    border-bottom: 2px solid $default-color
-
-
-// ========
-// Comments
-// ========
-
-
-div.avatar
-  float: left
-  margin-right: 20px
-
-  img
-    border: 1px solid #999
-
-
-span.comment-meta
-  clear: both
-  display: block
-
-
-div.new-comment
-  padding: 0 $content-margin
-
-
-ol#comment-list
-  margin: 20px 0
-
-  p
-    padding: $content-margin 0 0 72px
-
-
-// =======
-// Buttons
-// =======
-
-
-button, a.button, input.button
-  background-color: $button-gradient-end-color // graceful degrade for Opera
-  border: 1px solid #AAA
-  cursor: pointer
-  float: left
-  @include linear-gradient($button-gradient-start-color, $button-gradient-end-color)
-  @include round-corners(4px, 4px, 4px, 4px)
-  @include enable-ie-css3
-
-
-button:active, a.button:active, input.button:active
-  @include linear-gradient($button-gradient-end-color, $button-gradient-start-color)
-  @include enable-ie-css3
-
-
-a.button
-  padding: 6px 10px
-
-
-input.button
-  padding: 5px 10px !important
-
-
-button
-  padding: 5px 10px
-
-
-ul.buttons
-  margin: $content-margin 0
-
-  a
-    margin: 0 10px 0 0
-
-
-*:first-child + html input[type]
-  padding: 2px 10px 3px
-  // IE7
-
-
-a.google_ico, a.yahoo_ico
-  margin: 0 0 $content-margin 0
-  width: 90%
-
-
-// Self-clearing floats and IE hacks
-
-.selfclear
-  &:after
-    content: "."
-    display: block
-    height: 0
-    clear: both
-    visibility: hidden
-  display: inline-block // IE 7
-  display: block
