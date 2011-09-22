@@ -35,9 +35,9 @@
 
         <%= render :partial => 'announcements/announcement' %>
 
-        <%= yield :tag_cloud %>
+        <%= yield :tag_menu %>
 
-        <div id="content" class="<%= yield(:tag_cloud) ? 'double' : 'single' %>">
+        <div id="content" class="<%= yield(:tag_menu) ? 'double' : 'single' %>">
           <%= yield %>
         </div>
       </div>
@@ -49,7 +49,7 @@
 
   <% javascript_tag do %>
     jQuery(window).load(function(){
-      jQuery("div#tag-cloud").float_bar("30px");
+      jQuery("div#tag-menu").float_bar("30px");
     });
   <% end %>
 
