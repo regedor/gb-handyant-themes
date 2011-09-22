@@ -1,8 +1,3 @@
-// ============================================================================
-// Rules
-// ============================================================================
-
-
 body
   background-color: $frontend-background-color
 
@@ -58,8 +53,8 @@ div#menu
       background-color: $menu-hover-color
 
 
-div#tag-cloud
-  background-color: $tag-cloud-color
+div#tag-menu
+  background-color: $tag-menu-color
   margin: 0 25px 20px 780px
   min-height: 100px
   padding: 10px 20px
@@ -136,32 +131,6 @@ div#footer
 
   a:hover
     border-bottom: 2px solid $default-color
-
-
-div#flash
-  background-image: url("/images/dark_transparency.png")
-  border-top: 1px solid #000
-  bottom: 0
-  left: 0
-  padding: 15px 0
-  position: fixed
-  width: 100%
-
-  div.message
-    margin: 0 0 0 30px
-
-    p
-      margin: 0 70px
-      padding: 20px
-
-  div.message.error
-    background: url("/images/flash/error.png") no-repeat 0 50%
-
-  div.message.warning
-    background: url("/images/flash/warning.png") no-repeat 0 50%
-
-  div.message.info, div.message.notice
-    background: url("/images/flash/notice.png") no-repeat 0 50%
 
 
 // =============

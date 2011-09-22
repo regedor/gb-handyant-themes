@@ -1,9 +1,5 @@
-// ============================================================================
-// Rules
-// ============================================================================
-
-
 body
+  background-color: #E9E4E1
   background-image: url("/images/bg.png")
 
 
@@ -12,14 +8,6 @@ h2.title, h3.archives-month-title
 
   a:hover
     border-bottom: 3px solid $default-color
-
-
-hr
-  background-color: #DDD
-  border: none
-  clear: left
-  height: 1px
-  margin: $content-margin 0
 
 
 div#header
@@ -31,7 +19,6 @@ div#header
     margin: 15px 0 0
 
   span.options
-    color: #FFF
     background-color: $default-color
     float: right
     padding: 10px 20px 15px
@@ -57,26 +44,31 @@ div#menu
 
     a
       border: none
-      color: #FFF
       padding: 12px 20px
 
-    a:hover
-      color: #FFF
-      @include inset-box-shadow(0, 2px, 7px, #5e7ed5)
-      @include round-corners(12px, 12px, 12px, 12px)
-      @include enable-ie-css3
 
-
-div#tag-cloud
-  background-color: $tag-cloud-color
-  border: 1px solid #B0C7DE
-  margin: 0 25px 20px 780px
+div#tag-menu
+  background-color: #F4F4F4
+  border: 1px solid $default-color
+  margin: 0 25px 20px 755px
   min-height: 100px
-  padding: 10px 20px
   position: relative
   top: 20px
+  width: 200px
   @include round-corners(8px, 8px, 8px, 8px)
   @include enable-ie-css3
+
+  h2
+    background-color: $default-color
+    margin: 0
+    padding: 10px 0 10px 20px
+    @include round-corners(6px, 6px, 0, 0)
+    @include enable-ie-css3
+
+  a
+    border-top: 1px solid $default-color
+    display: block
+    padding: 10px 0 10px 20px
 
 
 div#tag-search-bar
@@ -88,8 +80,8 @@ div#tag-search-bar
 
 div#logo
   background-image: url("/logo.png")
-  height: 197px
-  margin: 30px 40px
+  height: 220px
+  margin: 20px 40px
   position: absolute
   right: 0
   width: 190px
@@ -113,14 +105,14 @@ div#content.single
 
 div#content.double
   float: left
-  width: 745px
+  width: 720px
   margin: 20px 20px 30px
 
 
 div#main
   background-color: $frontend-background-color
   border: 3px solid $default-color
-  margin: 65px auto 0
+  margin: 50px auto 0
   width: 980px
   @include round-corners(8px, 8px, 8px, 8px)
   @include enable-ie-css3
@@ -138,39 +130,13 @@ div#footer
   margin: 25px
 
 
-div#flash
-  background-image: url("/images/dark_transparency.png")
-  border-top: 1px solid #000
-  bottom: 0
-  left: 0
-  padding: 15px 0
-  position: fixed
-  width: 100%
-
-  div.message
-    margin: 0 0 0 30px
-
-    p
-      margin: 0 70px
-      padding: 20px
-
-  div.message.error
-    background: url("/images/flash/error.png") no-repeat 0 50%
-
-  div.message.warning
-    background: url("/images/flash/warning.png") no-repeat 0 50%
-
-  div.message.info, div.message.notice
-    background: url("/images/flash/notice.png") no-repeat 0 50%
-
-
 // =============
 // Announcements
 // =============
 
 
 div#announcements
-  border: 2px solid $default-color
+  border: 1px solid #000
   float: left
   margin: 0 20px
   overflow: hidden
@@ -196,7 +162,7 @@ div#announcement-numbers
   padding: 10px 10px 13px 13px
   position: absolute
   right: 0
-  @include round-corners(0, 0, 0, 3px)
+  @include round-corners(0, 0, 0, 6px)
   @include enable-ie-css3
 
   a
@@ -215,7 +181,7 @@ div.announcement-text
   position: absolute
   right: 0
   width: 300px
-  @include round-corners(3px, 0, 0, 0)
+  @include round-corners(6px, 0, 0, 0)
   @include enable-ie-css3
 
   p.title

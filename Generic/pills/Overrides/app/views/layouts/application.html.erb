@@ -1,33 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="content-type" content="application/xhtml+xml;charset=UTF-8" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <title><%= yield(:page_title) || h(configatron.title)%></title>
-
-  <%= stylesheet_link_tag    'shared/reset', :media => 'screen'                                           %>
-  <%= stylesheet_link_tag    'smoothness/jquery-ui-1.8.7.custom',
-                             'formtastic/formtastic',
-                             'shared/formtastic-changes',
-                             'frontend',                                       :cache => 'cache/frontend' %>
-
-  <%= javascript_include_tag 'jquery',
-                             'jquery-ui-1.8.7.custom.min',
-                             'announcements', 
-                             'utils',                                          :cache => 'cache/frontend' %>
-
-  <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="<%= configatron.addthis_pubid %>"></script>
-
-  <%= yield :head %>
-</head>
+<%= render :partial => 'shared/layout_head' %>
 
 <body>
   <div id="container">
       <div id="logo"><%= render :partial => 'shared/flash_logo', :locals => { :width => "190", :height => "120" } %></div>
     <div id="navigation">
       <div id="menu" ><%= frontend_navigation_content %></div>
-      <%= yield :tag_cloud %>
+      <%= yield :tag_menu %>
     </div>
 
     <div id="wrapper">
@@ -51,8 +29,7 @@
         </span>
       </div>
 
-      <% announcements = Announcement.prioritize.active %>
-      <%= render :partial => 'announcements/announcement', :locals => { :announcements => announcements } %>
+      <%= render :partial => 'announcements/announcement' %>
 
       <div id="main" class="selfclear">
         <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
@@ -69,10 +46,9 @@
   </div>
 
   <% javascript_tag do %>
-    window.onload = setTimeout(function() {
-      announcementsRoutine(<%= announcements.size %>);
-      float_bar("#navigation","60px");
-    }, 0);
+    jQuery(window).load(function(){
+      jQuery("div#navigation").float_bar_nemum("50px");
+    });
   <% end %>
 
 </body>
