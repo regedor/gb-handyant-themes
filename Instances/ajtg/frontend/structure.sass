@@ -1,27 +1,7 @@
-// ============================================================================
-// Rules
-// ============================================================================
-
-
 body
   background-color: $frontend-background-color
   background-image: url("/images/paper.png")
   background-repeat: repeat
-
-
-h2.title, h3.archives-month-title
-  margin: 0 0 $content-margin
-
-  a:hover
-    border-bottom: 3px solid $default-color
-
-
-hr
-  background-color: #DDD
-  border: none
-  clear: left
-  height: 1px
-  margin: $content-margin 0
 
 
 div#header
@@ -120,8 +100,8 @@ div#menu
       color: #FFD700
 
 
-div#tag-cloud
-  background-color: $tag-cloud-color
+div#tag-menu
+  background-color: $tag-menu-color
   border: 1px solid #FCD254
   margin: 0 20px 20px 780px
   min-height: 100px
@@ -164,33 +144,6 @@ div#footer
 
   a:hover
     border-bottom: 2px solid $default-color
-
-
-div#flash
-  background-image: url("/images/dark_transparency.png")
-  border-top: 1px solid #222
-  bottom: 0
-  left: 0
-  padding: 15px 0
-  position: fixed
-  width: 100%
-  z-index: 1
-
-  div.message
-    margin: 0 0 0 30px
-
-    p
-      margin: 0 70px
-      padding: 20px
-
-  div.message.error
-    background: url("/images/flash/error.png") no-repeat 0 50%
-
-  div.message.warning
-    background: url("/images/flash/warning.png") no-repeat 0 50%
-
-  div.message.info, div.message.notice
-    background: url("/images/flash/notice.png") no-repeat 0 50%
 
 
 // =============
