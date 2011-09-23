@@ -1,0 +1,179 @@
+body
+  background-color: $frontend-background-color
+  overflow-x: hidden // Firefox needs this
+
+
+div#panel
+  height: 290px
+  margin: 25px auto
+  width: 770px
+
+
+div#header
+  background-color: #FFF
+  position: absolute
+  top: 10px
+  width: 100%
+  z-index: 1
+  @include box-shadow(0, 0, 10px, #222)
+  @include enable-ie-css3
+
+  span.site-title
+    float: left
+    margin: 6px $content-margin 8px
+
+  span.options
+    float: right
+    margin: 6px $content-margin 8px
+
+    a:hover
+      border-bottom: 2px solid $default-color
+
+
+div#top-gradient
+  background-color: $menu-default-color
+  background-image: url("/images/topbar.png")
+  background-repeat: repeat-x
+  height: 100px
+  width: 100%
+
+
+div#navigation
+  background-color: $menu-default-color
+  background-image: url("/images/menu.png")
+  background-repeat: repeat-x
+  padding: 12px 0
+  position: relative
+  width: 100%
+  @include box-shadow(0, 0, 10px, #222)
+  @include enable-ie-css3
+
+  ul
+    position: relative
+    left: 130px
+
+    li
+      display: inline
+
+      a
+        border: none
+        color: #FFF
+        padding: 12px 25px
+
+      a:hover
+        background-color: $menu-hover-color
+
+
+div#tag-menu
+  background-color: $tag-menu-color
+  margin: 0 25px 20px 780px
+  min-height: 100px
+  padding: 10px 20px
+  position: relative
+  top: $content-margin
+  @include round-corners(5px, 5px, 5px, 5px)
+  @include enable-ie-css3
+
+
+div#tag-search-bar
+  margin: 0 0 $content-margin
+
+  div#tags
+    margin: 10px
+
+
+div#content.single
+  float: left
+  width: 960px
+  margin: 20px 20px 30px
+
+
+div#content.double
+  float: left
+  width: 745px
+  margin: 20px 20px 30px
+
+
+div#main
+  background-color: #FFF
+  border-left: 3px solid #111
+  border-right: 3px solid #111
+  border-bottom: 3px solid #111
+  margin: auto
+  width: 1000px
+
+
+div.content-body
+  margin: 0 10px
+
+
+div#user-info, div#user-invite
+  margin: $content-margin 10px
+
+
+div#footer
+  margin: 25px
+
+  a:hover
+    border-bottom: 2px solid $default-color
+
+
+// =============
+// Announcements
+// =============
+
+
+div#announcements
+  overflow: hidden
+  position: relative
+  left: 20px
+  top: 20px
+  width: 730px
+
+  a
+    display: block
+
+  a:hover
+    border: none
+
+
+div.announcement-tail
+  display: none
+
+
+div#announcement-numbers
+  background: url("/images/dark_transparency.png")
+  cursor: default
+  padding: 12px
+  position: absolute
+  right: 0
+
+  a
+    display: inline-block
+
+
+div.announcement img
+  height: 250px
+  width: 730px
+
+
+div.announcement-text
+  background: url("/images/dark_transparency.png")
+  bottom: 0
+  padding: 14px 12px 12px 14px
+  position: absolute
+  right: 0
+  width: 300px
+
+  p.title
+    padding: 0 0 15px
+
+
+// =====
+// Posts
+// =====
+
+
+div.meta
+  @include round-corners(5px, 5px, 5px, 5px)
+  @include enable-ie-css3

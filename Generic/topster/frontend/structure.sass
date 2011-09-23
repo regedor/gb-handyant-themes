@@ -1,35 +1,59 @@
 body
-  background-color: $frontend-background-color
-  background-image: url("/images/bg.png")
+  @include linear-gradient(#4B4A4A, #BDBCBC)
+  @include enable-ie-css3
+
+
+div#top-bg
+  border-bottom: 1px solid #333
+  height: 380px
+  position: absolute
+  width: 100%
+  z-index: -1
+  @include linear-gradient($default-color, #7F1519)
+  @include enable-ie-css3
 
 
 div#header
-  background-color: #FFF
-  margin: 0 20px 15px
+  margin: 0 auto
+  position: relative
+  width: 980px
 
-  span.site-title
-    display: inline-block
-    margin: 15px 0 0
+  div#header-top
+    padding: 20px 0 25px
+    position: relative
 
-  span.options
-    background-color: $default-color
-    float: right
-    padding: 10px 20px 15px
-    @include round-corners(0, 0, 8px, 8px)
-    @include enable-ie-css3
+    span.site-title
+      left: 0
+      position: absolute
+ 
+    span.options
+      position: absolute
+      right: 0
+ 
+      a:hover
+        border-bottom: 2px solid #FFF
 
-    a
-      color: #FFF
+  div#header-bottom
+    height: 255px
+    padding: 10px 0 25px
+    position: relative
 
-    a:hover
-      border-bottom: 2px solid #FFF
+    div#logo
+      background-image: url("/logo.png")
+      height: 47px
+      left: 0
+      margin: 100px 0 0
+      position: absolute
+      width: 204px
 
 
 div#menu
-  background-color: $default-color
+  border-bottom: 1px solid #333
   height: 45px
-  margin: 20px auto 0
   width: 980px
+  @include linear-gradient($default-color, #7F1519)
+  @include round-corners(10px, 10px, 0, 0)
+  @include enable-ie-css3
 
   ul li
     display: inline-block
@@ -41,27 +65,31 @@ div#menu
 
 
 div#tag-menu
-  background-color: #F4F4F4
-  border: 1px solid $default-color
-  margin: 0 25px 20px 755px
-  min-height: 100px
-  position: relative
-  top: 20px
+  margin: 25px 0 0 755px
+  min-height: 120px
   width: 200px
-  @include round-corners(8px, 8px, 8px, 8px)
+  @include round-corners(3px, 3px, 3px, 3px)
   @include enable-ie-css3
 
   h2
-    background-color: $default-color
-    margin: 0
-    padding: 10px 0 10px 20px
-    @include round-corners(6px, 6px, 0, 0)
+    border: 1px solid #333
+    padding: 5px 15px
+    @include linear-gradient($default-color, #7F1519)
+    @include round-corners(10px, 10px, 10px, 10px)
     @include enable-ie-css3
 
+  li
+    color: $default-color
+    list-style: square
+    margin-left: 30px
+
   a
-    border-top: 1px solid $default-color
     display: block
-    padding: 10px 0 10px 20px
+    padding: 5px 0
+
+  a:hover
+    color: $default-color
+    border-bottom: none !important
 
 
 div#tag-search-bar
@@ -71,23 +99,8 @@ div#tag-search-bar
     margin: 10px
 
 
-div#logo
-  background-image: url("/logo.png")
-  height: 220px
-  margin: 20px 40px
-  position: absolute
-  right: 0
-  width: 190px
-
-
 div#flash-content
   margin: 5px 0
-
-
-div#panel
-  height: 250px
-  position: relative
-  width: 980px
 
 
 div#content.single
@@ -103,11 +116,12 @@ div#content.double
 
 
 div#main
-  background-color: #FFF
-  border: 3px solid $default-color
-  margin: 50px auto 0
+  background-color: $frontend-background-color
+  min-height: 300px
+  margin: 0 auto
   width: 980px
-  @include round-corners(8px, 8px, 8px, 8px)
+  @include box-shadow(0, 0, 5px, #000)
+  @include round-corners(12px, 12px, 0, 0)
   @include enable-ie-css3
 
 
@@ -123,6 +137,10 @@ div#footer
   margin: 25px
 
 
+div.entrybody
+  margin: 0 10px
+
+
 // =============
 // Announcements
 // =============
@@ -130,8 +148,7 @@ div#footer
 
 div#announcements
   border: 1px solid #000
-  float: left
-  margin: 0 20px
+  float: right
   overflow: hidden
   position: relative
   width: 680px
