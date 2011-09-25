@@ -132,17 +132,26 @@ div#footer
   div.textile-body
     margin: 0
 
-  div#left
+  div#gradient
     float: left
     height: 100%
     width: 69%
     @include linear-gradient(#B5B5B5, #909090)
     @include enable-ie-css3
 
-  div#right
-    float: right
-    width: 31%
+  div#center
+    margin: auto
+    position: relative
+    width: 1000px
 
+    div#text-left
+      position: absolute
+      width: 69%
+
+    div#text-right
+      position: absolute
+      margin: 0 0 0 71%
+      width: 31%
 
 // =============
 // Announcements
