@@ -30,7 +30,7 @@
       </div>
 
       <%= render :partial => 'announcements/announcement' %>
-      <%= render :partial => '../../vendor/plugins/event_manager/app/views/events/calendar', :locals => { :year => 2009, :month => 1 } %>
+      <%= render :partial => '../../vendor/plugins/event_manager/app/views/events/calendar.html', :locals => { :year => 2009, :month => 1 } %>
 
       <div id="main" class="selfclear">
         <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
