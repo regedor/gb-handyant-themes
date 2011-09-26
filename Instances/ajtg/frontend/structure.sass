@@ -106,11 +106,16 @@ div#tag-menu
   border: 1px solid #FCD254
   margin: 0 20px 20px 780px
   min-height: 100px
-  padding: 10px 25px
+  padding: 20px 25px
   position: relative
   top: $content-margin
   @include round-corners(2px, 2px, 2px, 2px)
   @include enable-ie-css3
+
+  li
+    color: #222
+    list-style: square
+    margin-left: 15px
 
 
 div#tag-search-bar
@@ -129,7 +134,7 @@ div#content.single
 div#content.double
   float: left
   width: 745px
-  margin: 20px 20px 30px
+  margin: 15px 20px 30px
 
 
 div.content-body
@@ -212,5 +217,6 @@ div.entrybody
 
 
 div.meta
+  @include text-shadow(1px, 1px, 0, #FFF)
   @include round-corners(2px, 2px, 2px, 2px)
   @include enable-ie-css3
