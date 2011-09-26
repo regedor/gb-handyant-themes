@@ -78,8 +78,8 @@ div#primary-wrapper
   background-image: url("/images/bg_content.png")
   background-repeat: repeat
   margin: 130px auto 0
-  // HACK????????
-  padding-top: 1px
+  min-height: 300px
+  padding-top: 40px
   position: relative
   width: 980px
 
@@ -99,23 +99,90 @@ div#menu
       @include round-corners(8px, 8px, 0, 0)
       @include enable-ie-css3
 
-    a:hover
+    a:hover, .current
       background: url("/images/button_hover.png")
 
 
 div#content.single
-  float: left
   margin: 0 40px 30px
 
 
 div#content.double
   float: left
-  width: 745px
-  margin: 0 40px 30px
+  width: 710px
+  margin: 0 30px 30px 40px
 
 
-div.content-body
-  margin: 0 10px
+div#tag-menu
+  margin: 0 30px 20px 760px
+  min-height: 100px
+  position: relative
+  width: 175px
+
+  h2
+    margin: 0
+    padding: 0 0 10px 20px
+
+  li
+    color: $default-color
+    list-style: square
+    margin-left: 40px
+
+  a
+    display: block
+    padding: 5px 0
+
+  a:hover
+    color: $default-color
+    border-bottom: none !important
+
+div#organization
+  margin: 0 30px 20px 760px
+  position: relative
+  width: 175px
+
+  div.organization-logo
+    background-color: #FFF
+    display: inline-block
+    height: 75px
+    width: 75px
+
+  div#aac-logo
+    background-image: url("/images/aac.png")
+
+  div#aauav-logo
+    background-image: url("/images/aauav.png")
+
+  div#aaum-logo
+    background-image: url("/images/aaum.png")
+
+  div#aautad-logo
+    background-image: url("/images/aautad.png")
+
+  div#aefcup-logo
+    background-image: url("/images/aefcup.png")
+
+
+div#sponsors
+  margin: 80px auto 60px
+  width: 980px
+
+  h2
+    color: #FFF
+    font-size: 20px
+    line-height: 0
+
+  div.sponsor-logo
+    background-color: #000
+    display: inline-block
+    height: 100px
+    margin: 20px
+    width: 100px
+    filter: alpha(opacity=20)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+    -moz-opacity: 0.2
+    -khtml-opacity: 0.2
+    opacity: 0.2
 
 
 div#user-info, div#user-invite
@@ -135,19 +202,24 @@ div#footer
 
 
 div#announcements
-  border: 1px solid #444
+  border: 2px dashed #3A6B79
+  height: 200px
   overflow: hidden
-  margin: 40px auto
-  position: relative
-  width: 890px
-  @include round-corners(2px, 2px, 2px, 2px)
-  @include enable-ie-css3
+  position: absolute
+  right: 0
+  top: 20px
+  width: 690px
 
   a
     display: block
 
   a:hover
     border: none
+
+
+div.announcement
+  position: relative
+  z-index: -1
 
 
 div.announcement-tail
@@ -168,8 +240,8 @@ div#announcement-numbers
 
 
 div.announcement img
-  height: 250px
-  width: 940px
+  height: 200px
+  width: 690px
 
 
 div.announcement-text
@@ -191,6 +263,16 @@ div.announcement-text
 // =====
 
 
+div.post-image a
+  border: none
+
+
+div.entrybody
+  margin: 0 10px 0
+
+
 div.meta
+  background-color: transparent
+  border: 1px solid $default-color
   @include round-corners(3px, 3px, 3px, 3px)
   @include enable-ie-css3
