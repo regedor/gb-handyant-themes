@@ -18,13 +18,12 @@ div#header
 
 
 div#menu
-  background-color: $menu-default-color
-  background-image: url("/images/menu.png")
-  background-repeat: repeat-x
   border: 2px solid #000
   margin: auto
   padding: 12px 0
   width: 980px
+  @include linear-gradient(#88A8C8, #597592)
+  @include enable-ie-css3
 
   ul li
     display: inline
@@ -39,14 +38,22 @@ div#menu
 
 
 div#tag-menu
-  background-color: $tag-menu-color
   margin: 0 25px 20px 780px
   min-height: 100px
-  padding: 10px 20px
   position: relative
   top: $content-margin
   @include round-corners(5px, 5px, 5px, 5px)
   @include enable-ie-css3
+
+  h2.title
+    border: 2px solid #000
+    color: #FFF
+    font-size: 12px
+    font-weight: bold
+    padding: 12px 15px
+    @include linear-gradient(#88A8C8, #597592)
+    @include text-shadow(0, 1px, 0, #000)
+    @include enable-ie-css3
 
 
 div#tag-search-bar
