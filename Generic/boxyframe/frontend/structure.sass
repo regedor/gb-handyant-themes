@@ -30,18 +30,16 @@ div#menu
 
     a
       border: none
-      color: #FFF
       padding: 12px 20px
 
     a:hover
       background-color: $menu-hover-color
 
+    a.current:hover
+      background-color: transparent
+
 
 div#tag-menu
-  margin: 0 25px 20px 780px
-  min-height: 100px
-  position: relative
-  top: 20px
   @include round-corners(5px, 5px, 5px, 5px)
   @include enable-ie-css3
 
@@ -90,18 +88,6 @@ div#panel
   width: 980px
 
 
-div#content.single
-  float: left
-  width: 940px
-  margin: 20px 20px 30px
-
-
-div#content.double
-  float: left
-  width: 745px
-  margin: 20px 20px 30px
-
-
 div#main
   background-color: #FFF
   border-left: 2px solid #111
@@ -132,7 +118,7 @@ div#footer
 
 
 div#announcements
-  min-height: 250px
+  height: 250px
   overflow: hidden
   position: relative
   width: 980px

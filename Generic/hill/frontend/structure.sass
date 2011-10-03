@@ -64,11 +64,7 @@ div#header
       @include enable-ie-css3
 
       a
-        color: #FFF
-        font-weight: bold
         padding: 10px 20px
-        @include text-shadow(1px, 1px, 0, #444)
-        @include enable-ie-css3
 
     li:hover
       background-color: #8CABBF
@@ -79,12 +75,16 @@ div#tag-menu
   background-repeat: repeat-x
   background-position: 0% 100%
   border: 1px solid #DDD
-  float: right
-  min-height: 100px
+  margin-right: 0
   padding: 10px 20px
-  width: 200px
+  width: 21.8%
   @include round-corners(5px, 5px, 5px, 5px)
   @include enable-ie-css3
+
+  li
+    color: $default-color
+    list-style: square
+    margin-left: 30px
 
 
 div#tag-search-bar
@@ -95,13 +95,13 @@ div#tag-search-bar
 
 
 div#content.single
-  float: left
-  width: 1000px
+  margin-left: 0
+  margin-right: 0
+  width: 100%
 
 
 div#content.double
-  float: left
-  width: 750px
+  margin-left: 0
 
 
 div#main
@@ -109,10 +109,6 @@ div#main
   min-height: 300px
   margin: 20px auto 40px
   width: 1000px
-
-
-div.content-body
-  margin: 0 10px
 
 
 div#user-info, div#user-invite
@@ -127,7 +123,7 @@ div#footer
     border-bottom: 2px solid $default-color
 
   p
-    margin: 30px 30px 30px 16%
+    margin: 30px 30px 30px 0
 
   div.textile-body
     margin: 0
@@ -150,8 +146,9 @@ div#footer
 
     div#text-right
       position: absolute
-      margin: 0 0 0 71%
+      margin: 0 0 0 76%
       width: 31%
+
 
 // =============
 // Announcements
@@ -160,9 +157,9 @@ div#footer
 
 div#announcements
   border: 1px solid #024873
+  height: 250px
   position: relative
   margin: 20px 0
-  min-height: 250px
   width: 1000px
 
   a

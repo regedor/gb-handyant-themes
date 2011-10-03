@@ -19,6 +19,18 @@ h2.title
     color: $default-color
 
 
+div#menu
+
+  a
+    color: #FFF
+    font-weight: bold
+    @include text-shadow(1px, 1px, 0, #444)
+    @include enable-ie-css3
+
+  a.current
+    text-decoration: underline
+
+
 h3.archives-month-title
   font-size: 20px
 
@@ -49,6 +61,9 @@ div#announcement-numbers
 
 
 div#tag-menu
+
+  h2
+    color: $default-color
 
   a:hover
     border-bottom: 2px solid $default-color

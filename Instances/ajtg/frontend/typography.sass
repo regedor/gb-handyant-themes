@@ -28,6 +28,36 @@ div#header span.site-title
   font-weight: bold
 
 
+div#navigation
+
+  a
+    color: #FFF
+    font-weight: bold
+    @include text-shadow(1px, 2px, 0, #000)
+    @include enable-ie-css3
+
+  a:hover
+    color: #FFD700
+
+  a.current
+    text-decoration: underline
+
+  a.current:hover
+    color: #FFF
+
+
+span.options
+  color: #FFF
+  font-weight: bold
+  text-shadow: 1px 2px 0 #000
+
+  a
+    color: #FFF
+
+  a:hover
+    color: #FFD700
+
+
 div.announcement-text
   color: #FFF
   text-align: justify

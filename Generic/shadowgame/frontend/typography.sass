@@ -58,6 +58,16 @@ div#navigation
 
 
 div#tag-menu
+  @include box-shadow(0, 0, 5px, #222)
+  @include enable-ie-css3
+
+  h2.title
+    color: #FFF
+    font-size: 12px
+    font-weight: bold
+    @include box-shadow(0, 0, 5px, #222)
+    @include text-shadow(1px, 1px, 0, #000)
+    @include enable-ie-css3
 
   a:hover
     border-bottom: 2px solid $default-color

@@ -32,20 +32,19 @@ div#header
 
 div#top-gradient
   background-color: $menu-default-color
-  background-image: url("/images/topbar.png")
-  background-repeat: repeat-x
   height: 100px
   width: 100%
+  @include linear-gradient(#C52626, #8F0000)
+  @include enable-ie-css3
 
 
 div#navigation
   background-color: $menu-default-color
-  background-image: url("/images/menu.png")
-  background-repeat: repeat-x
   padding: 12px 0
   position: relative
   width: 100%
   @include box-shadow(0, 0, 10px, #222)
+  @include linear-gradient(#C52626, #8F0000)
   @include enable-ie-css3
 
   ul
@@ -65,14 +64,13 @@ div#navigation
 
 
 div#tag-menu
-  background-color: $tag-menu-color
-  margin: 0 25px 20px 780px
-  min-height: 100px
-  padding: 10px 20px
-  position: relative
-  top: $content-margin
-  @include round-corners(5px, 5px, 5px, 5px)
-  @include enable-ie-css3
+  border: 1px solid #000
+  width: 21.8%
+
+  h2.title
+    padding: 8px 15px
+    @include linear-gradient(#C52626, #8F0000)
+    @include enable-ie-css3
 
 
 div#tag-search-bar
@@ -82,18 +80,6 @@ div#tag-search-bar
     margin: 10px
 
 
-div#content.single
-  float: left
-  width: 960px
-  margin: 20px 20px 30px
-
-
-div#content.double
-  float: left
-  width: 745px
-  margin: 20px 20px 30px
-
-
 div#main
   background-color: #FFF
   border-left: 3px solid #111
@@ -101,10 +87,6 @@ div#main
   border-bottom: 3px solid #111
   margin: auto
   width: 1000px
-
-
-div.content-body
-  margin: 0 10px
 
 
 div#user-info, div#user-invite
@@ -124,7 +106,7 @@ div#footer
 
 
 div#announcements
-  min-height: 250px
+  height: 250px
   overflow: hidden
   position: relative
   left: 20px

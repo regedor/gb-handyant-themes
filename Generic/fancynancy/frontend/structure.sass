@@ -8,16 +8,6 @@ div#container
   width: 1000px
 
 
-div#content.single
-  position: relative
-  width: 955px
-
-
-div#content.double
-  position: relative
-  width: 755px
-
-
 div#wrapper
   margin: 0 auto 0
   position: relative
@@ -26,11 +16,11 @@ div#wrapper
 
 div#tag-menu
   background-color: $default-color
-  padding: 20px 20px 20px 10px
+  margin: 0 0 0 20px
+  padding: 20px 20px 20px 0
   position: absolute
   right: 0
-  top: 300px
-  width: 165px
+  top: 295px
   @include round-corners(30px, 0, 0, 30px)
   @include enable-ie-css3
 
@@ -54,7 +44,7 @@ img#logo
 
 
 div#flash-content
-  padding: 35px 20px 0
+  padding: 25px 20px 0
 
 
 div#header
@@ -71,11 +61,11 @@ div#header
 
 span.site-title
   display: block
-  margin: 0 35px 35px
+  margin: 0 25px 35px
 
 
 div#menu
-  margin: 0 35px 0 0
+  margin: 0 25px 0 0
   position: absolute
   right: 0
   top: 152px
@@ -89,7 +79,6 @@ div#menu
 
   a:hover
     background-color: $default-color
-    color: #FFF
     padding: 8px 10px
     @include inset-box-shadow(0, 2px, 7px, #9B1E1E)
     @include round-corners(12px, 12px, 12px, 12px)
@@ -99,8 +88,8 @@ div#menu
 div#main
   background-color: #FEFEFE
   border: 3px solid $default-color
-  padding: 20px
   position: relative
+  width: 994px
   z-index: 1
   @include round-corners(12px, 12px, 12px, 12px)
   @include enable-ie-css3
@@ -124,8 +113,8 @@ div#footer
 
 div#announcements
   border: 2px solid #333
-  margin: 0 0 15px
-  min-height: 250px
+  height: 250px
+  margin: 20px 20px 0
   position: relative
   overflow: hidden
 

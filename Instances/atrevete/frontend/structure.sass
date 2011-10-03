@@ -79,9 +79,17 @@ div#primary-wrapper
   background-repeat: repeat
   margin: 130px auto 0
   min-height: 300px
-  padding-top: 40px
   position: relative
   width: 980px
+
+
+div#content.single
+  margin: 30px
+  width: 94%
+
+
+div#content.double
+  margin: 30px
 
 
 div#menu
@@ -103,32 +111,14 @@ div#menu
       background: url("/images/button_hover.png")
 
 
-div#content.single
-  display: inline-block
-  margin: 0 40px 30px
-
-
-div#content.double
-  display: inline-block
-  float: left
-  width: 710px
-  margin: 0 30px 30px 40px
-
-
 div#tag-menu
-  margin: 0 30px 20px 760px
-  min-height: 100px
-  position: relative
-  width: 175px
-
-  h2
-    margin: 0
-    padding: 0 0 10px 20px
+  margin: 30px 30px 30px 0
+  width: 18.9%
 
   li
     color: $default-color
     list-style: square
-    margin-left: 40px
+    margin-left: 30px
 
   a
     display: block
@@ -138,15 +128,17 @@ div#tag-menu
     color: $default-color
     border-bottom: none !important
 
+
 div#organization
-  margin: 0 30px 20px 760px
-  position: relative
-  width: 175px
+  float: right
+  margin: 0 30px 30px 0
+  width: 18.9%
 
   div.organization-logo
     background-color: #FFF
     display: inline-block
     height: 75px
+    margin-left: 15px
     width: 75px
 
   div#aac-logo
@@ -205,7 +197,7 @@ div#footer
 
 div#announcements
   border: 2px dashed #3A6B79
-  min-height: 200px
+  height: 200px
   overflow: hidden
   position: absolute
   right: 0

@@ -65,9 +65,6 @@ div#menu
 
 
 div#tag-menu
-  margin: 25px 0 0 755px
-  min-height: 120px
-  width: 200px
   @include round-corners(3px, 3px, 3px, 3px)
   @include enable-ie-css3
 
@@ -103,18 +100,6 @@ div#flash-content
   margin: 5px 0
 
 
-div#content.single
-  float: left
-  width: 940px
-  margin: 20px 20px 30px
-
-
-div#content.double
-  float: left
-  width: 720px
-  margin: 20px 20px 30px
-
-
 div#main
   background-color: $frontend-background-color
   min-height: 300px
@@ -137,19 +122,15 @@ div#footer
   margin: 25px
 
 
-div.entrybody
-  margin: 0 10px
-
-
 // =============
 // Announcements
 // =============
 
 
 div#announcements
-  border: 1px solid #000
+  border: 1px solid #333
   float: right
-  min-height: 250px
+  height: 250px
   overflow: hidden
   position: relative
   width: 680px
