@@ -4,73 +4,97 @@ body
 
 
 div#panel
-  height: 290px
-  margin: 25px auto
-  width: 770px
+  border: 1px solid #FFF // DESTROY!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  height: 250px
+  margin: 0 auto 40px
 
 
 div#header
-  background-color: #FFF
-  position: absolute
-  top: 10px
+  height: 30px
+  margin: 10px 0 100px
+  position: relative
   width: 100%
   z-index: 1
-  @include box-shadow(0, 0, 10px, #222)
-  @include enable-ie-css3
 
   span.site-title
     float: left
-    margin: 6px $content-margin 8px
+    margin: 6px 0 8px
 
   span.options
     float: right
-    margin: 6px $content-margin 8px
+    margin: 6px 0 8px
 
     a:hover
       border-bottom: 2px solid $default-color
 
 
+div#white-stripe
+  background-color: #FFF
+  height: 30px
+  position: absolute
+  top: 10px
+  width: 100%
+  @include box-shadow(0, 0, 10px, #222)
+  @include enable-ie-css3
+
+
 div#top-gradient
   background-color: $menu-default-color
   height: 100px
+  position: absolute
+  top: 0
   width: 100%
   @include linear-gradient(#C52626, #8F0000)
   @include enable-ie-css3
 
 
-div#navigation
+div#bottom-gradient
   background-color: $menu-default-color
-  padding: 12px 0
-  position: relative
+  height: 40px
+  position: absolute
+  top: 432px // DESTROY!!!!!!!!!!!!!!!!!!!!!!!!!!!
   width: 100%
   @include box-shadow(0, 0, 10px, #222)
   @include linear-gradient(#C52626, #8F0000)
   @include enable-ie-css3
 
-  ul
-    position: relative
-    left: 130px
 
-    li
-      display: inline
+div#wrapper
+  margin: auto
+  width: 1004px
 
-      a
-        border: none
-        color: #FFF
-        padding: 12px 25px
 
-      a:hover
-        background-color: $menu-hover-color
+div#navigation
+  padding: 12px 0
+  position: relative
+
+  ul li
+    display: inline
+
+    a
+      border: none
+      color: #FFF
+      padding: 12px 25px
+
+    a:hover
+      background-color: $menu-hover-color
 
 
 div#tag-menu
   border: 1px solid #000
-  width: 21.8%
+  width: 22.8%
 
   h2.title
     padding: 8px 15px
+    @include box-shadow(0, 1px, 10px, #222)
     @include linear-gradient(#C52626, #8F0000)
     @include enable-ie-css3
+
+  li
+    color: $default-color
+    list-style: disc
+    margin-left: 30px
+    margin-bottom: 4px
 
 
 div#tag-search-bar
@@ -82,9 +106,9 @@ div#tag-search-bar
 
 div#main
   background-color: #FFF
-  border-left: 3px solid #111
-  border-right: 3px solid #111
-  border-bottom: 3px solid #111
+  border-left: 2px solid #111
+  border-right: 2px solid #111
+  border-bottom: 2px solid #111
   margin: auto
   width: 1000px
 
@@ -109,8 +133,6 @@ div#announcements
   height: 250px
   overflow: hidden
   position: relative
-  left: 20px
-  top: 20px
   width: 730px
 
   a
