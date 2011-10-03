@@ -33,11 +33,13 @@ span.options
 
 div.announcement-text
   color: #FFF
-  text-align: justify
 
   p.title
     font-size: 14px
     font-weight: bold
+
+  p.body
+    text-align: justify
 
 
 div#announcement-numbers
@@ -53,7 +55,7 @@ div#announcement-numbers
 
 
 div#menu
-  @include text-shadow(0, 1px, 0, #000)
+  @include text-shadow(1px, 1px, 0, #000)
   @include enable-ie-css3
 
   ul li a
@@ -62,6 +64,13 @@ div#menu
 
   a:hover
     @include text-shadow(0, 0, 15px, #000)
+    @include enable-ie-css3
+
+  a.current
+    text-decoration: underline
+
+  a.current:hover
+    @include text-shadow(1px, 1px, 0, #000)
     @include enable-ie-css3
 
 
