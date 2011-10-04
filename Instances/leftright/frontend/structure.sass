@@ -163,7 +163,7 @@ div#navigation
         color: #F3E7DD
         display: inline-block
         height: 18px
-        padding: 8px 20px 10px
+        padding: 9px 20px
 
       a:hover
         background-image: url("/images/menu.png")
@@ -176,7 +176,6 @@ div#primary-wrapper
   border-right: 1px solid #FFF
   margin: auto
   min-height: 400px
-  padding: 30px 0 0
   position: relative
   width: 959px
   @include box-shadow(0, 0, 10px, #444)
@@ -186,30 +185,23 @@ div#primary-wrapper
 div#tag-menu
   background-color: #F0E1D4
   border: 1px solid #FFF
-  margin: 0 30px 0 750px
-  min-height: 100px
-  padding: 15px 20px 20px
-  width: 135px
+  min-height: 170px
+  width: 21.6%
+
+  h2.title
+    background-image: url("/images/menu.png")
+    border-bottom: 1px solid #FFF
+    height: 18px
+    padding: 9px 20px
+
+  a:hover
+    border-bottom: 2px solid $default-color
 
   li
     color: #FFF
     list-style: square
-    margin-left: 15px
-
-
-div#content.single
-  float: left
-  margin: 0 30px 30px
-
-
-div#content.double
-  float: left
-  width: 700px
-  margin: 0 30px 30px
-
-
-div.content-body
-  margin: 0 10px
+    margin-bottom: 4px
+    margin-left: 35px
 
 
 div#user-info, div#user-invite
@@ -231,6 +223,7 @@ div#footer
 
 
 div#announcements
+  height: 129px
   overflow: hidden
   margin: 0 auto 20px
   width: 622px
