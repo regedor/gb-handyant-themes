@@ -60,12 +60,21 @@ div#announcement-numbers
 
 div#menu
   color: #FFF
-  font: 16px Helvetica
+  font-family: 'Droid Sans', sans-serif
+  font-size: 15px
 
   a
     color: #FFF
+
+  a:hover
+    text-decoration: underline
+
+  a.current
     @include text-shadow(1px, 1px, 0, #000)
     @include enable-ie-css3
+
+  a.current:hover
+    text-decoration: none
 
 
 div#tag-menu
