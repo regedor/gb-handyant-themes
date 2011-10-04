@@ -32,5 +32,18 @@
   text-shadow: $right $bottom $blur $color
 
 
+@mixin transition($property, $duration, $timing-function, $delay)
+  -moz-transition: $property $duration $timing-function $delay
+  -webkit-transition: $property $duration $timing-function $delay
+  -o-transition: $property $duration $timing-function $delay
+  transition: $property $duration $timing-function $delay
+
+
+@mixin opacity($value)
+  opacity: $value
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$value+"60)" // IE8
+  filter: alpha(opacity=$value) // IE5-7
+
+
 @mixin enable-ie-css3
   behavior: url("/stylesheets/pie.htc")
