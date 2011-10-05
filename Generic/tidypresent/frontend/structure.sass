@@ -69,10 +69,7 @@ div#panel
 
 
 div#tag-menu
-  margin: 20px 30px 20px 760px
   min-height: 100px
-  position: relative
-  width: 175px
 
   h2.title
     margin: 0
@@ -81,7 +78,8 @@ div#tag-menu
   li
     color: $default-color
     list-style: square
-    margin-left: 45px
+    margin-left: 30px
+    margin-bottom: 4px
 
   a
     display: block
@@ -93,9 +91,12 @@ div#tag-menu
 
 
 div#support
-  margin: 0 30px 20px 770px
-  position: relative
-  width: 190px
+  float: right
+  margin: 20px 20px 20px 0
+  width: 22%
+
+  div#support-logos
+    margin-left: 15px
 
   div.support-logo
     background-color: #FFF
@@ -105,6 +106,13 @@ div#support
     display: inline-block
     height: 85px
     width: 85px
+    @include opacity(0.4)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  div.support-logo:hover
+    @include opacity(1)
+    @include enable-ie-css3
 
   div#um-logo
     background-image: url("/images/um.png")
@@ -130,13 +138,13 @@ div#support
   div#dieci-logo
     background-image: url("/images/dieci.png")
     height: 85px
-    margin: 0 0 2px
+    margin-bottom: 2px
     width: 176px
 
   div#ca-logo
     background-image: url("/images/casa_academica.png")
     height: 85px
-    margin: 0 0 2px
+    margin-bottom: 2px
     width: 176px
 
 
@@ -147,24 +155,8 @@ div#tag-search-bar
     margin: 10px
 
 
-div#content.single
-  float: left
-  margin: 20px 20px 30px
-  width: 940px
-
-
-div#content.double
-  float: left
-  margin: 20px 20px 30px
-  width: 740px
-
-
 div#main
   background-color: #FFF
-
-
-div.content-body
-  margin: 0 10px
 
 
 div#user-info, div#user-invite
@@ -185,6 +177,7 @@ div#footer
 
 div#announcements
   border: 1px solid #AAA
+  height: 250px
   margin: auto
   overflow: hidden
   position: relative
