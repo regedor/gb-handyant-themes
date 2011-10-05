@@ -5,7 +5,10 @@
       <div id="logo"><%= render :partial => 'shared/flash_logo', :locals => { :width => "190", :height => "120" } %></div>
     <div id="navigation">
       <div id="menu" ><%= frontend_navigation_content %></div>
+
       <%= yield :tag_menu %>
+
+      <%# render :partial => '../../vendor/plugins/event_manager/app/views/events/calendar.html.erb', :locals => { :year => Time.now.year, :month => Time.now.month } %>
     </div>
 
     <div id="wrapper">
@@ -30,7 +33,6 @@
       </div>
 
       <%= render :partial => 'announcements/announcement' %>
-      <%# render :partial => '../../vendor/plugins/event_manager/app/views/events/calendar.html.erb', :locals => { :year => 2009, :month => 1 } %>
 
       <div id="main" class="selfclear">
         <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
