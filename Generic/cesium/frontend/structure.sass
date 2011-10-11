@@ -1,0 +1,157 @@
+body
+  background-color: #FFF
+
+
+div#header
+  background-image: url("/images/header.png")
+  background-repeat: repeat-x
+  height: 100px
+  margin-bottom: 70px
+
+  div.wrapper
+    margin: 0 auto
+    position: relative
+    width: 980px
+
+    span.site-title
+      float: left
+   
+    span.options
+      background-color: $default-color
+      float: right
+      padding: 10px 15px
+      @include round-corners(4px, 4px, 4px, 4px)
+      @include enable-ie-css3
+   
+      a:hover
+        border-bottom: 2px solid #FFF
+  
+    div#logo
+      background-image: url("/logo.png")
+      height: 122px
+      margin: 32px 0 0
+      position: absolute
+      width: 263px
+
+    div#menu
+      height: 45px
+      margin-top: 50px
+      position: absolute
+      right: 0
+  
+      ul li
+        display: inline-block
+        margin: 10px 14px
+  
+        a
+          padding: 23px 0
+
+
+div#tag-menu
+  margin-right: 0px
+
+  h2
+    background-color: $default-color
+    padding: 10px 14px
+    @include round-corners(4px, 4px, 4px, 4px)
+    @include enable-ie-css3
+
+  li
+    color: $default-color
+    list-style: square
+    margin-left: 30px
+    margin-bottom: 4px
+
+  a
+    display: block
+    padding: 5px 0
+
+  a:hover
+    color: $default-color
+    border-bottom: none !important
+
+
+div#tag-search-bar
+  margin: 0 0 $content-margin
+
+  div#tags
+    margin: 10px
+
+
+div#main
+  background-color: $frontend-background-color
+  min-height: 300px
+  margin: 0 auto
+  width: 980px
+
+
+div#content.single
+  margin-left: 0px
+
+
+div#content.double
+  margin-left: 0px
+
+
+div#user-info, div#user-invite
+  margin: $content-margin 10px
+
+
+div#footer
+  margin: 25px
+
+
+// =============
+// Announcements
+// =============
+
+
+div#announcements
+  border: 1px solid #333
+  height: 250px
+  overflow: hidden
+  margin: 0 auto
+  position: relative
+  width: 680px
+
+  a
+    display: block
+     
+  a:hover
+    border: none
+
+
+div.announcement-tail
+  display: none
+
+
+div#announcement-numbers
+  background: url("/images/dark_transparency.png")
+  cursor: default
+  padding: 10px 10px 13px 13px
+  position: absolute
+  right: 0
+  @include round-corners(0, 0, 0, 6px)
+  @include enable-ie-css3
+
+  a
+    display: inline-block
+
+
+div.announcement img
+  height: 250px
+  width: 680px
+
+
+div.announcement-text
+  background: url("/images/dark_transparency.png")
+  bottom: 0
+  padding: 14px 12px 12px 14px
+  position: absolute
+  right: 0
+  width: 300px
+  @include round-corners(6px, 0, 0, 0)
+  @include enable-ie-css3
+
+  p.title
+    padding: 0 0 15px
