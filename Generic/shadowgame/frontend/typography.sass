@@ -55,8 +55,17 @@ div#navigation
   @include text-shadow(1px, 1px, 0, #000)
   @include enable-ie-css3
 
-  ul li a
-    font-weight: bold
+  ul li
+
+    a
+      color: #DFDFDF
+      font-weight: bold
+
+    a:hover
+      color: #FFF
+
+    a.current
+      color: #FFF
 
 
 div#tag-menu
