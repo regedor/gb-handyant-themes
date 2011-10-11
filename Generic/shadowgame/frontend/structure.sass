@@ -4,9 +4,15 @@ body
 
 
 div#panel
-  border: 1px solid #FFF // DESTROY!!!!!!!!!!!!!!!!!!!!!!!!!!!
   height: 250px
-  margin: 0 auto 40px
+  margin: 0 auto 52px
+
+  div#logo
+    background-image: url("/logo.png")
+    float: right
+    height: 217px
+    margin: 15px 14px 15px 0
+    width: 251px
 
 
 div#header
@@ -51,8 +57,8 @@ div#top-gradient
 div#bottom-gradient
   background-color: $menu-default-color
   height: 40px
+  margin-top: 432px
   position: absolute
-  top: 432px // DESTROY!!!!!!!!!!!!!!!!!!!!!!!!!!!
   width: 100%
   @include box-shadow(0, 0, 10px, #222)
   @include linear-gradient(#C52626, #8F0000)
@@ -130,10 +136,15 @@ div#footer
 
 
 div#announcements
+  border: 1px solid #000
+  float: left
   height: 250px
   overflow: hidden
+  margin-left: 22px
   position: relative
-  width: 730px
+  width: 705px
+  @include box-shadow(0, 0, 10px, #111)
+  @include enable-ie-css3
 
   a
     display: block
@@ -159,7 +170,7 @@ div#announcement-numbers
 
 div.announcement img
   height: 250px
-  width: 730px
+  width: 705px
 
 
 div.announcement-text
