@@ -1,6 +1,6 @@
 body
   color: $text-color
-  font: 12px Verdana, HelveticaNeue, Helvetica, Arial, Sans-Serif
+  font: 12px HelveticaNeue, Helvetica, Arial, Sans-Serif
 
 
 a, a:active, a:link, a:visited
@@ -24,10 +24,14 @@ p.inline-errors
   font-size: 11px
 
 
-span.site-title, span.options, span.options a
-  color: #FFF
-  @include text-shadow(1px, 1px, 0, #000)
+span.options
+  color: #333
+  @include text-shadow(1px, 1px, 0px, #EEE)
   @include enable-ie-css3
+
+  a:hover
+    color: #333
+    border-bottom: 2px solid #FFF
 
 
 div.announcement-text
@@ -54,11 +58,11 @@ div#announcement-numbers
 
 
 div#menu
-  font-size: 13px
+  font-size: 14px
 
   a
-    color: #444
-    @include text-shadow(0, 1px, 0, #FFF)
+    color: #999
+    @include text-shadow(1px, 1px, 0, #FFF)
     @include enable-ie-css3
 
   a:hover
@@ -67,6 +71,7 @@ div#menu
     @include enable-ie-css3
 
   a.current
+    color: #444
     border-bottom: 3px solid $default-color
 
   a.current:hover
@@ -76,7 +81,7 @@ div#menu
 div#tag-menu h2.title
   color: #FFF
   font-size: 14px
-  @include text-shadow(1px, 2px, 0, #000)
+  @include text-shadow(1px, 1px, 0, #000)
   @include enable-ie-css3
 
 
@@ -111,7 +116,7 @@ ul.archives-month
 div#footer
   color: #444
   text-align: center
-  @include text-shadow(1px, 1px, 0, #DDD)
+  @include text-shadow(1px, 1px, 0, #FFF)
   @include enable-ie-css3
 
   a
