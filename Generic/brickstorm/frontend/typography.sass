@@ -8,12 +8,14 @@ a, a:active, a:link, a:visited
   text-decoration: none
 
 
-a:hover
-  color: #555
+div.textile-body
+  font-size: 14px
 
 
 h2.title
   font-size: 24px
+  @include text-shadow(1px, 1px, 1px, #666)
+  @include enable-ie-css3
 
 
 h3.archives-month-title
@@ -30,8 +32,9 @@ span.options
   @include enable-ie-css3
 
   a:hover
-    color: #333
-    border-bottom: 2px solid #FFF
+    color: #FFF
+    @include text-shadow(1px, 1px, 0px, #222)
+    @include enable-ie-css3
 
 
 div.announcement-text

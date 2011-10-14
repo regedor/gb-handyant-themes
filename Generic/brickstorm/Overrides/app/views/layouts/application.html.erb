@@ -30,7 +30,13 @@
     </div>
 
     <div id="main" class="selfclear">
-      <%= render :partial => 'announcements/announcement' %>
+	  <div id="panel">
+		<div id="left-side"></div>
+
+        <%= render :partial => 'announcements/announcement' %>
+
+		<div id="right-side"></div>
+      </div>
 
       <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
       <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
