@@ -21,18 +21,26 @@ p
   text-align: justify
 
 
-div#main-navigation ul li
+div#main-navigation ul
 
-  a
+  li a
     display: block
     font-size: 14px
 
+  li a:hover
+    color: #FFF
+
+  li.active a:hover
+    color: $text-color
+
+
+div#user-navigation
+
+  a
+    color: #FFF
+
   a:hover
-    color: #555
-
-
-div#user-navigation a
-  color: #FFF
+    text-decoration: underline
 
 
 div#sidebar
@@ -51,8 +59,13 @@ div.meta li
   line-height: 18px
 
 
-div.secondary-navigation ul li.active
-  background: #FFF
+div.secondary-navigation
+
+  ul li:hover
+    text-decoration: underline
+
+  ul li.active:hover
+    text-decoration: none
 
 
 div#footer p, div#flash div.message p
