@@ -66,12 +66,11 @@ div#menu
   a
     color: #999
     @include text-shadow(1px, 1px, 0, #FFF)
+    @include transition(color, 0.3s, ease-in-out, 0s)
     @include enable-ie-css3
 
   a:hover
     color: $default-color
-    @include transition(color, 0.2s, ease-in-out, 0s)
-    @include enable-ie-css3
 
   a.current
     color: #444
