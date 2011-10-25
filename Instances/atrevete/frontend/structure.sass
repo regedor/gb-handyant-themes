@@ -64,6 +64,8 @@ span.site-title
 span.options
   float: right
   margin: 15px 0 0
+  position: relative
+  z-index: 1
 
 
 div#logo
@@ -183,10 +185,11 @@ div#user-info, div#user-invite
 
 
 div#footer
-  margin: 25px
-
-  a:hover
-    border-bottom: 2px solid $default-color
+  background-image: url(/images/footer.png)
+  padding: 45px 0 35px
+  position: relative
+  @include box-shadow(0, 0, 10px, #222)
+  @include enable-ie-css3
 
 
 // =============

@@ -104,12 +104,17 @@ ul.archives-month
 
 
 div#footer
-  color: #DDD
+  color: #FFF
   text-align: center
+  @include text-shadow(1px, 1px, 0, #000)
+  @include enable-ie-css3
 
   a
-    color: $default-color
+    color: #FFF
     font-weight: bold
+
+  a:hover
+    color: $default-color
 
 
 // ========
