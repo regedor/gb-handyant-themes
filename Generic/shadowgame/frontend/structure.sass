@@ -84,9 +84,11 @@ div#navigation
       background-color: $menu-hover-color
 
 
-div#tag-menu
+div#tag-menu, div#social-networks
   border: 1px solid #000
   width: 22.8%
+  @include box-shadow(0, 0, 5px, #222)
+  @include enable-ie-css3
 
   h2.title
     padding: 8px 15px
