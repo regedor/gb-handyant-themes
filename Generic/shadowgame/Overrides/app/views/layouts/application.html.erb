@@ -48,7 +48,10 @@
 
         <%= yield :tag_menu %>
 
-        <%= render :partial => 'shared/social_networks', :locals => { :networks => { :facebook_link => 'http://www.facebook.com/nedaac' } } %>
+        <% if yield :tag_menu %>
+          <%= render :partial => 'shared/social_networks',
+                     :locals => { :networks => { :facebook_link => 'http://www.facebook.com/nedaac' } } %>
+        <% end %>
       </div>
 
       <%= render :partial => 'shared/footer' %>
