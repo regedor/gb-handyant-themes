@@ -1,8 +1,8 @@
---- 
-  theme: shadowgame
+---
+  theme: none
   default_locale: en
-  addthis_pubid: "ra-4e88782979b55e1c"
-  title: GroupBuddies
-  site_name: GroupBuddies
-  site_header: GroupBuddies
-  force_locale: "true"
+  addthis_pubid: "ra-4db0c70d4e7542c2"
+  title: Group Buddies
+  site_name: Group Buddies
+  site_header: Connect. Collaborate. Improve
+  force_locale: false
