@@ -1,6 +1,16 @@
+@font-face
+  font-family: 'PTSansRegular'
+  src: url('/fonts/PTS55F-webfont.eot')
+  src: url('/fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype')
+  src: url('/fonts/PTS55F-webfont.woff') format('woff')
+  src: url('/fonts/PTS55F-webfont.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
 body
   color: $text-color
-  font: 12px Verdana, HelveticaNeue, Helvetica, Arial, Sans-Serif
+  font: 13px Helvetica, Arial, Sans-Serif
 
 
 a, a:active, a:link, a:visited
@@ -13,7 +23,8 @@ a:hover
 
 
 h2.title
-  font-size: 24px
+  font-family: PTSansRegular
+  font-size: 26px
 
 
 h3.archives-month-title
@@ -24,38 +35,36 @@ p.inline-errors
   font-size: 11px
 
 
-div#header span.site-title
-  font-weight: bold
+span.options
+  color: #B2B2B2
+  font-size: 14px
+  @include text-shadow(1px, 1px, 0, #EFEFEF)
+  @include enable-ie-css3
+
+  a
+    color: #474747
+
+  a:hover
+    text-decoration: underline
 
 
 div#navigation
 
   a
-    color: #FFF
+    color: #586128
+    font-size: 15px
     font-weight: bold
-    @include text-shadow(1px, 2px, 0, #000)
-    @include enable-ie-css3
-
-  a:hover
-    color: #FFD700
 
   a.current
     text-decoration: underline
 
-  a.current:hover
-    color: #FFF
 
+div#right-sidebar
 
-span.options
-  color: #FFF
-  font-weight: bold
-  text-shadow: 1px 2px 0 #000
-
-  a
-    color: #FFF
-
-  a:hover
-    color: #FFD700
+  h2
+    color: #99A846
+    font-size: 18px
+    text-align: center
 
 
 div.announcement-text
@@ -117,11 +126,11 @@ ul.archives-month
 
 
 div#footer
-  color: #222
+  color: #454545
   text-align: center
 
   a
-    color: $default-color
+    color: #6F171B
     font-weight: bold
 
 

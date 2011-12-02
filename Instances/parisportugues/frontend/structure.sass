@@ -1,123 +1,66 @@
 body
   background-color: $frontend-background-color
-  background-image: url("/images/paper.png")
-  background-repeat: repeat
-
-
-div#header
-  height: 246px
-  margin: 10px auto 0
-  width: 980px
-
-
-div#logo
-  background-image: url("/logo.png")
-  background-repeat: no-repeat
-  float: left
-  height: 155px
-  margin: 55px 0 0
-  width: 348px
-
-
-div#stars
-  background-image: url("/images/stars.png")
-  background-repeat: no-repeat
-  float: right
-  height: 246px
-  width: 386px
-
-  div#left
-    float: left
-    height: 246px
-    width: 190px
-
-  div#center
-    float: left
-    height: 246px
-    width: 50px
-
-  div#right
-    float: left
-    height: 246px
-    width: 141px
-
-
-div#stars.jose
-  background-image: url("/images/jose.png")
-
-
-div#stars.rui
-  background-image: url("/images/rui.png")
-
-
-div#stars.nuno
-  background-image: url("/images/nuno.png")
 
 
 div#wrapper
-  background-color: #FFF
-  border: 2px solid #333
   margin: auto
-  width: 980px
+  width: 1000px
 
 
-div#menu
-  background: url("/images/belt.png") 0 0 no-repeat
-  height: 56px
-  left: -15px
-  position: relative
-  top: -5px
-  width: 1012px
+div#header
+  border-bottom: 25px solid #99A846
+  margin-bottom: 20px
 
-  div#navigation
-    float: left
-    padding: 18px 14px
-
-    ul li
-      display: inline
-
-      a
-        border: none
-        padding: 12px 20px
+  div#logo
+    background-image: url("/logo.png")
+    background-repeat: no-repeat
+    height: 155px
+    margin: 15px 0 0
+    width: 300px
 
   span.options
-    float: right
-    padding: 18px 34px
+    background-color: #E5E5E5
+    display: block
+    padding: 10px
+    width: 980px
+    text-align: right
 
 
-div#tag-menu
+div#left-sidebar
+  float: left
+  width: 125px
+
+  div#navigation
+
+    ul li a
+      border: none
+      padding: 12px 20px 12px 0
+
+
+div#main
+  float: left
+  margin: 0 20px
+  width: 660px
+
+  div#content.single
+    margin: 20px 0
+    width: inherit
+
+
+div#right-sidebar
+  float: right
+  width: 175px
 
   h2
-    background-image: url("/images/brush.png")
-    background-repeat: no-repeat
-    width: 215px
-    font-size: 13px
-    color: #FFF
-    padding: 15px 10px
-
-  li
-    color: $default-color
-    list-style: square
-    margin: 0 0 10px 30px
-
-
-div#tag-search-bar
-  margin: 0 0 $content-margin
-
-  div#tags
-    margin: 10px
-
-
-div.content-body
-  margin: 0 10px
-
-
-div#user-info, div#user-invite
-  margin: $content-margin 10px
+    border-top: 3px solid #6F171B
+    margin-bottom: 10px
+    padding-top: 5px
 
 
 div#footer
-  margin: 25px
+  border-top: 25px solid #99A846
+  clear: both
+  padding: 20px 0
 
   a:hover
     border-bottom: 2px solid $default-color
@@ -129,14 +72,12 @@ div#footer
 
 
 div#announcements
-  border: 2px solid #333
-  height: 250px
+  border: 1px solid #222
+  height: 220px
   overflow: hidden
-  margin: 10px auto 0
+  margin: auto
   position: relative
-  width: 940px
-  @include round-corners(2px, 2px, 2px, 2px)
-  @include enable-ie-css3
+  width: 660px
 
   a
     display: inline-block
@@ -156,13 +97,11 @@ div#announcement-numbers
   padding: 10px 10px 13px 13px
   position: absolute
   left: 0
-  @include round-corners(0, 0, 2px, 0)
-  @include enable-ie-css3
 
 
 div.announcement img
-  height: 250px
-  width: 940px
+  height: 220px
+  width: 660px
 
 
 div.announcement-text
@@ -172,8 +111,6 @@ div.announcement-text
   position: absolute
   right: 0
   width: 300px
-  @include round-corners(2px, 0, 0, 0)
-  @include enable-ie-css3
 
   p.title
     padding: 0 0 15px
@@ -185,6 +122,6 @@ div.announcement-text
 
 
 div.meta
-  @include text-shadow(1px, 1px, 0, #EDEDED)
-  @include round-corners(2px, 2px, 2px, 2px)
-  @include enable-ie-css3
+  background-color: transparent
+  padding: 0
+  text-align: right

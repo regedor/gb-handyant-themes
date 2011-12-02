@@ -1,8 +1,9 @@
 ---
   theme: none
-  default_locale: en
+  default_locale: pt
   addthis_pubid: "ra-4db0c70d4e7542c2"
-  title: AJTG
-  site_name: AJTG
-  site_header: Associação Juvenil de Taekwondo de Gualtar
+  title: "Paris Português"
+  site_name: "Paris Português"
+  site_header: "Paris Português"
+  announcement_size: "660x220#"
   force_locale: "true"
