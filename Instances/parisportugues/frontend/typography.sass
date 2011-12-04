@@ -8,6 +8,16 @@
   font-style: normal
 
 
+@font-face
+  font-family: 'DroidSansRegular'
+  src: url('/fonts/DroidSans-webfont.eot')
+  src: url('/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype')
+  src: url('/fonts/DroidSans-webfont.woff') format('woff')
+  src: url('/fonts/DroidSans-webfont.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
 body
   color: $text-color
   font: 13px Helvetica, Arial, Sans-Serif
@@ -37,7 +47,8 @@ p.inline-errors
 
 span.options
   color: #B2B2B2
-  font-size: 14px
+  font-family: DroidSansRegular
+  font-size: 13px
   @include text-shadow(1px, 1px, 0, #EFEFEF)
   @include enable-ie-css3
 
@@ -62,7 +73,7 @@ div#navigation
     color: #6F171B
 
 
-div#right-sidebar
+div#left-sidebar, div#right-sidebar
 
   h2
     color: #99A846
@@ -111,6 +122,8 @@ div#tag-search-bar
 
 
 div.meta li
+  font-family: DroidSansRegular
+  font-size: 12px
   line-height: 18px
 
 
