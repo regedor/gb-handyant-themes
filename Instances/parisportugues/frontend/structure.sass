@@ -10,13 +10,7 @@ div#wrapper
 div#header
   border-bottom: 25px solid #99A846
   margin-bottom: 20px
-
-  div#logo
-    background-image: url("/logo.png")
-    background-repeat: no-repeat
-    height: 155px
-    margin: 15px 0 0
-    width: 300px
+  position: relative
 
   span.options
     background-color: #E5E5E5
@@ -25,25 +19,58 @@ div#header
     width: 980px
     text-align: right
 
+  div#logo
+    background-image: url("/logo.png")
+    background-repeat: no-repeat
+    height: 155px
+    margin: 15px 0 0
+    width: 300px
+
+  div#ads
+    background-color: #E5E5E5
+    height: 120px
+    position: absolute
+    right: 0
+    top: 60px
+    width: 350px
+
 
 div#left-sidebar
   float: left
-  width: 125px
+  padding: 0 20px 0 10px
+  width: 105px
+
+  h2.title
+    border-top: 3px solid #6F171B
+    margin-bottom: 10px
+    padding-top: 5px
 
   div#navigation
+    height: 185px
 
-    ul li a
-      border: none
-      padding: 12px 20px 12px 0
+    ul li
+      margin: 0 0 5px
+
+      a
+        border: none
+
+  div#supporters
+    div.support-logo
+      background-color: #E5E5E5
+      height: 80px
+      margin: 20px 13px
+      width: 80px
 
 
 div#main
+  border-left: 1px solid #E5E5E5
   float: left
-  margin: 0 20px
-  width: 660px
+  margin-bottom: 20px
+  padding: 0 20px
+  width: 649px
 
   div#content.single
-    margin: 20px 0
+    margin: 20px 0 0
     width: inherit
 
 
@@ -73,11 +100,11 @@ div#footer
 
 div#announcements
   border: 1px solid #222
-  height: 220px
+  height: 185px
   overflow: hidden
   margin: auto
   position: relative
-  width: 660px
+  width: 648px
 
   a
     display: inline-block
@@ -100,8 +127,8 @@ div#announcement-numbers
 
 
 div.announcement img
-  height: 220px
-  width: 660px
+  height: 185px
+  width: 648px
 
 
 div.announcement-text
