@@ -1,0 +1,60 @@
+div.ec-calendar
+  background-color: #7F8A90
+  margin-bottom: 20px
+  cursor: default
+
+  td, th
+    color: #454545
+    height: 25px
+    position: relative
+    text-align: center
+    vertical-align: middle
+    width: 25px
+
+  th
+    font-size: 11px
+
+  th.ec-month-name
+    font-size: 13px
+    width: 95px
+
+  th.ec-month-nav
+    width: 40px
+
+    a:hover
+      color: #99A846
+
+  th.ec-day-name
+    width: 25px
+
+  td.ec-today-header
+    border: 1px solid #999
+    height: 23px
+    width: 23px
+    @include round-corners(3px, 3px, 3px, 3px)
+    @include enable-ie-css3
+
+  td div.events ul
+    background-color: #FFF
+    border: 1px solid #999
+    display: none
+    padding: 15px
+    position: absolute
+    top: 25px
+    width: 100px
+    z-index: 1
+    @include round-corners(3px, 3px, 3px, 3px)
+    @include enable-ie-css3
+
+  td:hover div.events ul
+    display: block
+
+  div.events
+    height: 23px
+    position: absolute
+    top: 0
+    width: 23px
+
+    li span
+      display: block
+      text-align: justify

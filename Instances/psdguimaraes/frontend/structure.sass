@@ -1,0 +1,162 @@
+body
+  background-color: #E9E9E9
+  background-image: url('/images/pattern.png')
+
+
+div#wrapper
+  background-color: #FFF
+  border-left: 1px solid #000
+  border-right: 1px solid #000
+  margin: auto
+  width: 1000px
+
+
+div#header
+  height: 390px
+  position: relative
+
+  div#logo
+    background-image: url("/logo.png")
+    background-repeat: no-repeat
+    float: left
+    height: 75px
+    margin: 20px
+    width: 165px
+
+  span.site-title
+    display: block
+    padding-top: 55px
+
+  span.options
+    background-color: $default-color
+    margin: 0 20px
+    padding: 10px 15px
+    position: absolute
+    right: 0
+    top: 0
+    @include round-corners(0, 0, 10px, 10px)
+    @include enable-ie-css3
+
+
+div#left-sidebar
+  float: left
+  width: 175px
+
+  div#navigation
+
+    ul li
+      border-top: 1px dotted #AAA
+      padding: 10px 20px
+
+      a
+        border: none
+        padding: 12px 20px 12px 0
+
+
+div#main
+  float: left
+  margin: 0 20px
+  width: 610px
+
+  div#content.single
+    margin: 0 0 20px
+    width: inherit
+
+
+div#right-sidebar
+  float: right
+  width: 175px
+
+  h2
+    background-color: #7F8A90
+    padding-top: 5px
+
+  div#tag-menu
+    margin: 0
+    width: inherit
+
+    li
+      color: $default-color
+      list-style: square
+      margin: 0 0 10px 30px
+
+
+div#tag-search-bar
+  margin: 0 0 $content-margin
+
+  div#tags
+    margin: 10px
+
+
+div#footer
+  clear: both
+  padding: 20px 0
+
+  a:hover
+    border-bottom: 2px solid $default-color
+
+
+// =============
+// Announcements
+// =============
+
+
+div#announcements
+  border-bottom: 1px solid #000
+  border-top: 1px solid #000
+  height: 250px
+  overflow: hidden
+  margin: auto
+  position: relative
+  width: 1000px
+
+  a
+    display: inline-block
+
+  a:hover
+    border: none
+    display: inline-block
+
+
+div.announcement-tail
+  display: none
+
+
+div#announcement-numbers
+  background: url("/images/dark_transparency.png")
+  cursor: default
+  padding: 10px 10px 13px 13px
+  position: absolute
+  left: 0
+  @include round-corners(0, 0, 10px, 0)
+  @include enable-ie-css3
+
+
+div.announcement img
+  height: 250px
+  width: 1000px
+
+
+div.announcement-text
+  background: url("/images/dark_transparency.png")
+  bottom: 0
+  padding: 14px 12px 12px 14px
+  position: absolute
+  right: 0
+  width: 300px
+  @include round-corners(10px, 0, 0, 0)
+  @include enable-ie-css3
+
+  p.title
+    padding: 0 0 15px
+
+
+// =====
+// Posts
+// =====
+
+
+div.meta
+  background-color: transparent
+  padding: 0
+  text-align: right
