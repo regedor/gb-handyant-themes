@@ -33,27 +33,41 @@ div.ec-calendar
     @include round-corners(3px, 3px, 3px, 3px)
     @include enable-ie-css3
 
-  td div.events ul
-    background-color: #FFF
-    border: 1px solid #999
-    display: none
-    padding: 15px
-    position: absolute
-    top: 25px
-    width: 100px
-    z-index: 1
-    @include round-corners(3px, 3px, 3px, 3px)
-    @include enable-ie-css3
+  td.has-events
+    color: #6F171B
 
-  td:hover div.events ul
-    display: block
-
-  div.events
+  td div.events
     height: 23px
     position: absolute
     top: 0
     width: 23px
 
-    li span
+    ul
+      background-color: #FFF
+      border: 1px solid #999
+      display: none
+      padding: 15px
+      position: absolute
+      top: 25px
+      width: 110px
+      z-index: 1
+      @include round-corners(3px, 3px, 3px, 3px)
+      @include enable-ie-css3
+
+    li a
       display: block
       text-align: justify
+
+    li a:hover
+      color: #6F171B
+      text-decoration: underline
+
+    li span
+      color: #99A846
+      display: block
+      margin-bottom: 5px
+      text-align: left
+
+
+  td:hover div.events ul
+    display: block
