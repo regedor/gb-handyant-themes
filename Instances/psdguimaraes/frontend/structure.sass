@@ -12,7 +12,7 @@ div#wrapper
 
 
 div#header
-  height: 390px
+  margin-bottom: 20px
   position: relative
 
   div#logo
@@ -54,9 +54,10 @@ div#left-sidebar
 
 
 div#main
+  border-left: 1px dotted #999
   float: left
-  margin: 0 20px
-  width: 610px
+  padding: 0 20px
+  width: 569px
 
   div#content.single
     margin: 0 0 20px
@@ -65,11 +66,15 @@ div#main
 
 div#right-sidebar
   float: right
-  width: 175px
+  width: 215px
 
   h2
     background-color: #7F8A90
-    padding-top: 5px
+    border-bottom: 1px dotted #FFF
+    margin: 0 20px 0 0
+    padding: 5px
+    @include round-corners(10px, 0, 0, 0)
+    @include enable-ie-css3
 
   div#tag-menu
     margin: 0
@@ -89,8 +94,13 @@ div#tag-search-bar
 
 
 div#footer
+  background-color: $default-color
   clear: both
-  padding: 20px 0
+  margin: auto
+  padding: 15px 0
+  width: 960px
+  @include round-corners(10px, 10px, 0, 0)
+  @include enable-ie-css3
 
   a:hover
     border-bottom: 2px solid $default-color
@@ -102,13 +112,12 @@ div#footer
 
 
 div#announcements
-  border-bottom: 1px solid #000
-  border-top: 1px solid #000
+  border: 1px solid #000
   height: 250px
   overflow: hidden
   margin: auto
   position: relative
-  width: 1000px
+  width: 960px
 
   a
     display: inline-block
@@ -134,7 +143,7 @@ div#announcement-numbers
 
 div.announcement img
   height: 250px
-  width: 1000px
+  width: 960px
 
 
 div.announcement-text
@@ -157,6 +166,8 @@ div.announcement-text
 
 
 div.meta
+  color: $default-color
   background-color: transparent
   padding: 0
   text-align: right
+  text-transform: uppercase

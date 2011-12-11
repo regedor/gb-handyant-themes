@@ -8,6 +8,16 @@
   font-style: normal
 
 
+@font-face
+  font-family: 'TerminalDosisExtraLight'
+  src: url('/fonts/terminaldosis-extralight-webfont.eot')
+  src: url('/fonts/terminaldosis-extralight-webfont.eot?#iefix') format('embedded-opentype')
+  src: url('/fonts/terminaldosis-extralight-webfont.woff') format('woff')
+  src: url('/fonts/terminaldosis-extralight-webfont.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
 body
   color: $text-color
   font: 13px Helvetica, Arial, Sans-Serif
@@ -71,7 +81,8 @@ div#right-sidebar
 
   h2
     color: #FFF
-    font-size: 18px
+    font-family: 'TerminalDosisExtraLight'
+    font-size: 24px
     text-align: center
     text-transform: uppercase
 
@@ -135,11 +146,13 @@ ul.archives-month
 
 
 div#footer
-  color: #454545
+  color: #FFF
   text-align: center
+  @include text-shadow(1px, 1px, 0, #000)
+  @include enable-ie-css3
 
   a
-    color: #6F171B
+    color: #FFF
     font-weight: bold
 
 

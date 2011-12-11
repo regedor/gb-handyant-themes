@@ -1,10 +1,14 @@
 div.ec-calendar
   background-color: #7F8A90
-  margin-bottom: 20px
+  font-family: "PTSansRegular"
+  margin: 0 20px 20px 0
   cursor: default
+  padding: 10px
+  @include round-corners(0, 0, 10px, 0)
+  @include enable-ie-css3
 
   td, th
-    color: #454545
+    color: #FFF
     height: 25px
     position: relative
     text-align: center
@@ -16,45 +20,58 @@ div.ec-calendar
 
   th.ec-month-name
     font-size: 13px
-    width: 95px
+    text-transform: uppercase
+    width: 115px
 
   th.ec-month-nav
-    width: 40px
+    width: 30px
 
     a:hover
-      color: #99A846
+      color: $default-color
 
   th.ec-day-name
     width: 25px
 
   td.ec-today-header
-    border: 1px solid #999
+    border: 1px solid #FFF
     height: 23px
     width: 23px
     @include round-corners(3px, 3px, 3px, 3px)
     @include enable-ie-css3
 
-  td div.events ul
-    background-color: #FFF
-    border: 1px solid #999
-    display: none
-    padding: 15px
-    position: absolute
-    top: 25px
-    width: 100px
-    z-index: 1
-    @include round-corners(3px, 3px, 3px, 3px)
-    @include enable-ie-css3
+  td.has-events
+    background-color: #3B4349
 
-  td:hover div.events ul
-    display: block
-
-  div.events
-    height: 23px
+  td div.events
     position: absolute
     top: 0
-    width: 23px
+
+    ul
+      background-color: #7F8A90
+      border: 1px solid #3B4349
+      display: none
+      padding: 15px
+      position: absolute
+      top: 25px
+      width: 150px
+      z-index: 1
+      @include round-corners(3px, 3px, 3px, 3px)
+      @include enable-ie-css3
+
+    li a
+      color: #FFF
+      display: block
+      text-align: justify
+
+    li a:hover
+      color: #3B4349
+      text-decoration: underline
 
     li span
       display: block
-      text-align: justify
+      margin-bottom: 5px
+      text-align: left
+
+
+  td:hover div.events ul
+    display: block
