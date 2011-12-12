@@ -12,6 +12,7 @@ div#wrapper
 
 
 div#header
+  border-top: 3px solid #F68B1E
   margin-bottom: 20px
   position: relative
 
@@ -30,7 +31,7 @@ div#header
   span.options
     background-color: $default-color
     margin: 0 20px
-    padding: 10px 15px
+    padding: 5px 15px 10px
     position: absolute
     right: 0
     top: 0
@@ -94,13 +95,11 @@ div#tag-search-bar
 
 
 div#footer
-  background-color: $default-color
+  background-color: #7F8A90
+  border-top: 1px solid #000
   clear: both
   margin: auto
-  padding: 15px 0
-  width: 960px
-  @include round-corners(10px, 10px, 0, 0)
-  @include enable-ie-css3
+  padding: 25px 0
 
   a:hover
     border-bottom: 2px solid $default-color
