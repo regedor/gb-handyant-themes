@@ -54,9 +54,11 @@
 
       <%= render :partial => 'calendar/calendar', :locals => { :year => Time.now.year, :month => Time.now.month } %>
 
-      <h2 class="title">Mapas</h2>
-      <a href="/pages/portugal"><div id="map-pt"></div></a>
-      <a href="/pages/frança"><div id="map-fr"></div></a>
+      <div id="maps">
+        <h2 class="title">Mapas</h2>
+        <a href="/pages/portugal"><div id="map-pt"></div></a>
+        <a href="/pages/frança"><div id="map-fr"></div></a>
+      </div>
     </div>
 
     <%= render :partial => 'shared/footer' %>

@@ -1,6 +1,7 @@
 div.ec-calendar
   margin-bottom: 20px
   cursor: default
+  font-family: "PTSansRegular"
 
   td, th
     color: #454545
@@ -15,13 +16,14 @@ div.ec-calendar
 
   th.ec-month-name
     font-size: 13px
-    width: 95px
+    text-transform: uppercase
+    width: 115px
 
   th.ec-month-nav
-    width: 40px
+    width: 30px
 
     a:hover
-      color: #99A846
+      color: $default-color
 
   th.ec-day-name
     width: 25px
@@ -37,8 +39,7 @@ div.ec-calendar
     color: #6F171B
 
   td div.events
-    position: absolute
-    top: 0
+    position: relative
 
     ul
       background-color: #FFF
@@ -46,7 +47,6 @@ div.ec-calendar
       display: none
       padding: 15px
       position: absolute
-      top: 25px
       width: 110px
       z-index: 1
       @include round-corners(3px, 3px, 3px, 3px)
