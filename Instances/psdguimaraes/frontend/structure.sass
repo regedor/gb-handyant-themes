@@ -12,7 +12,7 @@ div#wrapper
 
 
 div#header
-  border-top: 3px solid #F68B1E
+  border-top: 3px solid $default-color
   margin-bottom: 20px
   position: relative
 
@@ -26,7 +26,8 @@ div#header
 
   span.site-title
     display: block
-    padding-top: 55px
+    float: right
+    margin: 75px 20px 0
 
   span.options
     background-color: $default-color
@@ -46,7 +47,7 @@ div#left-sidebar
   div#navigation
 
     ul li
-      border-top: 1px dotted #AAA
+      border-top: 1px solid #EDEDED
       padding: 10px 20px
 
       a
@@ -55,7 +56,7 @@ div#left-sidebar
 
 
 div#main
-  border-left: 1px dotted #999
+  border-left: 1px solid #EDEDED
   float: left
   padding: 0 20px
   width: 569px
@@ -71,7 +72,8 @@ div#right-sidebar
 
   h2
     background-color: #7F8A90
-    border-bottom: 1px dotted #FFF
+    background-image: url("/images/line.png")
+    border-bottom: 1px solid #FFF
     margin: 0 20px 0 0
     padding: 5px
     @include round-corners(10px, 0, 0, 0)
@@ -94,15 +96,17 @@ div#tag-search-bar
     margin: 10px
 
 
+div#archives
+  margin: 0
+
+
 div#footer
   background-color: #7F8A90
+  background-image: url("/images/line.png")
   border-top: 1px solid #000
   clear: both
   margin: auto
   padding: 25px 0
-
-  a:hover
-    border-bottom: 2px solid $default-color
 
 
 // =============
@@ -165,12 +169,23 @@ div.announcement-text
 
 
 div.post
-  border-bottom: 1px dotted #999
+  border-bottom: 1px solid #EDEDED
+
+
+div.textile-body
+  margin: 0 0 0 10px
+
+  p
+    color: #7F8A90
+
+
+div.event-body
+  margin: 0 0 30px
 
 
 div.meta
   color: $default-color
   background-color: transparent
-  padding: 0 0 10px
+  margin: 0 0 20px
+  padding: 0
   text-align: right
-  text-transform: uppercase

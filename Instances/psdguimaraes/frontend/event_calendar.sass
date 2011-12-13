@@ -1,5 +1,6 @@
 div.ec-calendar
   background-color: #7F8A90
+  background-image: url("/images/line.png")
   font-family: "PTSansRegular"
   margin: 0 20px 20px 0
   cursor: default
@@ -43,16 +44,15 @@ div.ec-calendar
     background-color: #3B4349
 
   td div.events
-    position: absolute
-    top: 0
+    position: relative
 
     ul
       background-color: #7F8A90
+      background-image: url("/images/line.png")
       border: 1px solid #3B4349
       display: none
       padding: 15px
       position: absolute
-      top: 25px
       width: 150px
       z-index: 1
       @include round-corners(3px, 3px, 3px, 3px)
