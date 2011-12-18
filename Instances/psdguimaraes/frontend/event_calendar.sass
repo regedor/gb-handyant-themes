@@ -1,77 +1,82 @@
-div.ec-calendar
-  background-color: #7F8A90
-  background-image: url("/images/line.png")
-  font-family: "PTSansRegular"
-  margin: 0 0 20px
-  cursor: default
-  padding: 10px
-  @include round-corners(0, 0, 10px, 0)
-  @include enable-ie-css3
+div#event-calendar
 
-  td, th
-    color: #FFF
-    height: 25px
-    position: relative
-    text-align: center
-    vertical-align: middle
-    width: 25px
+  h2
+    background-color: #7F8A90
 
-  th
-    font-size: 11px
-
-  th.ec-month-name
-    font-size: 13px
-    text-transform: uppercase
-    width: 115px
-
-  th.ec-month-nav
-    width: 30px
-
-    a:hover
-      color: $default-color
-
-  th.ec-day-name
-    width: 25px
-
-  td.ec-today-header
-    border: 1px solid #FFF
-    height: 23px
-    width: 23px
-    @include round-corners(3px, 3px, 3px, 3px)
+  div.ec-calendar
+    background-color: #7F8A90
+    background-image: url("/images/line.png")
+    font-family: "PTSansRegular"
+    margin: 0 0 20px
+    cursor: default
+    padding: 10px
+    @include round-corners(0, 0, 10px, 0)
     @include enable-ie-css3
-
-  td.has-events
-    background-color: #3B4349
-
-  td div.events
-    position: relative
-
-    ul
-      background-color: #7F8A90
-      background-image: url("/images/line.png")
-      border: 1px solid #3B4349
-      display: none
-      padding: 15px
-      position: absolute
-      width: 150px
-      z-index: 1
+  
+    td, th
+      color: #FFF
+      height: 25px
+      position: relative
+      text-align: center
+      vertical-align: middle
+      width: 25px
+  
+    th
+      font-size: 11px
+  
+    th.ec-month-name
+      font-size: 13px
+      text-transform: uppercase
+      width: 115px
+  
+    th.ec-month-nav
+      width: 30px
+  
+      a:hover
+        color: $default-color
+  
+    th.ec-day-name
+      width: 25px
+  
+    td.ec-today-header
+      border: 1px solid #FFF
+      height: 23px
+      width: 23px
       @include round-corners(3px, 3px, 3px, 3px)
       @include enable-ie-css3
-
-    li a
-      color: #FFF
+  
+    td.has-events
+      background-color: #3B4349
+  
+    td div.events
+      position: relative
+  
+      ul
+        background-color: #7F8A90
+        background-image: url("/images/line.png")
+        border: 1px solid #3B4349
+        display: none
+        padding: 15px
+        position: absolute
+        width: 150px
+        z-index: 1
+        @include round-corners(3px, 3px, 3px, 3px)
+        @include enable-ie-css3
+  
+      li a
+        color: #FFF
+        display: block
+        text-align: justify
+  
+      li a:hover
+        color: #3B4349
+        text-decoration: underline
+  
+      li span
+        display: block
+        margin-bottom: 5px
+        text-align: left
+  
+  
+    td:hover div.events ul
       display: block
-      text-align: justify
-
-    li a:hover
-      color: #3B4349
-      text-decoration: underline
-
-    li span
-      display: block
-      margin-bottom: 5px
-      text-align: left
-
-
-  td:hover div.events ul
-    display: block

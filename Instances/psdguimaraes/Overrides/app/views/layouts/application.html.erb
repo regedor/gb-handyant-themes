@@ -29,6 +29,8 @@
 
     <div id="left-sidebar">
       <div id="navigation"><%= frontend_navigation_content %></div>
+
+      <%= render :partial => 'shared/search' %>
     </div>
 
     <div id="main" class="selfclear">
@@ -43,6 +45,8 @@
 
     <div id="right-sidebar">
       <%= render :partial => 'shared/event_calendar', :locals => { :year => Time.now.year, :month => Time.now.month } %>
+
+      <%= render :partial => 'shared/newsletter' %>
     </div>
 
     <%= render :partial => 'shared/footer' %>

@@ -42,12 +42,19 @@ div#header
 
 div#left-sidebar
   float: left
-  width: 175px
+  width: 195px
+
+  h2
+    background-image: url("/images/line.png")
+    border-bottom: 1px solid #FFF
+    margin-bottom: 0
+    padding: 5px
 
   div#navigation
+    border-top: 1px solid #EDEDED
 
     ul li
-      border-top: 1px solid #EDEDED
+      border-bottom: 1px solid #EDEDED
       padding: 10px 20px
 
       a
@@ -59,7 +66,7 @@ div#main
   border-left: 1px solid #EDEDED
   float: left
   padding: 0 20px
-  width: 569px
+  width: 549px
 
   div#content.single
     margin: 0 0 20px
@@ -72,7 +79,6 @@ div#right-sidebar
   width: 195px
 
   h2
-    background-color: #7F8A90
     background-image: url("/images/line.png")
     border-bottom: 1px solid #FFF
     margin-bottom: 0
@@ -138,7 +144,7 @@ div.announcement-tail
 div#announcement-numbers
   background: url("/images/dark_transparency.png")
   cursor: default
-  padding: 10px 10px 13px 13px
+  padding: 10px
   position: absolute
   left: 0
   @include round-corners(0, 0, 10px, 0)
@@ -153,7 +159,7 @@ div.announcement img
 div.announcement-text
   background: url("/images/dark_transparency.png")
   bottom: 0
-  padding: 14px 12px 12px 14px
+  padding: 14px
   position: absolute
   right: 0
   width: 300px

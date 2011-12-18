@@ -1,0 +1,29 @@
+div#search
+
+  h2
+    background-color: $default-color
+    padding-left: 20px
+    text-align: left
+
+  form
+    background-color: $default-color
+    background-image: url('/images/line.png')
+    height: 56px
+    @include round-corners(0, 0, 10px, 10px)
+    @include enable-ie-css3
+
+    input[type='text']
+      border: 1px solid #7F8A90
+      font-size: 13px
+      margin: 15px 2px 15px 20px
+      padding: 4px
+      width: 125px
+
+    input[type='submit']
+      background-color: transparent
+      background-image: url('/images/magnifying_glass.png')
+      border: none
+      cursor: pointer
+      height: 20px
+      padding: 4px
+      width: 20px

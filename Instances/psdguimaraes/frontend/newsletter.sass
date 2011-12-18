@@ -1,0 +1,36 @@
+div#newsletter
+  color: #FFF
+  font-family: "PTSansRegular"
+
+  h2
+    background-color: $default-color
+
+  form
+    background-color: $default-color
+    background-image: url('/images/line.png')
+    @include round-corners(0, 0, 10px, 0)
+    @include enable-ie-css3
+
+    label
+      display: inline-block
+      margin-left: 10px
+      width: 35px
+
+    input[type='text']
+      border: 1px solid #7F8A90
+      font-size: 13px
+      margin: 15px 0 0 10px
+      padding: 4px
+      width: 120px
+
+    input[type='submit']
+      background-color: transparent
+      background-image: url('/images/subscribe.png')
+      background-position: 100%
+      background-repeat: no-repeat
+      border: none
+      color: #FFF
+      cursor: pointer
+      margin: 10px 10px 10px 88px
+      padding-right: 22px
+      text-transform: uppercase
