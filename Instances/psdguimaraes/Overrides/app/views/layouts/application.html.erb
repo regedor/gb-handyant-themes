@@ -42,7 +42,7 @@
     </div>
 
     <div id="right-sidebar">
-      <%= render :partial => 'calendar/calendar', :locals => { :year => Time.now.year, :month => Time.now.month } %>
+      <%= render :partial => 'shared/event_calendar', :locals => { :year => Time.now.year, :month => Time.now.month } %>
     </div>
 
     <%= render :partial => 'shared/footer' %>
