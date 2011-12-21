@@ -1,8 +1,7 @@
 --- 
   theme: dirtyfrankez
-  default_locale: en
-  addthis_pubid: "ra-4db0c70d4e7542c2"
-  title: NEBIOQ
-  site_name: NEBIOQ
-  site_header: Núcleo de Estudantes de Bioquímica da Universidade de Coimbra
+  default_locale: pt
+  title: Itaca Project
+  site_name: Itaca Project
+  site_header: Itaca Project
   force_locale: "true"
