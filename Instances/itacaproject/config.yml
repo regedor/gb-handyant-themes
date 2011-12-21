@@ -1,0 +1,8 @@
+--- 
+  theme: dirtyfrankez
+  default_locale: en
+  addthis_pubid: "ra-4db0c70d4e7542c2"
+  title: NEBIOQ
+  site_name: NEBIOQ
+  site_header: Núcleo de Estudantes de Bioquímica da Universidade de Coimbra
+  force_locale: "true"
