@@ -1,0 +1,25 @@
+*.sassc
+**.orig
+.sass-cache
+
+# Linux ignores
+.*
+*~
+*.sw[a-p]
+.directory
+
+# Vim ignores
+.*.sw[a-z]
+*.un~
+
+# OSX ignores
+.DS_Store?
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# TextMate ignores
+*.tmproj
+*.tmproject
+tmtags
