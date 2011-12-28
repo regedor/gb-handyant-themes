@@ -1,0 +1,157 @@
+body
+  @include linear-gradient(#6DC0E1, #FFF)
+  @include enable-ie-css3
+
+
+div#header
+  margin: 20px auto 60px
+  padding-right: 20px
+  width: 880px
+
+  span.options
+    display: block
+    text-align: right
+
+    a:hover
+      border-bottom: 2px solid $default-color
+
+div#wrapper
+  background-color: #FFF
+  margin: auto
+  width: 900px
+  @include box-shadow(0, 0, 6px, #222)
+  @include enable-ie-css3
+
+  div#top-panel
+    height: 242px
+    position: relative
+
+    div#logo
+      background-image: url('/images/logo.png')
+      float: left
+      height: 125px
+      margin: 58px 20px
+      width: 283px
+
+  div#menu
+    margin: 0 20px
+    border-bottom: 2px solid #006483
+  
+    ul
+      margin: 15px 0
+  
+      li
+        display: inline
+        padding: 15px 0
+        @include linear-gradient(#359AB9, #006483)
+        @include round-corners(4px, 4px, 0, 0)
+        @include enable-ie-css3
+    
+        a
+          border: none
+          padding: 15px 20px
+    
+        a:hover
+          background-color: #FFF
+    
+        a.current:hover
+          background-color: transparent
+
+  div#bottom-panel
+    background-image: url('/images/waves.png')
+    background-color: #00DCF4
+    background-repeat: no-repeat
+    height: 160px
+    padding-top: 40px
+
+    div#bottom-panel-left
+      float: left
+
+    div#bottom-panel-center
+      float: left
+
+    div#bottom-panel-right
+      float: right
+
+    div.bottom-panel-page
+      border-left: 1px solid #0095C8
+      color: #384A75
+      height: 120px
+      margin: 20px
+      padding: 0 10px
+      width: 237px
+
+
+div#tag-search-bar
+  margin: 0 0 15px
+
+  div#tags
+    margin: 10px
+
+
+div#user-info, div#user-invite
+  margin: 15px 10px
+
+
+div#footer
+  margin: 60px 20px 20px
+
+  a:hover
+    border-bottom: 2px solid $default-color
+
+
+// =============
+// Announcements
+// =============
+
+
+div#announcements
+  border: 1px solid #000
+  float: right
+  height: 200px
+  margin: 20px
+  overflow: hidden
+  position: relative
+  width: 500px
+
+  a
+    display: block
+     
+  a:hover
+    border: none
+
+
+div.announcement-tail
+  display: none
+
+
+div#announcement-numbers
+  background: url("/images/dark_transparency.png")
+  cursor: default
+  padding: 10px 10px 13px 13px
+  position: absolute
+  right: 0
+  @include round-corners(0, 0, 0, 12px)
+  @include enable-ie-css3
+
+  a
+    display: inline-block
+
+
+div.announcement img
+  height: 200px
+  width: 500px
+
+
+div.announcement-text
+  background: url("/images/dark_transparency.png")
+  bottom: 0
+  padding: 14px 12px 12px 14px
+  position: absolute
+  right: 0
+  width: 300px
+  @include round-corners(12px, 0, 0, 0)
+  @include enable-ie-css3
+
+  p.title
+    padding: 0 0 15px
