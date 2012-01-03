@@ -72,22 +72,24 @@ div#header
       background-color: #8CABBF
 
 
-div#tag-menu
-  background-image: url("/images/tag_cloud_gradient.png")
-  background-repeat: repeat-x
-  background-position: 0% 100%
-  border: 1px solid #DDD
+div#right-sidebar
   margin-right: 0
-  padding: 10px 20px
-  width: 20.8%
-  @include round-corners(5px, 5px, 5px, 5px)
-  @include enable-ie-css3
+  width: 25%
 
-  li
-    color: $default-color
-    list-style: square
-    margin-left: 30px
-    margin-bottom: 10px
+  div#tag-menu
+    background-image: url("/images/tag_cloud_gradient.png")
+    background-repeat: repeat-x
+    background-position: 0% 100%
+    border: 1px solid #DDD
+    padding: 10px 20px
+    @include round-corners(5px, 5px, 5px, 5px)
+    @include enable-ie-css3
+  
+    li
+      color: $default-color
+      list-style: square
+      margin-left: 30px
+      margin-bottom: 10px
 
 
 div#tag-search-bar
