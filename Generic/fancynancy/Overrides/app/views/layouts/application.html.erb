@@ -35,13 +35,15 @@
 
         <%= render :partial => 'announcements/announcement' %>
 
-        <%= yield :tag_menu %>
+        <%= render :partial => 'shared/tag_menu' if yield(:tag_cloud) %>
 
-        <div id="content" class="<%= yield(:tag_menu) ? 'double' : 'single' %>">
+        <div id="content" class="double">
           <%= yield %>
         </div>
-      </div>
 
+        <div id="right-sidebar">
+        </div>
+      </div>
     </div>
 
     <%= render :partial => 'shared/footer' %>
