@@ -11,6 +11,8 @@ span.options
 
   a
     color: #FFF
+    @include text-shadow(1px, 1px, 0, #000)
+    @include enable-ie-css3
 
 
 div.announcement-text
@@ -37,29 +39,24 @@ div#announcement-numbers
 
 
 div#menu
+  font-size: 15px
   @include text-shadow(1px, 1px, 0, #000)
   @include enable-ie-css3
 
   ul li a
     color: #FFF
-    font-weight: bold
 
   a:hover
-    @include text-shadow(0, 0, 15px, #000)
-    @include enable-ie-css3
+    text-decoration: underline
 
   a.current
     text-decoration: underline
 
-  a.current:hover
-    @include text-shadow(1px, 1px, 0, #000)
-    @include enable-ie-css3
 
-
-div#tag-menu h2.title, div#social-networks h2.title, div#support h2.title
+div#right-sidebar h2.title
   color: #FFF
   font-size: 14px
-  @include text-shadow(1px, 2px, 0, #000)
+  @include text-shadow(1px, 1px, 0, #000)
   @include enable-ie-css3
 
 
@@ -94,6 +91,8 @@ ul.archives-month
 div#footer
   color: #FFF
   text-align: center
+  @include text-shadow(1px, 1px, 0, #000)
+  @include enable-ie-css3
 
   a
     color: $default-color
