@@ -1,0 +1,155 @@
+body
+  background-color: $frontend-background-color
+  position: relative
+
+
+div.wrapper
+  margin: auto
+  width: 1000px
+
+
+div#header
+  height: 160px
+  @include linear-gradient(#05090C, #0F1923)
+  @include enable-ie-css3
+
+  span.site-title
+    float: left
+    margin: 15px
+
+  span.options
+    float: right
+    margin: 15px
+
+    a:hover
+      border-bottom: 2px solid $default-color
+
+  div#logo
+    background-image: url("/logo.png")
+    height: 217px
+    width: 196px
+
+
+div#navigation
+  height: 60px
+  position: relative
+  z-index: 1
+  @include box-shadow(0, 0, 20px, #111)
+  @include linear-gradient(#2C4257, #2C3033)
+  @include enable-ie-css3
+
+  ul
+    padding: 23px 0
+
+    li
+      display: inline
+
+      a
+        padding: 23px
+
+
+div#right-sidebar
+
+  div.block
+    border: 1px solid #3F4F5E
+    margin-bottom: 20px
+
+    h2.title
+      padding: 8px 15px
+
+    li
+      color: $default-color
+      list-style: disc
+      margin-left: 35px
+      margin-bottom: 10px
+
+
+div#main
+  background-color: #13161B
+  margin: auto
+  padding-top: 20px
+  width: 1000px
+  @include box-shadow(0, 0, 50px, #466076)
+  @include enable-ie-css3
+
+
+div#tag-search-bar
+  margin: 0 0 $content-margin
+
+  div#tags
+    margin: 10px
+
+
+div#user-info, div#user-invite
+  margin: $content-margin 10px
+
+
+div#footer
+  border-top: 1px solid #3F4F5E
+  padding: 40px 0
+  @include linear-gradient(#020202, #0A1017)
+  @include enable-ie-css3
+
+
+// =============
+// Announcements
+// =============
+
+
+div#announcements
+  border: 1px solid #000
+  height: 200px
+  margin: auto
+  overflow: hidden
+  position: relative
+  width: 740px
+  @include box-shadow(0, 0, 10px, #111)
+  @include enable-ie-css3
+
+  a
+    display: block
+
+  a:hover
+    border: none
+
+
+div.announcement-tail
+  display: none
+
+
+div#announcement-numbers
+  background: url("/images/dark_transparency.png")
+  cursor: default
+  padding: 12px
+  position: absolute
+  right: 0
+
+  a
+    display: inline-block
+
+
+div.announcement img
+  height: 200px
+  width: 740px
+
+
+div.announcement-text
+  background: url("/images/dark_transparency.png")
+  bottom: 0
+  padding: 14px
+  position: absolute
+  right: 0
+  width: 300px
+
+  p.title
+    padding: 0 0 15px
+
+
+// =====
+// Posts
+// =====
+
+
+div.meta
+  background-color: transparent
+  border: 1px solid #3F4F5E

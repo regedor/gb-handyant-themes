@@ -1,7 +1,9 @@
---- 
-  theme: dirtyfrankez
+---
+  theme: none
   default_locale: pt
+  addthis_pubid: "ra-4db0c70d4e7542c2"
   title: Itaca Project
   site_name: Itaca Project
   site_header: Itaca Project
+  announcement_size: "648x185#"
   force_locale: "true"
