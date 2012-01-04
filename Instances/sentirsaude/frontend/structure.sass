@@ -31,7 +31,7 @@ div#wrapper
       background-image: url('/logo.png')
       float: left
       height: 125px
-      margin: 58px 20px
+      margin: 58px 0 58px 20px
       width: 283px
 
   div#menu
@@ -53,14 +53,10 @@ div#wrapper
           border: none
           padding: 15px 20px
 
-        a:hover
+        a:hover, a.current
           @include linear-gradient(#09759D, #006282)
           @include round-corners(4px, 4px, 0, 0)
           @include enable-ie-css3
-
-        a.current:hover
-          background: none
-          text-decoration: underline
 
   div#bottom-panel
     background-image: url('/images/bottom_panel.png')
@@ -120,7 +116,7 @@ div#announcements
   margin: 20px
   overflow: hidden
   position: relative
-  width: 500px
+  width: 550px
 
   a
     display: block
@@ -136,7 +132,7 @@ div.announcement-tail
 div#announcement-numbers
   background: url("/images/dark_transparency.png")
   cursor: default
-  padding: 10px 10px 13px 13px
+  padding: 12px
   position: absolute
   right: 0
   @include round-corners(0, 0, 0, 12px)
@@ -148,13 +144,13 @@ div#announcement-numbers
 
 div.announcement img
   height: 200px
-  width: 500px
+  width: 550px
 
 
 div.announcement-text
   background: url("/images/dark_transparency.png")
   bottom: 0
-  padding: 14px 12px 12px 14px
+  padding: 14px
   position: absolute
   right: 0
   width: 300px
