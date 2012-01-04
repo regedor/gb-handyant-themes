@@ -15,6 +15,7 @@ div#header
     a:hover
       border-bottom: 2px solid #FFF
 
+
 div#wrapper
   background-color: #FFF
   margin: auto
@@ -46,7 +47,7 @@ div#wrapper
         margin-right: 2px
         padding: 15px 0
         @include linear-gradient(#359AB9, #006483)
-        @include round-corners(4px, 4px, 0, 0)
+        @include round-corners(5px, 5px, 0, 0)
         @include enable-ie-css3
 
         a
@@ -55,8 +56,11 @@ div#wrapper
 
         a:hover, a.current
           @include linear-gradient(#09759D, #006282)
-          @include round-corners(4px, 4px, 0, 0)
+          @include round-corners(5px, 5px, 0, 0)
           @include enable-ie-css3
+
+  div#right-sidebar
+    width: 21.3%
 
   div#bottom-panel
     background-image: url('/images/bottom_panel.png')
@@ -127,13 +131,10 @@ div.announcement-tail
 
 
 div#announcement-numbers
-  background: url("/images/dark_transparency.png")
   cursor: default
   padding: 12px
   position: absolute
   right: 0
-  @include round-corners(0, 0, 0, 12px)
-  @include enable-ie-css3
 
   a
     display: inline-block
@@ -146,12 +147,12 @@ div.announcement img
 
 div.announcement-text
   background: url("/images/dark_transparency.png")
-  bottom: 0
+  bottom: 20px
   padding: 14px
   position: absolute
   right: 0
   width: 300px
-  @include round-corners(12px, 0, 0, 0)
+  @include round-corners(5px, 0, 0, 5px)
   @include enable-ie-css3
 
   p.title
