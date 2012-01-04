@@ -1,9 +1,8 @@
 ---
   theme: none
   default_locale: pt
-  addthis_pubid: ""
-  title: "Sentir Saúde"
-  site_name: "Sentir Saúde"
-  site_header: "Sentir Saúde"
+  title: Sentir Saúde
+  site_name: Sentir Saúde
+  site_header: Sentir Saúde
   announcement_size: "555x200#"
   force_locale: "true"

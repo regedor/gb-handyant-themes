@@ -1,7 +1,6 @@
---- 
+---
   theme: brickstorm
-  default_locale: en
-  addthis_pubid: "ra-4e95a79b5fe52600"
+  default_locale: pt
   title: CeSIUM
   site_name: CeSIUM
   site_header: Centro de Estudantes de Engenharia Informática da Universidade do Minho

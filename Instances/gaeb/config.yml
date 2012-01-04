@@ -1,7 +1,6 @@
---- 
+---
   theme: tidypresent
-  default_locale: en
-  addthis_pubid: "ra-4db0c70d4e7542c2"
+  default_locale: pt
   title: GAEB
   site_name: GAEB
   site_header: Gabinete de Alunos de Engenharia Biomédica da Universidade do Minho

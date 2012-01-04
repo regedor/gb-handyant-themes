@@ -1,9 +1,8 @@
 ---
   theme: none
   default_locale: pt
-  addthis_pubid: "ra-4db0c70d4e7542c2"
-  title: Atreve-te
-  site_name: Atreve-te
+  title: Atreve-te 2011
+  site_name: Atreve-te 2011
   site_header: Concurso de Ideias de Negócio
   announcement_size: "690x200#"
   force_locale: "true"
