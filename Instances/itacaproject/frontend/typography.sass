@@ -20,6 +20,8 @@ div#header span.site-title
 
 div#navigation
   font-size: 16px
+  @include text-shadow(1px, 1px, 0, #000)
+  @include enable-ie-css3
 
   ul li
 
@@ -30,7 +32,8 @@ div#navigation
       text-decoration: underline
 
     a.current
-      color: #FFF
+      color: $default-color
+      text-decoration: none
 
 
 div#tag-menu
