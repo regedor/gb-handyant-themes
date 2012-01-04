@@ -8,11 +8,10 @@ h3.archives-month-title
 
 span.options
   color: #FFF
+  @include text-shadow(1px, 1px, 0, #006282)
+  @include enable-ie-css3
 
   a
-    color: #FFF
-
-  a:hover
     color: #FFF
 
 
@@ -80,11 +79,15 @@ ul.archives-month
   font-size: 14px
 
 
-div#footer
-  color: #555
-  text-align: center
-  @include text-shadow(1px, 1px, 0, #FFF)
+div#bottom-panel
+  color: #FFF
+  @include text-shadow(1px, 1px, 0, #006282)
   @include enable-ie-css3
+
+
+div#footer
+  color: #444
+  text-align: center
 
   a
     color: $default-color
