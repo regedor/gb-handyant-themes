@@ -1,7 +1,8 @@
---- 
-  theme: dirtyfrankez
+---
+  theme: none
   default_locale: pt
   title: Itaca Project
   site_name: Itaca Project
   site_header: Itaca Project
+  announcement_size: "910x200#"
   force_locale: "true"

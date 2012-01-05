@@ -36,20 +36,22 @@
       <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
       <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
 
-      <div id="content" class="<%= yield(:tag_menu) ? 'double' : 'single' %>">
+      <div id="content" class="double">
         <%= yield %>
       </div>
 
-      <%= yield :tag_menu %>
+      <div id="right-sidebar">
+        <%= render :partial => 'shared/tag_menu' if yield(:tag_cloud) %>
+      </div>
     </div>
 
     <div id="footer">
-	  <div class="wrapper">
+      <div class="wrapper">
         <div id="text-left">
           <div class="textile-body"><%= Page.find_by_title('footer_left').body_html %></div>
-            <p>Copyright © <%= Time.now.year %> <%= link_to configatron.site_name, configatron.site_url %>. All rights reserved. Powered by <%= link_to 'Group Buddies', 'http://www.groupbuddies.com' %>.</p>
-          </div>
-	    <div id="text-right">
+          <p>Copyright © <%= Time.now.year %> <%= link_to configatron.site_name, configatron.site_url %>. All rights reserved. Powered by <%= link_to 'Group Buddies', 'http://www.groupbuddies.com' %>.</p>
+        </div>
+        <div id="text-right">
           <div class="textile-body"><%= Page.find_by_title('footer_right').body_html %></div>
         </div>
       </div>

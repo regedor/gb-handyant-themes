@@ -1,3 +1,11 @@
+body
+  color: #FFF
+
+
+a, a:active, a:link, a:visited
+  color: #FFF
+
+
 h2.title
   font-size: 24px
 
@@ -6,8 +14,36 @@ h3.archives-month-title
   font-size: 20px
 
 
-div#header span.site-title
-  font-weight: bold
+div#navigation
+  font-size: 16px
+  @include text-shadow(1px, 1px, 0, #000)
+  @include enable-ie-css3
+
+  ul li
+
+    a
+      color: #FFF
+
+    a:hover
+      text-decoration: underline
+
+    a.current
+      color: $default-color
+      text-decoration: none
+
+
+div#tag-menu
+
+  h2.title
+    color: #FFF
+    font-size: 12px
+    font-weight: bold
+
+  a:hover
+    border-bottom: 2px solid $default-color
+
+  a.selected
+    font-weight: bold
 
 
 div.announcement-text
@@ -33,37 +69,6 @@ div#announcement-numbers
     color: $default-color
 
 
-div#menu
-  @include text-shadow(0, 1px, 0, #000)
-  @include enable-ie-css3
-
-  ul li a
-    color: #FFF
-    font-weight: bold
-
-  a:hover
-    text-decoration: underline
-
-  a.current:hover
-    text-decoration: none
-
-
-div#tag-menu
-
-  h2.title
-    color: #FFF
-    font-size: 12px
-    font-weight: bold
-    @include text-shadow(0, 1px, 0, #000)
-    @include enable-ie-css3
-
-  a:hover
-    border-bottom: 2px solid $default-color
-
-  a.selected
-    font-weight: bold
-
-
 div#tag-search-bar
   font-size: 14px
 
@@ -74,8 +79,15 @@ div#tag-search-bar
     font-size: 12px
 
 
-div.meta li
-  line-height: 18px
+div.meta
+  color: $default-color
+  text-align: right
+
+  a
+    color: $default-color
+
+  li
+    line-height: 18px
 
 
 div#flash div.message p
@@ -97,8 +109,11 @@ div#footer
   text-align: center
 
   a
-    color: $default-color
+    color: #FFF
     font-weight: bold
+
+  a:hover
+    color: $default-color
 
 
 // ========

@@ -42,16 +42,16 @@
         <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
         <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
 
-        <div id="content" class="<%= yield(:tag_menu) ? 'double' : 'single' %>">
+        <div id="content" class="double">
           <%= yield %>
         </div>
 
-        <%= yield :tag_menu %>
+        <div id="right-sidebar">
+          <%= render :partial => 'shared/tag_menu' if yield(:tag_cloud) %>
 
-        <% if yield :tag_menu %>
           <%= render :partial => 'shared/social_networks',
-                     :locals => { :networks => { :facebook_link => 'http://www.facebook.com/nedaac' } } %>
-        <% end %>
+                     :locals => { :networks => { :facebook_link => 'http://www.facebook.com/nedaac' } } if yield(:tag_cloud) %>
+        </div>
       </div>
 
       <%= render :partial => 'shared/footer' %>

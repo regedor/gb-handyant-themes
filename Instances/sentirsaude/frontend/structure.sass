@@ -1,10 +1,10 @@
 body
-  @include linear-gradient(#6DC0E1, #FFF)
+  @include linear-gradient(#0B779F, #FFF)
   @include enable-ie-css3
 
 
 div#header
-  margin: 20px auto 60px
+  margin: 15px auto 40px
   padding-right: 20px
   width: 880px
 
@@ -13,13 +13,15 @@ div#header
     text-align: right
 
     a:hover
-      border-bottom: 2px solid $default-color
+      border-bottom: 2px solid #FFF
+
 
 div#wrapper
   background-color: #FFF
   margin: auto
   width: 900px
   @include box-shadow(0, 0, 6px, #222)
+  @include round-corners(5px, 5px, 5px, 5px)
   @include enable-ie-css3
 
   div#top-panel
@@ -27,42 +29,47 @@ div#wrapper
     position: relative
 
     div#logo
-      background-image: url('/images/logo.png')
+      background-image: url('/logo.png')
       float: left
       height: 125px
-      margin: 58px 20px
+      margin: 58px 0 58px 20px
       width: 283px
 
   div#menu
     margin: 0 20px
-    border-bottom: 2px solid #006483
+    border-bottom: 1px solid #A3A5A8
   
     ul
       margin: 15px 0
   
       li
         display: inline
+        margin-right: 2px
         padding: 15px 0
         @include linear-gradient(#359AB9, #006483)
-        @include round-corners(4px, 4px, 0, 0)
+        @include round-corners(5px, 5px, 0, 0)
         @include enable-ie-css3
-    
+
         a
           border: none
           padding: 15px 20px
-    
-        a:hover
-          background-color: #FFF
-    
-        a.current:hover
-          background-color: transparent
+
+        a:hover, a.current
+          @include linear-gradient(#09759D, #006282)
+          @include round-corners(5px, 5px, 0, 0)
+          @include enable-ie-css3
+
+  div#right-sidebar
+    width: 21.3%
 
   div#bottom-panel
-    background-image: url('/images/waves.png')
-    background-color: #00DCF4
+    background-image: url('/images/bottom_panel.png')
+    background-color: #09759D
     background-repeat: no-repeat
     height: 160px
     padding-top: 40px
+    @include round-corners(0px, 0px, 5px, 5px)
+    @include enable-ie-css3
 
     div#bottom-panel-left
       float: left
@@ -74,8 +81,7 @@ div#wrapper
       float: right
 
     div.bottom-panel-page
-      border-left: 1px solid #0095C8
-      color: #384A75
+      border-left: 1px solid #3299B8
       height: 120px
       margin: 20px
       padding: 0 10px
@@ -94,7 +100,7 @@ div#user-info, div#user-invite
 
 
 div#footer
-  margin: 60px 20px 20px
+  margin: 40px 0 20px
 
   a:hover
     border-bottom: 2px solid $default-color
@@ -106,13 +112,12 @@ div#footer
 
 
 div#announcements
-  border: 1px solid #000
   float: right
   height: 200px
   margin: 20px
   overflow: hidden
   position: relative
-  width: 500px
+  width: 555px
 
   a
     display: block
@@ -126,13 +131,10 @@ div.announcement-tail
 
 
 div#announcement-numbers
-  background: url("/images/dark_transparency.png")
   cursor: default
-  padding: 10px 10px 13px 13px
+  padding: 12px
   position: absolute
   right: 0
-  @include round-corners(0, 0, 0, 12px)
-  @include enable-ie-css3
 
   a
     display: inline-block
@@ -140,17 +142,17 @@ div#announcement-numbers
 
 div.announcement img
   height: 200px
-  width: 500px
+  width: 555px
 
 
 div.announcement-text
   background: url("/images/dark_transparency.png")
-  bottom: 0
-  padding: 14px 12px 12px 14px
+  bottom: 20px
+  padding: 14px
   position: absolute
   right: 0
   width: 300px
-  @include round-corners(12px, 0, 0, 0)
+  @include round-corners(5px, 0, 0, 5px)
   @include enable-ie-css3
 
   p.title

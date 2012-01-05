@@ -158,16 +158,10 @@ div#navigation
       display: inline
 
       a
-        background-image: url("/images/menu.png")
         border-right: 1px solid #6E6258
-        color: #F3E7DD
         display: inline-block
-        height: 18px
-        padding: 9px 20px
-
-      a:hover
-        background-image: url("/images/menu.png")
-        color: #FFF
+        height: 16px
+        padding: 10px 20px
 
 
 div#primary-wrapper
@@ -182,26 +176,27 @@ div#primary-wrapper
   @include enable-ie-css3
 
 
-div#tag-menu
-  background-color: #F0E1D4
-  border: 1px solid #FFF
-  min-height: 170px
-  width: 21.6%
+div#right-sidebar
+  width: 21.7%
 
-  h2.title
-    background-image: url("/images/menu.png")
-    border-bottom: 1px solid #FFF
-    height: 18px
-    padding: 9px 20px
+  div#tag-menu
+    background-color: #F0E1D4
+    border: 1px solid #FFF
+    min-height: 170px
 
-  a:hover
-    border-bottom: 2px solid $default-color
+    h2.title
+      background-image: url("/images/menu.png")
+      border-bottom: 1px solid #FFF
+      padding: 10px 20px
 
-  li
-    color: #FFF
-    list-style: square
-    margin-bottom: 10px
-    margin-left: 35px
+    a:hover
+      border-bottom: 2px solid $default-color
+
+    li
+      color: #FFF
+      list-style: square
+      margin-bottom: 10px
+      margin-left: 35px
 
 
 div#user-info, div#user-invite

@@ -71,36 +71,38 @@ div#wrapper
 
 
 div#navigation
-  padding: 12px 0
+  padding: 11px 0
   position: relative
 
   ul li
     display: inline
 
     a
-      padding: 12px 25px
+      padding: 11px 25px 12px
 
     a.current
       background-color: $menu-hover-color
 
 
-div#tag-menu, div#social-networks
-  border: 1px solid #000
-  width: 22.8%
-  @include box-shadow(0, 0, 5px, #222)
-  @include enable-ie-css3
+div#right-sidebar
 
-  h2.title
-    padding: 8px 15px
-    @include box-shadow(0, 1px, 10px, #222)
-    @include linear-gradient(#C52626, #8F0000)
+  div.block
+    border: 1px solid #000
+    margin-bottom: 20px
+    @include box-shadow(0, 0, 5px, #222)
     @include enable-ie-css3
 
-  li
-    color: $default-color
-    list-style: disc
-    margin-left: 35px
-    margin-bottom: 10px
+    h2.title
+      padding: 8px 15px
+      @include box-shadow(0, 1px, 10px, #222)
+      @include linear-gradient(#C52626, #8F0000)
+      @include enable-ie-css3
+
+    li
+      color: $default-color
+      list-style: disc
+      margin-left: 35px
+      margin-bottom: 10px
 
 
 div#tag-search-bar

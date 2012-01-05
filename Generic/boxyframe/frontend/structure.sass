@@ -35,13 +35,12 @@ div#menu
     a:hover
       background-color: $menu-hover-color
 
-    a.current:hover
-      background-color: transparent
+    a.current
+      background-color: $menu-hover-color
 
 
-div#tag-menu
-  @include round-corners(5px, 5px, 5px, 5px)
-  @include enable-ie-css3
+div#right-sidebar
+  width: 21.8%
 
   h2.title
     border: 2px solid #000

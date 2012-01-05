@@ -34,20 +34,22 @@ div#announcement-numbers
 
 
 div#navigation
+  font-size: 15px
   @include text-shadow(1px, 1px, 0, #000)
   @include enable-ie-css3
 
-  ul li
+  a
+    color: #DFDFDF
 
-    a
-      color: #DFDFDF
-      font-weight: bold
+  a:hover
+    color: #FFF
+    text-decoration: underline
 
-    a:hover
-      color: #FFF
+  a.current
+    color: #FFF
 
-    a.current
-      color: #FFF
+  a.current:hover
+    text-decoration: none
 
 
 div#tag-menu, div#social-networks
