@@ -3,30 +3,36 @@ body
   background-repeat: repeat-x
 
 
-div#wrapper
+div.wrapper
   margin: auto
-  width: 880px
+  width: 960px
 
 
 div#header
-  height: 141px
-  margin-top: 30px
+  height: 190px
+  margin: 25px 20px 0
+  position: relative
 
   div#logo
     background-image: url('/images/logo.png')
     background-repeat: no-repeat
-    float: right
+    float: left
     height: 141px
     width: 200px
 
-  span#goals
-    float: left
-    margin-top: 45px
+  span#slogan
+    float: right
+    margin-top: 40px
 
+  div#menu
+    background-image: url('/images/gradient.png')
+    background-position: 0 25px
+    background-repeat: no-repeat
+    bottom: 10px
+    height: 49px
+    position: absolute
+    width: 100%
 
-div#menu
-  background-image: url('/images/gradient.png')
-  background-position: 0 20px
-  background-repeat: no-repeat
-  height: 49px
-  width: 880px
+    li
+      display: inline
+      margin-left: 20px

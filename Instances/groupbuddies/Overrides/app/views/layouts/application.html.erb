@@ -1,23 +1,24 @@
 <%= render :partial => 'shared/layout_head' %>
 
 <body>
-  <div id="wrapper">
+  <div class="wrapper">
     <div id="header">
       <a href="/"><div id="logo"></div></a>
 
-      <span id="goals">Connect. Collaborate. Improve.</span>
+      <span id="slogan">Connect. Collaborate. Improve.</span>
+
+      <div id="menu"><%= frontend_navigation_content %></div>
     </div>
 
-    <div id="menu"><%= frontend_navigation_content %></div>
-
-    <div id="main" class="selfclear">
+    <div id="content" class="selfclear wrapper">
       <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
       <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
       <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
 
-      <div id="content" class="<%= yield(:tag_menu) ? 'double' : 'single' %>">
+      <div id="main">
         <%= yield %>
       </div>
+
       <%= yield :tag_menu %>
     </div>
 
