@@ -3,13 +3,22 @@ body
   background-image: url("/images/bg.png")
 
 
+div.wrapper
+  background-color: #FFF
+  border: 2px solid $default-color
+  margin: 50px auto 0
+  width: 960px
+  @include round-corners(6px, 6px, 6px, 6px)
+  @include enable-ie-css3
+
+
 div#header
   height: 300px
 
   div#header-left
     float: left
     position: relative
-    width: 700px
+    width: 670px
 
     span.site-title
       display: block
@@ -18,15 +27,14 @@ div#header
   div#header-right
     float: right
     position: relative
-    width: 278px
+    width: 290px
 
     span.options
-      display: block
+      display: inline-block
       background-color: $default-color
-      margin: 0 auto
-      padding: 10px 20px 15px
-      width: 180px
-      @include round-corners(0, 0, 8px, 8px)
+      padding: 10px 20px 12px
+      float: right
+      @include round-corners(0, 0, 0, 6px)
       @include enable-ie-css3
 
       a
@@ -38,15 +46,14 @@ div#header
     div#logo
       background-image: url("/logo.png")
       height: 200px
-      margin: 25px auto
+      margin: 70px 20px
       width: 250px
 
 
 div#menu
   background-color: $default-color
   height: 45px
-  margin: 20px auto 0
-  width: 980px
+  margin-top: 20px
 
   ul li
     display: inline-block
@@ -60,16 +67,14 @@ div#menu
 div#tag-menu
   background-color: #F4F4F4
   border: 1px solid $default-color
-  min-height: 72px
-  width: 22.6%
-  @include round-corners(8px, 8px, 8px, 8px)
+  @include round-corners(6px, 6px, 6px, 6px)
   @include enable-ie-css3
 
   h2
     background-color: $default-color
     margin: 0
     padding: 10px 0 10px 20px
-    @include round-corners(6px, 6px, 0, 0)
+    @include round-corners(4px, 4px, 0, 0)
     @include enable-ie-css3
 
   a
@@ -78,34 +83,9 @@ div#tag-menu
     padding: 10px 0 10px 20px
 
 
-div#tag-search-bar
-  margin: 0 0 $content-margin
-
-  div#tags
-    margin: 10px
-
-
-div#flash-content
-  margin: 5px 0
-
-
 div#panel
   height: 250px
   position: relative
-  width: 980px
-
-
-div#main
-  background-color: #FFF
-  border: 3px solid $default-color
-  margin: 50px auto 0
-  width: 980px
-  @include round-corners(8px, 8px, 8px, 8px)
-  @include enable-ie-css3
-
-
-div#user-info, div#user-invite
-  margin: $content-margin 10px
 
 
 div#footer
@@ -124,9 +104,7 @@ div#announcements
   margin: 0 20px
   overflow: hidden
   position: relative
-  width: 680px
-  @include round-corners(3px, 3px, 3px, 3px)
-  @include enable-ie-css3
+  width: 650px
 
   a
     display: block
@@ -142,7 +120,7 @@ div.announcement-tail
 div#announcement-numbers
   background: url("/images/dark_transparency.png")
   cursor: default
-  padding: 10px 10px 13px 13px
+  padding: 12px
   position: absolute
   right: 0
   @include round-corners(0, 0, 0, 6px)
@@ -154,13 +132,13 @@ div#announcement-numbers
 
 div.announcement img
   height: 250px
-  width: 680px
+  width: 650px
 
 
 div.announcement-text
   background: url("/images/dark_transparency.png")
   bottom: 0
-  padding: 14px 12px 12px 14px
+  padding: 14px
   position: absolute
   right: 0
   width: 300px
