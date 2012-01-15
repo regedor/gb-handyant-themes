@@ -8,12 +8,20 @@ a, a:active, a:link, a:visited
   text-decoration: none
 
 
+h2.title
+  font-size: 24px
+
+
 hr
   background-color: #DDD
   border: none
   clear: left
   height: 1px
   margin: $content-margin 0
+
+
+p.inline-errors
+  font-size: 11px
 
 
 ul.list li
@@ -52,28 +60,19 @@ div#open-id
 
 
 div#main
-  min-height: 400px
-
-
-div#content.single
   float: left
-  width: 96%
   margin: 20px
-
-
-div#content.double
-  float: left
-  width: 72%
-  margin: 20px
+  min-height: 300px
+  width: 700px
 
 
 div#right-sidebar
   float: right
   margin: 20px 20px 20px 0
-  width: 22%
+  width: 200px
 
   div.block
-    min-height: 100px
+    min-height: 120px
 
 
 h2.title, h3.archives-month-title 
@@ -91,6 +90,10 @@ div#archives
     border-bottom: 3px solid $default-color
 
 
+h3.archives-month-title
+  font-size: 20px
+
+
 div.pagination
   font: 13px Verdana
   margin: 0 10px
@@ -100,6 +103,13 @@ div.pagination
 
   a.prev_page:hover, a.next_page:hover, a[rel="prev start"]:hover, a[rel="prev"]:hover, a[rel="next"]:hover
     color: $default-color
+
+
+
+
+
+
+
 
 
 ul.archives-month
@@ -112,6 +122,47 @@ ul.archives-month
 
     a:hover
       border-bottom: 2px solid $default-color
+
+
+div#tag-search-bar
+  margin: 0 0 $content-margin
+
+  div#tags
+    margin: 10px
+
+
+div#tag-search-bar
+  font-size: 14px
+
+  span#tagged-with
+    font-size: 16px
+
+  span#clear-link
+    font-size: 12px
+
+
+div.meta li
+  line-height: 18px
+
+
+div#flash div.message p
+  color: #FFF
+  font-size: 20px
+  font-weight: bold
+
+
+div#archives
+  font-size: 14px
+
+
+ul.archives-month
+  font-size: 14px
+
+
+
+
+
+
 
 
 // =========
@@ -172,19 +223,6 @@ p#event-total-price
 p#total-price
   font-size: 15px
   margin-bottom: 20px
-
-
-// ==============
-// Social buttons
-// ==============
-
-
-div.social-buttons
-  float: right
-  margin: 0 10px 10px
-
-  div.addthis_toolbox
-    display: inline
 
 
 // =====
@@ -268,6 +306,46 @@ ol#comment-list
     padding: $content-margin 0 0 72px
 
 
+ol#comment-list a.author
+  font-weight: bold
+
+ol#comment-list span.comment-meta
+  text-align: right
+
+
+
+
+
+// Anounncements
+
+
+div.announcement-text
+  color: #FFF
+
+  p.title
+    font-size: 14px
+    font-weight: bold
+
+  p.body
+    text-align: justify
+
+
+div#announcement-numbers
+  color: #FFF
+  text-align: justify
+
+  a, span
+    color: #FFF
+    text-align: justify
+
+  a:hover, span:hover
+    color: $default-color
+
+
+
+
+
+
 // =======
 // Buttons
 // =======
@@ -305,6 +383,36 @@ ul.buttons
 
   a
     margin: 0 10px 0 0
+
+
+button, a.button
+  text-decoration: none
+
+
+button, input.button
+  line-height: 16px
+
+
+button, a.button, input.button
+  color: #2E2E2E
+  font-size: 12px !important
+  font-weight: bold !important
+  text-align: center
+
+
+button.positive:hover, a.positive:hover, input.positive:hover
+  color: $text-color-positive
+
+
+button.negative:hover, a.negative:hover, input.negative:hover
+  color: $text-color-negative
+
+
+
+
+
+
+
 
 
 *:first-child + html input[type]
