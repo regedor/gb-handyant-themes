@@ -1,38 +1,38 @@
 <%= render :partial => 'shared/layout_head' %>
 
 <body>
-  <span class="options">
-    <% if logged_in? %>
-      <% if @current_user.small_name %>
-        <%= link_to @current_user.small_name, user_account_path                                            %> |
+  <div id="header">
+    <span class="options">
+      <% if logged_in? %>
+        <% if @current_user.small_name %>
+          <%= link_to @current_user.small_name, user_account_path                                            %> |
+        <% else %>
+          <%= link_to @current_user.email, user_account_path                                                 %> |
+        <% end %>
+        <% if permitted_to? :read, :admin_dashboard %>
+          <%= link_to t('navigation.administration'), admin_root_path %> |
+        <% end %>
+        <%= link_to t('user_session.bar.logout'), user_logout_path                                           %>
       <% else %>
-        <%= link_to @current_user.email, user_account_path                                                 %> |
+        <%= link_to t("user_session.bar.signin"), new_user_session_path                                      %> |
+        <%= link_to t("user_session.bar.signup"), new_user_account_path                                      %>
       <% end %>
-      <% if permitted_to? :read, :admin_dashboard %>
-        <%= link_to t('navigation.administration'), admin_root_path %> |
-      <% end %>
-      <%= link_to t('user_session.bar.logout'), user_logout_path                                           %>
-    <% else %>
-      <%= link_to t("user_session.bar.signin"), new_user_session_path                                      %> |
-      <%= link_to t("user_session.bar.signup"), new_user_account_path                                      %>
-    <% end %>
-  </span>
+    </span>
+  </div>
 
-  <div id="container">
-    <div id="panel">
-      <div id="logo"><%= render :partial => 'shared/flash_logo', :locals => { :width => "400", :height => "200" } %></div>
+  <div class="wrapper">
+    <div id="logo"><%= render :partial => 'shared/flash_logo', :locals => { :width => "400", :height => "200" } %></div>
 
-      <div id="menu"><%= frontend_navigation_content %></div>
-    </div>
+    <div id="menu"><%= frontend_navigation_content %></div>
 
-    <div id="main" class="selfclear">
+    <div id="content" class="selfclear">
       <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
       <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
       <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
 
       <%= render :partial => 'announcements/announcement' %>
 
-      <div id="content" class="double">
+      <div id="main">
         <%= yield %>
       </div>
 

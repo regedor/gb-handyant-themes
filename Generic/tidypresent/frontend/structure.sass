@@ -3,73 +3,51 @@ body
   background-image: url("/images/hex.png")
 
 
-div#container
-  border: 1px solid #252525
-  margin: 40px auto 0
-  width: 980px
-  @include box-shadow(0, 0, 10px, #222)
-  @include enable-ie-css3
-
-
-span.options
-  display: block
-  margin: 15px auto 0
-  width: 980px
+div#header
+  margin: 20px auto 40px
+  width: 960px
   text-align: right
 
   a:hover
     border-bottom: 2px solid $default-color
 
 
-div#panel
+div.wrapper
   background-color: #FFF
   background-image: url("/images/wheel.png")
-  background-position: 100% 70%
   background-repeat: no-repeat
-  height: 267px
+  background-position: 100% 0
+  margin: auto
   position: relative
+  width: 960px
+  @include box-shadow(0, 0, 10px, #222)
+  @include enable-ie-css3
 
-  div#logo
-    float: left
 
-    div#flash-content
-      padding: 10px 15px
+div#logo
+  padding: 20px
 
-  div#social-networks
-    float: right
-    margin: 15px
 
-    div#facebook-link
-      background-image: url("/images/facebook_logo.png")
-      height: 25px
-      width: 25px
+div#menu
+  background-image: url("/images/menu.png")
+  height: 67px
+  left: -10px
+  position: absolute
+  top: 220px
+  width: 980px
 
-    div#twitter-link
-      background-image: url("/images/twitter_logo.png")
-      height: 25px
-      width: 25px
+  ul
+    padding: 12px 0
 
-  div#menu
-    background-image: url("/images/menu.png")
-    height: 67px
-    left: -10px
-    position: absolute
-    top: 200px
-    width: 1000px
- 
-    ul
-      padding: 12px 0
-    
-      li
-        display: inline
- 
-        a
-          border: none
-          margin: 0 0 0 30px
+    li
+      display: inline
+
+      a
+        border: none
+        margin: 0 0 0 30px
 
 
 div#right-sidebar
-  width: 21.8%
 
   h2.title
     background-image: url(/images/bar.png)
@@ -79,17 +57,18 @@ div#right-sidebar
     width: 215px
 
   li
-    color: $default-color
     list-style: square
     margin-left: 30px
     margin-bottom: 10px
 
   a:hover
-    color: $default-color
-    border-bottom: none !important
+    border-bottom: 2px solid $default-color
 
 
 div#support
+
+  a:hover
+    border-bottom: none !important
 
   div#support-logos
     margin-left: 15px
@@ -143,21 +122,6 @@ div#support
     width: 176px
 
 
-div#tag-search-bar
-  margin: 0 0 $content-margin
-
-  div#tags
-    margin: 10px
-
-
-div#main
-  background-color: #FFF
-
-
-div#user-info, div#user-invite
-  margin: $content-margin 10px
-
-
 div#footer
   margin: 25px
 
@@ -172,11 +136,11 @@ div#footer
 
 div#announcements
   border: 1px solid #AAA
-  height: 250px
-  margin: auto
+  height: 200px
+  margin: 40px auto 0
   overflow: hidden
   position: relative
-  width: 940px
+  width: 920px
 
   a
     display: block
@@ -192,7 +156,7 @@ div.announcement-tail
 div#announcement-numbers
   background: url("/images/dark_transparency.png")
   cursor: default
-  padding: 10px 10px 13px 13px
+  padding: 12px
   position: absolute
   right: 0
   @include round-corners(0, 0, 0, 12px)
@@ -203,14 +167,14 @@ div#announcement-numbers
 
 
 div.announcement img
-  height: 250px
-  width: 940px
+  height: 200px
+  width: 920px
 
 
 div.announcement-text
   background: url("/images/dark_transparency.png")
   bottom: 0
-  padding: 14px 12px 12px 14px
+  padding: 14px
   position: absolute
   right: 0
   width: 300px

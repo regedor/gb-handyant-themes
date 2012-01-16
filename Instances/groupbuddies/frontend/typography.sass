@@ -1,3 +1,43 @@
+@font-face
+  font-family: HelveticaNeue
+  src: url('/fonts/HelveticaNeue.eot')
+  src: url('/fonts/HelveticaNeue.eot?#iefix') format('embedded-opentype')
+  src: url('/fonts/HelveticaNeue.woff') format('woff')
+  src: url('/fonts/HelveticaNeue.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
+@font-face
+  font-family: 'HelveticaNeue-UltraLight'
+  src: url('/fonts/HelveticaNeueUltraLight.eot')
+  src: url('/fonts/HelveticaNeueUltraLight.eot?#iefix') format('embedded-opentype')
+  src: url('/fonts/HelveticaNeueUltraLight.woff') format('woff')
+  src: url('/fonts/HelveticaNeueUltraLight.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
+@font-face
+  font-family: 'HelveticaNeue-Light'
+  src: url('/fonts/HelveticaNeueLight.eot')
+  src: url('/fonts/HelveticaNeueLight.eot?#iefix') format('embedded-opentype')
+  src: url('/fonts/HelveticaNeueLight.woff') format('woff')
+  src: url('/fonts/HelveticaNeueLight.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
+@font-face
+  font-family: 'HelveticaNeue-Bold'
+  src: url('/fonts/HelveticaNeueBold.eot')
+  src: url('/fonts/HelveticaNeueBold.eot?#iefix') format('embedded-opentype')
+  src: url('/fonts/HelveticaNeueBold.woff') format('woff')
+  src: url('/fonts/HelveticaNeueBold.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
 a
   text-decoration: none
 
@@ -5,21 +45,21 @@ a
 div#header
 
   span#slogan
-    color: #B9B9B9
-    font-family: HelveticaNeue
+    color: #828282
+    font-family: 'HelveticaNeue-UltraLight'
     font-size: 28px
     text-transform: lowercase
 
 
 div#menu
   text-align: right
-
-  ul
-    font-size: 14px
-    font-weight: bold
+  font-size: 16px
+  font-family: 'HelveticaNeue-Light'
 
   a
-    color: #575757
+    color: #828282
+    @include transition(color, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
 
   a:hover, a.current
     color: #2294D1

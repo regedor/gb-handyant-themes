@@ -24,20 +24,20 @@
     </div>
   </div>
 
-  <div id="navigation">
+  <div id="menu">
     <div class="wrapper">
       <%= frontend_navigation_content %>
     </div>
   </div>
 
-  <div id="main" class="selfclear">
+  <div id="content" class="selfclear wrapper">
     <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
     <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
     <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
 
     <%= render :partial => 'announcements/announcement' %>
 
-    <div id="content" class="double">
+    <div id="main">
       <%= yield %>
     </div>
 

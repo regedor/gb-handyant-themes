@@ -1,161 +1,59 @@
-h2.title
-  font-size: 24px
+div#header
 
+  span.site-title
+    color: #222
+    @include text-shadow(1px, 1px, 0, #FFF)
+    @include enable-ie-css3
 
-h3.archives-month-title
-  font-size: 20px
+  span.options
+    color: #FFF
+    @include text-shadow(1px, 1px, 0, #222)
+    @include enable-ie-css3
+
+    a
+      color: #FFF
 
 
 div#menu
-  font: 15px Helvetica, Sans-Serif
+  font-size: 15px
 
   a
     @include text-shadow(1px, 1px, 0, #FFF)
     @include enable-ie-css3
 
   a:hover
-    color: #FFF !important
-    @include text-shadow(1px, 1px, 0, #444)
+    color: #FFF
+    @include text-shadow(1px, 1px, 0, #222)
     @include enable-ie-css3
 
   a.current
     color: #AA2121
 
-
-div#header
-  color: #FFF
-  @include text-shadow(1px, 1px, 0, #444)
-  @include enable-ie-css3
-
-  span.options a
+  a.current:hover
     color: #FFF
-
-
-span.site-title
-  font: 13px Helvetica, Sans-Serif
-
-
-div.announcement-text
-  color: #FFF
-
-  p.title
-    font-size: 14px
-    font-weight: bold
-
-  p.body
-    text-align: justify
-
-
-div#announcement-numbers
-  color: #FFF
-  text-align: justify
-
-  a, span
-    color: #FFF
-    text-align: justify
-
-  a:hover, span:hover
-    color: $default-color
 
 
 div#tag-menu
   color: #FFF
   font-size: 13px
   text-align: right
-  @include text-shadow(1px, 1px, 0, #444)
+  @include text-shadow(1px, 1px, 0, #222)
   @include enable-ie-css3
 
   h2.title
     font-size: 13px
 
-  a, a:hover, a.active
+  a, a:hover
     color: #FFF
 
   a.selected
     font-weight: bold
 
 
-div#tag-search-bar
-  font-size: 14px
-
-  span#tagged-with
-    font-size: 16px
-
-  span#clear-link
-    font-size: 12px
-
-
-div.meta li
-  line-height: 18px
-
-
-div#flash div.message p
-  color: #FFF
-  font-size: 20px
-  font-weight: bold
-
-
-div#archives
-  font-size: 14px
-
-
-ul.archives-month
-  font-size: 14px
-
-
 div#footer
-  color: $text-color
   text-align: center
+  @include text-shadow(1px, 1px, 0, #FFF)
+  @include enable-ie-css3
 
   a
     color: $default-color
-    font-weight: bold
-
-
-// ========
-// Comments
-// ========
-
-
-ol#comment-list a.author
-  font-weight: bold
-
-ol#comment-list span.comment-meta
-  text-align: right
-
-
-// ==============
-// Social Buttons
-// ==============
-
-
-div#social-buttons
-  text-align: right
-
-
-// =======
-// Buttons
-// =======
-
-
-button, a.button
-  text-decoration: none
-
-
-button, input.button
-  line-height: 16px
-
-
-button, a.button, input.button
-  color: $text-color
-  font-size: 12px !important
-  font-weight: bold !important
-  text-align: center
-
-
-button.positive:hover, a.positive:hover, input.positive:hover
-  color: $text-color-positive
-
-
-button.negative:hover, a.negative:hover, input.negative:hover
-  color: $text-color-negative

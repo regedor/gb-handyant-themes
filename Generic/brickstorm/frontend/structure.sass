@@ -18,95 +18,65 @@ div#header
   @include linear-gradient(#FAF9FA, #EEEEED)
   @include enable-ie-css3
 
-  div.wrapper
-    margin: 0 auto
-    position: relative
-    width: 980px
+  span.site-title
+    float: left
+    margin-left: 110px
+    margin-top: 105px
+ 
+  span.options
+    background-color: #DDD
+    float: right
+    padding: 10px 15px
+    @include round-corners(0, 0, 4px, 4px)
+    @include enable-ie-css3
 
-    span.site-title
-      float: left
-      margin-left: 110px
-      margin-top: 105px
-   
-    span.options
-      background-color: #DDD
-      float: right
-      padding: 10px 15px
-      @include round-corners(0, 0, 4px, 4px)
-      @include enable-ie-css3
+  div#logo
+    position: absolute
+    background-image: url("/logo.png")
+    margin: 33px 0 0
+    height: 90px
+    width: 264px
 
-    div#logo
-      position: absolute
-      background-image: url("/logo.png")
-      margin: 33px 0 0
-      height: 90px
-      width: 264px
+  div#menu
+    height: 45px
+    margin-top: 60px
+    position: absolute
+    right: 0
 
-    div#menu
-      height: 45px
-      margin-top: 60px
-      position: absolute
-      right: 0
-  
-      ul li
-        display: inline-block
-        margin: 0 14px
-  
-        a
-          padding: 0 0 14px
+    ul li
+      display: inline-block
+      margin: 0 14px
+
+      a
+        padding: 0 0 14px
 
 
-div#panel
-  background-image: url("/images/pattern.png")
-  background-repeat: repeat-x
+div.wrapper
+  margin: auto
+  position: relative
+  width: 960px
+
+
+div#content
+  background-color: $frontend-background-color
+  margin-bottom: 80px
+  @include box-shadow(0, 0, 6px, #AAA)
+  @include enable-ie-css3
 
 
 div#right-sidebar
-  margin: 30px 30px 30px 0
-  width: 20%
 
   h2
     background-color: $default-color
     padding: 10px 14px
 
   li
-    color: $default-color
     list-style: square
     margin-left: 30px
     margin-bottom: 10px
 
   a:hover
-    color: $default-color
-    border-bottom: none !important
-
-
-div#tag-search-bar
-  margin: 0 0 $content-margin
-
-  div#tags
-    margin: 10px
-
-
-div#main
-  background-color: $frontend-background-color
-  margin: 0 auto 80px
-  width: 980px
-  @include box-shadow(0, 0, 6px, #AAA)
-  @include enable-ie-css3
-
-
-div#content.single
-  margin: 30px
-  width: 94%
-
-
-div#content.double
-  margin: 30px
-  width: 70.8%
-
-
-div#user-info, div#user-invite
-  margin: $content-margin 10px
+    border-bottom: 2px solid $default-color
 
 
 div#footer
@@ -129,7 +99,7 @@ div#announcements
   overflow: hidden
   margin: 0 auto 50px
   position: relative
-  width: 980px
+  width: 960px
   z-index: 1
 
   a
@@ -146,7 +116,7 @@ div.announcement-tail
 div#announcement-numbers
   background: url("/images/dark_transparency.png")
   cursor: default
-  padding: 10px 10px 13px 13px
+  padding: 12px
   position: absolute
   right: 0
   @include round-corners(0, 0, 0, 6px)
@@ -158,13 +128,13 @@ div#announcement-numbers
 
 div.announcement img
   height: 200px
-  width: 980px
+  width: 960px
 
 
 div.announcement-text
   background: url("/images/dark_transparency.png")
   bottom: 0
-  padding: 14px 12px 12px 14px
+  padding: 14px
   position: absolute
   right: 0
   width: 300px

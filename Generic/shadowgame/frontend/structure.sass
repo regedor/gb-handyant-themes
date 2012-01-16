@@ -1,11 +1,38 @@
 body
   background-color: $frontend-background-color
-  overflow-x: hidden // Firefox needs this
+  overflow-x: hidden
+
+
+div.wrapper
+  margin: auto
+  width: 960px
+
+
+div#header
+  background-color: $menu-default-color
+  height: 50px
+  padding-top: 20px
+  @include linear-gradient(#C52626, #8F0000)
+  @include enable-ie-css3
+
+  div#white-stripe
+    background-color: #FFF
+    height: 23px
+    padding-top: 7px
+    @include box-shadow(0, 0, 10px, #222)
+    @include enable-ie-css3
+
+    span.options
+      float: right
+
+      a:hover
+        border-bottom: 2px solid $default-color
 
 
 div#panel
   height: 250px
-  margin: 0 auto 42px
+  margin: auto
+  padding: 20px 0
 
   div#logo
     background-image: url("/logo.png")
@@ -15,73 +42,29 @@ div#panel
     width: 251px
 
 
-div#header
-  height: 30px
-  margin: 10px 0 80px
-  position: relative
-  width: 100%
-  z-index: 1
-
-  span.site-title
-    float: left
-    margin: 6px 0 8px
-
-  span.options
-    float: right
-    margin: 6px 0 8px
-
-    a:hover
-      border-bottom: 2px solid $default-color
-
-
-div#white-stripe
-  background-color: #FFF
-  height: 30px
-  position: absolute
-  top: 10px
-  width: 100%
-  @include box-shadow(0, 0, 10px, #222)
-  @include enable-ie-css3
-
-
-div#top-gradient
-  background-color: $menu-default-color
-  height: 80px
-  position: absolute
-  top: 0
-  width: 100%
-  @include linear-gradient(#C52626, #8F0000)
-  @include enable-ie-css3
-
-
-div#bottom-gradient
+div#menu
   background-color: $menu-default-color
   height: 40px
-  margin-top: 402px
-  position: absolute
-  width: 100%
   @include box-shadow(0, 0, 10px, #222)
   @include linear-gradient(#C52626, #8F0000)
   @include enable-ie-css3
 
-
-div#wrapper
-  margin: auto
-  width: 1004px
-
-
-div#navigation
-  padding: 11px 0
-  position: relative
-
   ul li
-    display: inline
+    display: inline-block
+    margin-top: 12px
 
     a
-      padding: 11px 25px 12px
+      padding: 12px 20px 11px
 
     a.current
       background-color: $menu-hover-color
+
+
+div#content
+  background-color: #FFF
+  border-left: 2px solid #000
+  border-right: 2px solid #000
+  border-bottom: 2px solid #000
 
 
 div#right-sidebar
@@ -99,30 +82,9 @@ div#right-sidebar
       @include enable-ie-css3
 
     li
-      color: $default-color
       list-style: disc
-      margin-left: 35px
+      margin-left: 30px
       margin-bottom: 10px
-
-
-div#tag-search-bar
-  margin: 0 0 $content-margin
-
-  div#tags
-    margin: 10px
-
-
-div#main
-  background-color: #FFF
-  border-left: 2px solid #111
-  border-right: 2px solid #111
-  border-bottom: 2px solid #111
-  margin: auto
-  width: 1000px
-
-
-div#user-info, div#user-invite
-  margin: $content-margin 10px
 
 
 div#footer
@@ -143,7 +105,7 @@ div#announcements
   height: 250px
   overflow: hidden
   position: relative
-  width: 740px
+  width: 700px
   @include box-shadow(0, 0, 10px, #111)
   @include enable-ie-css3
 
@@ -171,7 +133,7 @@ div#announcement-numbers
 
 div.announcement img
   height: 250px
-  width: 740px
+  width: 700px
 
 
 div.announcement-text

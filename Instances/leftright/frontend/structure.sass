@@ -3,11 +3,33 @@ body
   overflow-x: hidden
 
 
+div.wrapper
+  margin: auto
+  position: relative
+  width: 960px
+  z-index: 1
+
+
+span.options
+  float: right
+  margin: 10px 55px
+
+  a:hover
+    border-bottom: 2px solid #FFF
+
+
+div#logo
+  background: url("/logo.png") no-repeat
+  float: right
+  height: 51px
+  margin: 40px 50px
+  width: 228px
+
+
 div#header-top
   border-bottom: 1px solid #FFF
   height: 200px
   position: relative
-  z-index: 2
 
   div.left-light-cream-bar
     background-color: #F3E7DD
@@ -48,10 +70,8 @@ div#header-top
 
 
 div#header-bottom
-  border-bottom: 1px solid #FFF
   height: 129px
   position: relative
-  z-index: 2
 
   div.left-light-brown-bar
     background-color: #6E6258
@@ -98,32 +118,13 @@ div#header-bottom
     z-index: 0
 
 
-div.secondary-wrapper
-  margin: auto
-  position: relative
-  width: 960px
-  z-index: 1
-
-
-span.options
-  float: right
-  margin: 10px
-
-
-div#logo
-  background: url("/logo.png") no-repeat
-  float: right
-  height: 51px
-  margin: 40px 50px
-  width: 228px
-
-
 div#navigation
   background-image: url("/images/menu.png")
   background-repeat: repeat-x
   border-bottom: 1px solid #FFF
+  border-top: 1px solid #FFF
   position: relative
-  z-index: 1
+  z-index: 2
   @include box-shadow(0, 0, 10px, #444)
   @include enable-ie-css3
 
@@ -146,7 +147,7 @@ div#navigation
   div#menu
     border-left: 1px solid #FFF
     border-right: 1px solid #FFF
-    width: 959px
+    width: 960px
     margin: auto
     position: relative
     z-index: 1
@@ -164,49 +165,44 @@ div#navigation
         padding: 10px 20px
 
 
-div#primary-wrapper
+div#content
   background-color: #F3E7DD
   border-left: 1px solid #FFF
   border-right: 1px solid #FFF
-  margin: auto
-  min-height: 400px
-  position: relative
-  width: 959px
   @include box-shadow(0, 0, 10px, #444)
   @include enable-ie-css3
 
 
 div#right-sidebar
-  width: 21.7%
+  width: 198px
 
-  div#tag-menu
+  div.block
     background-color: #F0E1D4
     border: 1px solid #FFF
-    min-height: 170px
 
     h2.title
       background-image: url("/images/menu.png")
       border-bottom: 1px solid #FFF
-      padding: 10px 20px
+      padding: 10px 15px
+
+    li
+      list-style: square
+      margin-left: 30px
+      margin-bottom: 10px
 
     a:hover
       border-bottom: 2px solid $default-color
-
-    li
-      color: #FFF
-      list-style: square
-      margin-bottom: 10px
-      margin-left: 35px
-
-
-div#user-info, div#user-invite
-  margin: $content-margin 10px
 
 
 div#footer
   background-image: url("/images/footer.png")
   background-repeat: repeat-x
+  border-top: 1px solid #FFF
   padding: 20px
+  position: relative
+  z-index: 1
+  @include box-shadow(0, 0, 10px, #444)
+  @include enable-ie-css3
 
   a:hover
     border-bottom: 2px solid $default-color
@@ -240,7 +236,7 @@ div#announcement-numbers
   background: url("/images/dark_transparency.png")
   bottom: -129px
   cursor: default
-  padding: 10px 10px 13px 13px
+  padding: 12px
   position: absolute
   left: 0
   @include round-corners(0, 0, 2px, 0)

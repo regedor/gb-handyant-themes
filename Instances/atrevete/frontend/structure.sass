@@ -15,6 +15,14 @@ div#bg-top-back
   @include enable-ie-css3
 
 
+div#logo
+  background: url("/logo.png") no-repeat
+  float: left
+  height: 85px
+  margin: 20px 0 0
+  width: 198px
+
+
 div#target
   background-image: url("/images/target.png")
   background-repeat: no-repeat
@@ -25,73 +33,11 @@ div#target
   width: 614px
 
 
-div#bg-top-front
-  background-image: url("/images/bg_top_front.png")
-  background-repeat: repeat-x
-  height: 240px
-  overflow: hidden
-  position: relative
-  top: 130px
-  z-index: 1
-  @include box-shadow(0, 0, 10px, #222)
-  @include enable-ie-css3
-
-
-div#man-and-arrows
-  background-image: url("/images/man_and_arrows.png")
-  float: left
-  height: 220px
-  margin: 10px 40px
-  width: 520px
-
-
-div.secondary-wrapper
-  margin: auto
-  position: relative
-  width: 980px
-
-
-span.site-title
-  display: block
-  padding: 30px 0 30px 600px
-  width: 250px
-
-  span
-    border-bottom: 3px solid #FFF
-    line-height: 1.5em
-
-
 span.options
   float: right
   margin: 15px 0 0
   position: relative
   z-index: 1
-
-
-div#logo
-  background: url("/logo.png") no-repeat
-  float: left
-  height: 85px
-  margin: 20px 0 0
-  width: 198px
-
-
-div#primary-wrapper
-  background-image: url("/images/bg_content.png")
-  background-repeat: repeat
-  margin: 130px auto 0
-  min-height: 300px
-  position: relative
-  width: 980px
-
-
-div#content.single
-  margin: 30px
-  width: 94%
-
-
-div#content.double
-  margin: 30px
 
 
 div#menu
@@ -113,20 +59,48 @@ div#menu
       background: url("/images/button_hover.png")
 
 
+div#bg-top-front
+  background-image: url("/images/bg_top_front.png")
+  background-repeat: repeat-x
+  height: 240px
+  overflow: hidden
+  position: relative
+  top: 130px
+  z-index: 1
+  @include box-shadow(0, 0, 10px, #222)
+  @include enable-ie-css3
+
+
+div#man-and-arrows
+  background-image: url("/images/man_and_arrows.png")
+  float: left
+  height: 220px
+  margin: 10px 20px
+  width: 520px
+
+
+div.wrapper
+  margin: auto
+  position: relative
+  width: 960px
+
+
+div#content
+  background-image: url("/images/bg_content.png")
+  background-repeat: repeat
+  margin-top: 130px
+
+
 div#right-sidebar
-  margin: 30px 30px 30px 0
-  width: 18.8%
 
-  div#tag-menu
+  li
+    color: $default-color
+    list-style: square
+    margin-left: 30px
+    margin-bottom: 10px
 
-    li
-      color: $default-color
-      list-style: square
-      margin: 0 0 15px 30px
-
-    a:hover
-      color: $default-color
-      border-bottom: none !important
+  a:hover
+    border-bottom: 2px solid $default-color
 
   div#organization
 
@@ -137,6 +111,8 @@ div#right-sidebar
       background-color: #FFF
       display: inline-block
       height: 75px
+      margin-bottom: 10px
+      margin-right: 10px
       width: 75px
 
     div#aac-logo
@@ -153,10 +129,6 @@ div#right-sidebar
 
     div#aefcup-logo
       background-image: url("/images/aefcup.png")
-
-
-div#user-info, div#user-invite
-  margin: $content-margin 10px
 
 
 div#footer
@@ -200,7 +172,7 @@ div.announcement-tail
 div#announcement-numbers
   background: url("/images/dark_transparency.png")
   cursor: default
-  padding: 10px 10px 13px 13px
+  padding: 12px
   position: absolute
   left: 0
   @include round-corners(0, 0, 2px, 0)
@@ -218,7 +190,7 @@ div.announcement img
 div.announcement-text
   background: url("/images/dark_transparency.png")
   bottom: 0
-  padding: 14px 12px 12px 14px
+  padding: 14px
   position: absolute
   right: 0
   width: 300px

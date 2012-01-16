@@ -27,26 +27,26 @@
       <%= render :partial => 'announcements/announcement' %>
     </div>
 
-    <div id="left-sidebar">
-      <div id="navigation"><%= frontend_navigation_content %></div>
-
-      <%= render :partial => 'shared/search' %>
-    </div>
-
-    <div id="main" class="selfclear">
+    <div id="content" class="selfclear wrapper">
       <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
       <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
       <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
 
-      <div id="content" class="single">
+      <div id="left-sidebar">
+        <div id="menu"><%= frontend_navigation_content %></div>
+
+        <%= render :partial => 'shared/search' %>
+      </div>
+
+      <div id="main">
         <%= yield %>
       </div>
-    </div>
 
-    <div id="right-sidebar">
-      <%= render :partial => 'shared/event_calendar', :locals => { :year => Time.now.year, :month => Time.now.month } %>
+      <div id="right-sidebar">
+        <%= render :partial => 'shared/event_calendar', :locals => { :year => Time.now.year, :month => Time.now.month } %>
 
-      <%= render :partial => 'shared/newsletter' %>
+        <%= render :partial => 'shared/newsletter' %>
+      </div>
     </div>
 
     <%= render :partial => 'shared/footer' %>

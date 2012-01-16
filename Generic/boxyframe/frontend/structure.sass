@@ -2,45 +2,66 @@ body
   background-color: $frontend-background-color
 
 
-div#header
+div.wrapper
   background-color: #FFF
   border: 2px solid #111
   margin: 50px auto 0
-  height: 20px
-  padding: 6px 10px 2px $content-margin
-  width: 955px
+  width: 960px
+
+
+div#header
+  position: relative
+
+  span.site-title
+    display: inline-block
+    padding: 10px 20px
 
   span.options
     float: right
+    padding: 10px 20px
 
     a:hover
       border-bottom: 2px solid $default-color
 
+  div#logo
+    background-color: #FFF
+    border-bottom: 2px solid #111
+    border-right: 2px solid #111
+    border-top: 2px solid #111
+    height: 160px
+    margin: 40px 0
+    position: absolute
+    width: 300px
+    z-index: 1
+    @include round-corners(0, 10px, 10px, 0)
+    @include enable-ie-css3
 
-div#menu
-  border: 2px solid #000
-  margin: auto
-  padding: 12px 0
-  width: 980px
-  @include linear-gradient(#88A8C8, #597592)
-  @include enable-ie-css3
+    div#flash-content
+      height: 120px
+      margin: 20px
+      width: 260px
 
-  ul li
-    display: inline
+  div#menu
+    border-bottom: 2px solid #222
+    border-top: 2px solid #222
+    padding: 12px 0
+    @include linear-gradient(#88A8C8, #597592)
+    @include enable-ie-css3
 
-    a
-      border: none
-      padding: 12px 20px
+    ul li
+      display: inline
 
-    a:hover
-      background-color: $menu-hover-color
+      a
+        padding: 12px 20px
 
-    a.current
-      background-color: $menu-hover-color
+      a:hover
+        background-color: $menu-hover-color
+
+      a.current
+        background-color: $menu-hover-color
 
 
 div#right-sidebar
-  width: 21.8%
 
   h2.title
     border: 2px solid #000
@@ -49,56 +70,12 @@ div#right-sidebar
     @include enable-ie-css3
 
   li
-    color: $default-color
     list-style: square
     margin-left: 30px
     margin-bottom: 10px
 
-
-div#tag-search-bar
-  margin: 0 0 $content-margin
-
-  div#tags
-    margin: 10px
-
-
-div#logo
-  background-color: #FFF
-  border-top: 2px solid #111
-  border-right: 2px solid #111
-  border-bottom: 2px solid #111
-  height: 130px
-  margin: 58px 0
-  position: absolute
-  width: 260px
-  z-index: 1
-  -webkit-background-clip: padding-box // Fixes bleeding background in WebKit browsers
-  @include round-corners(0, 12px, 12px, 0)
-  @include enable-ie-css3
-
-
-div#flash-content
-  margin: 5px 0
-
-
-div#panel
-  border-left: 2px solid #111
-  border-right: 2px solid #111
-  margin: auto
-  width: 980px
-
-
-div#main
-  background-color: #FFF
-  border-left: 2px solid #111
-  border-right: 2px solid #111
-  border-bottom: 2px solid #111
-  margin: auto
-  width: 980px
-
-
-div#user-info, div#user-invite
-  margin: $content-margin 10px
+  a:hover
+    border-bottom: 2px solid $default-color
 
 
 div#footer
@@ -114,10 +91,11 @@ div#footer
 
 
 div#announcements
-  height: 250px
+  border-top: 2px solid #111
+  height: 240px
   overflow: hidden
   position: relative
-  width: 980px
+  width: 960px
 
   a
     display: block
@@ -133,10 +111,10 @@ div.announcement-tail
 div#announcement-numbers
   background: url("/images/dark_transparency.png")
   cursor: default
-  padding: 10px 10px 13px 13px
+  padding: 12px
   position: absolute
   right: 0
-  @include round-corners(0, 0, 0, 12px)
+  @include round-corners(0, 0, 0, 10px)
   @include enable-ie-css3
 
   a
@@ -144,29 +122,19 @@ div#announcement-numbers
 
 
 div.announcement img
-  height: 250px
-  width: 980px
+  height: 240px
+  width: 960px
 
 
 div.announcement-text
   background: url("/images/dark_transparency.png")
   bottom: 0
-  padding: 14px 12px 12px 14px
+  padding: 14px
   position: absolute
   right: 0
   width: 300px
-  @include round-corners(12px, 0, 0, 0)
+  @include round-corners(10px, 0, 0, 0)
   @include enable-ie-css3
 
   p.title
     padding: 0 0 15px
-
-
-// =====
-// Posts
-// =====
-
-
-div.meta
-  @include round-corners(5px, 5px, 5px, 5px)
-  @include enable-ie-css3

@@ -16,7 +16,7 @@ div#header
       border-bottom: 2px solid #FFF
 
 
-div#wrapper
+div.wrapper
   background-color: #FFF
   margin: auto
   width: 900px
@@ -59,8 +59,11 @@ div#wrapper
           @include round-corners(5px, 5px, 0, 0)
           @include enable-ie-css3
 
+  div#main
+    width: 690px
+
   div#right-sidebar
-    width: 21.3%
+    width: 150px
 
   div#bottom-panel
     background-image: url('/images/bottom_panel.png')
@@ -88,17 +91,6 @@ div#wrapper
       width: 237px
 
 
-div#tag-search-bar
-  margin: 0 0 15px
-
-  div#tags
-    margin: 10px
-
-
-div#user-info, div#user-invite
-  margin: 15px 10px
-
-
 div#footer
   margin: 40px 0 20px
 
@@ -112,6 +104,7 @@ div#footer
 
 
 div#announcements
+  border: 1px solid #000
   float: right
   height: 200px
   margin: 20px

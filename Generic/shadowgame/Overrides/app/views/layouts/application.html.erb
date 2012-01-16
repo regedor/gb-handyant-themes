@@ -1,16 +1,11 @@
 <%= render :partial => 'shared/layout_head' %>
 
 <body>
-  <div id="container">
-    <div id="top-gradient"></div>
-
-    <div id="white-stripe"></div>
-
-    <div id="bottom-gradient"></div>
-
-    <div id="wrapper">
-      <div id="header">
+  <div id="header">
+    <div id="white-stripe">
+      <div class="wrapper">
         <span class="site-title"><%= configatron.site_header %></span>
+
         <span class="options">
           <% if logged_in? %>
             <% if @current_user.small_name %>
@@ -28,34 +23,38 @@
           <% end %>
         </span>
       </div>
-
-      <div id="panel">
-        <%= render :partial => 'announcements/announcement' %>
-
-        <a href="/"><div id="logo"></div></a>
-      </div>
-
-      <div id="navigation"><%= frontend_navigation_content %></div>
-
-      <div id="main" class="selfclear">
-        <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
-        <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
-        <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
-
-        <div id="content" class="double">
-          <%= yield %>
-        </div>
-
-        <div id="right-sidebar">
-          <%= render :partial => 'shared/tag_menu' if yield(:tag_cloud) %>
-
-          <%= render :partial => 'shared/social_networks',
-                     :locals => { :networks => { :facebook_link => 'http://www.facebook.com/nedaac' } } if yield(:tag_cloud) %>
-        </div>
-      </div>
-
-      <%= render :partial => 'shared/footer' %>
     </div>
   </div>
+
+  <div id="panel" class="wrapper">
+    <%= render :partial => 'announcements/announcement' %>
+
+    <a href="/"><div id="logo"></div></a>
+  </div>
+
+  <div id="menu">
+    <div class="wrapper">
+      <%= frontend_navigation_content %>
+    </div>
+  </div>
+
+  <div id="content" class="selfclear wrapper">
+    <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
+    <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
+    <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
+
+    <div id="main">
+      <%= yield %>
+    </div>
+
+    <div id="right-sidebar">
+      <%= render :partial => 'shared/tag_menu' if yield(:tag_cloud) %>
+
+      <%= render :partial => 'shared/social_networks',
+                 :locals => { :networks => { :facebook_link => 'http://www.facebook.com/nedaac' } } if yield(:tag_cloud) %>
+    </div>
+  </div>
+
+  <%= render :partial => 'shared/footer' %>
 </body>
 </html>

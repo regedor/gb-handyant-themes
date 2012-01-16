@@ -8,7 +8,7 @@ div#wrapper
   border-left: 1px solid #000
   border-right: 1px solid #000
   margin: auto
-  width: 1000px
+  width: 960px
 
 
 div#header
@@ -50,7 +50,7 @@ div#left-sidebar
     margin-bottom: 0
     padding: 5px
 
-  div#navigation
+  div#menu
     border-top: 1px solid #EDEDED
 
     ul li
@@ -65,12 +65,10 @@ div#left-sidebar
 div#main
   border-left: 1px solid #EDEDED
   float: left
+  margin-left: 0
+  margin-top: 0
   padding: 0 20px
-  width: 549px
-
-  div#content.single
-    margin: 0 0 20px
-    width: inherit
+  width: 489px
 
 
 div#right-sidebar
@@ -85,22 +83,6 @@ div#right-sidebar
     padding: 5px
     @include round-corners(10px, 0, 0, 0)
     @include enable-ie-css3
-
-  div#tag-menu
-    margin: 0
-    width: inherit
-
-    li
-      color: $default-color
-      list-style: square
-      margin: 0 0 10px 30px
-
-
-div#tag-search-bar
-  margin: 0 0 $content-margin
-
-  div#tags
-    margin: 10px
 
 
 div#archives
@@ -127,7 +109,7 @@ div#announcements
   overflow: hidden
   margin: auto
   position: relative
-  width: 960px
+  width: 920px
 
   a
     display: inline-block
@@ -144,7 +126,7 @@ div.announcement-tail
 div#announcement-numbers
   background: url("/images/dark_transparency.png")
   cursor: default
-  padding: 10px
+  padding: 12px
   position: absolute
   left: 0
   @include round-corners(0, 0, 10px, 0)
@@ -153,7 +135,7 @@ div#announcement-numbers
 
 div.announcement img
   height: 250px
-  width: 960px
+  width: 920px
 
 
 div.announcement-text

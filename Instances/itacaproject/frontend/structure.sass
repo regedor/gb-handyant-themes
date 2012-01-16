@@ -5,7 +5,7 @@ body
 
 div.wrapper
   margin: auto
-  width: 950px
+  width: 960px
 
 
 div#header
@@ -26,7 +26,7 @@ div#header
     width: 300px
 
 
-div#navigation
+div#menu
   height: 60px
   position: relative
   z-index: 1
@@ -45,7 +45,6 @@ div#navigation
 
 
 div#right-sidebar
-  width: 21.6%
 
   div.block
     border: 1px solid #3F4F5E
@@ -61,24 +60,11 @@ div#right-sidebar
       margin-bottom: 10px
 
 
-div#main
+div#content
   background-color: #13161B
-  margin: auto
   padding-top: 20px
-  width: 950px
   @include box-shadow(0, 0, 50px, #466076)
   @include enable-ie-css3
-
-
-div#tag-search-bar
-  margin: 0 0 $content-margin
-
-  div#tags
-    margin: 10px
-
-
-div#user-info, div#user-invite
-  margin: $content-margin 10px
 
 
 div#footer
@@ -99,7 +85,7 @@ div#announcements
   margin: auto
   overflow: hidden
   position: relative
-  width: 910px
+  width: 920px
   @include box-shadow(0, 0, 10px, #111)
   @include enable-ie-css3
 
@@ -127,7 +113,7 @@ div#announcement-numbers
 
 div.announcement img
   height: 200px
-  width: 910px
+  width: 920px
 
 
 div.announcement-text
