@@ -1,10 +1,17 @@
 body
   background-color: $frontend-background-color
 
+/*background-image: url("/images/vichy.png")*/
 
-div#wrapper
+
+div.wrapper
+  background-color: #FFF
   margin: auto
-  width: 1000px
+  width: 960px
+
+/*@include box-shadow(0, 0, 6px, #666)*/
+/*border-left: 1px solid #444*/
+/*border-right: 1px solid #444*/
 
 
 div#header
@@ -15,8 +22,7 @@ div#header
   span.options
     background-color: #EEE
     display: block
-    padding: 10px
-    width: 980px
+    padding: 5px 10px
     text-align: right
 
   div#logo
@@ -26,26 +32,17 @@ div#header
     margin: 15px 0 0
     width: 300px
 
-  div#ads
-    background-color: #E5E5E5
-    height: 120px
-    position: absolute
-    right: 0
-    top: 60px
-    width: 350px
-
 
 div#left-sidebar
   float: left
-  padding: 0 20px 0 10px
-  width: 105px
+  width: 135px
 
   h2.title
     border-top: 3px solid #6F171B
     margin-bottom: 10px
     padding-top: 5px
 
-  div#navigation
+  div#menu
     height: 185px
 
     ul li
@@ -54,29 +51,19 @@ div#left-sidebar
       a
         border: none
 
-  div#supporters
-    div.support-logo
-      background-color: #E5E5E5
-      height: 80px
-      margin: 20px 13px
-      width: 80px
-
 
 div#main
   border-left: 1px solid #E5E5E5
   float: left
-  margin-bottom: 20px
-  padding: 0 20px
-  width: 649px
-
-  div#content.single
-    margin: 20px 0 0
-    width: inherit
+  margin-top: 0
+  padding: 0 0 0 20px
+  width: 589px
 
 
 div#right-sidebar
   float: right
   width: 175px
+  margin: 0
 
   h2
     border-top: 3px solid #6F171B
@@ -142,7 +129,7 @@ div.announcement-tail
 div#announcement-numbers
   background: url("/images/dark_transparency.png")
   cursor: default
-  padding: 10px 10px 13px 13px
+  padding: 12px
   position: absolute
   left: 0
 
@@ -155,7 +142,7 @@ div.announcement img
 div.announcement-text
   background: url("/images/dark_transparency.png")
   bottom: 0
-  padding: 14px 12px 12px 14px
+  padding: 14px
   position: absolute
   right: 0
   width: 300px
