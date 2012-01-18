@@ -44,7 +44,7 @@
       </div>
 
       <div id="right-sidebar">
-        <%= render :partial => 'shared/tag_menu' if yield(:tag_cloud) %>
+        <%= tag_menu_widget(@tags) %>
       </div>
     </div>
   </div>

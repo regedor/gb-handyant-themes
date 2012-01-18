@@ -19,7 +19,7 @@
         <%= yield %>
       </div>
 
-      <%= yield :tag_menu %>
+      <%= tag_menu_widget(@tags) %>
     </div>
 
     <%= render :partial => 'shared/footer' %>
