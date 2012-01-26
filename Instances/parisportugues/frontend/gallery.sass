@@ -6,12 +6,15 @@ div.album
 
 div.album:hover
 
+  img.thumb
+    border: 1px solid #000
+
   span.name
     background-color: #CCC
 
 
 img.thumb
-  border: 1px solid #444
+  border: 1px solid #777
   padding: 2px
 
 
@@ -21,7 +24,7 @@ span.name
   margin: 5px auto 0
   padding: 5px
   text-align: center
-  width: 80px
+  width: 95px
   @include round-corners(15px, 15px, 15px, 15px)
   @include enable-ie-css3
 
