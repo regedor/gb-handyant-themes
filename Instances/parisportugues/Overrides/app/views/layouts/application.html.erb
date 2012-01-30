@@ -47,13 +47,13 @@
 
         <%= render :partial => 'shared/event_calendar', :locals => { :year => Time.now.year, :month => Time.now.month } %>
 
+        <%= render :partial => 'widgets/gallery' %>
+
         <div id="maps">
           <h2 class="title">Mapas</h2>
           <a href="/mapa-de-portugal"><div id="map-pt"></div></a>
           <a href="/mapa-de-franca"><div id="map-fr"></div></a>
         </div>
-
-        <%= render :partial => 'widgets/gallery' %>
       </div>
     </div>
 
