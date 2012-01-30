@@ -55,7 +55,7 @@
 
                 <%= link_to(@posts.first.approved_comments_count.to_s, post_path(@posts.first, :anchor => 'comment-list'), :class => 'post-comments') %>
 
-                <p><%= truncate(@posts.first.body, 12, '...') %></p>
+                <p><%= truncate(@posts.first.body, 100, '...') %></p>
               </div>
 
               <ul>
@@ -89,8 +89,8 @@
 
         <div id="maps">
           <h2 class="title">Mapas</h2>
-          <a href="/pages/portugal"><div id="map-pt"></div></a>
-          <a href="/pages/frança"><div id="map-fr"></div></a>
+          <a href="/mapa-de-portugal"><div id="map-pt"></div></a>
+          <a href="/mapa-de-franca"><div id="map-fr"></div></a>
         </div>
       </div>
     </div>
