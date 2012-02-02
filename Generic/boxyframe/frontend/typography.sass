@@ -3,12 +3,12 @@ div#header span.site-title
 
 
 div#menu
-  @include text-shadow(0, 1px, 0, #000)
+  font-size: 14px
+  @include text-shadow(1px, 1px, 0, #000)
   @include enable-ie-css3
 
-  ul li a
+  a
     color: #FFF
-    font-weight: bold
 
   a:hover
     text-decoration: underline
@@ -21,9 +21,8 @@ div#right-sidebar
 
   h2.title
     color: #FFF
-    font-size: 12px
-    font-weight: bold
-    @include text-shadow(0, 1px, 0, #000)
+    font-size: 14px
+    @include text-shadow(1px, 1px, 0, #000)
     @include enable-ie-css3
 
   li
@@ -36,6 +35,8 @@ div#right-sidebar
 div#footer
   color: #FFF
   text-align: center
+  @include text-shadow(1px, 1px, 0, #000)
+  @include enable-ie-css3
 
   a
     color: $default-color
