@@ -17,6 +17,7 @@ div.wrapper
   background-image: url("/images/wheel.png")
   background-repeat: no-repeat
   background-position: 100% 0
+  border: 1px solid #222
   margin: auto
   position: relative
   width: 960px
@@ -47,14 +48,18 @@ div#menu
         margin: 0 0 0 30px
 
 
+div#content
+  margin-top: 40px
+
+
 div#right-sidebar
 
   h2.title
-    background-image: url(/images/bar.png)
-    background-repeat: no-repeat
-    height: 25px
-    padding: 6px 0 0 15px
-    width: 215px
+    border: 1px solid #222
+    padding: 5px 15px
+    @include linear-gradient(#e14c00, #a93b00)
+    @include round-corners(10px, 10px, 10px, 10px)
+    @include enable-ie-css3
 
   li
     list-style: square
@@ -135,9 +140,9 @@ div#footer
 
 
 div#announcements
-  border: 1px solid #AAA
+  border: 1px solid #222
   height: 200px
-  margin: 40px auto 0
+  margin: auto
   overflow: hidden
   position: relative
   width: 920px
