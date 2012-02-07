@@ -1,0 +1,192 @@
+body
+  background-image: url('/images/body.png')
+  color: #5A5845
+
+
+h2.title
+
+  a
+    color: #333
+
+  a:hover
+    color: #828C66
+
+
+div.wrapper
+  margin: auto
+  position: relative
+  width: 960px
+
+
+div#header
+  background-image: url('/images/header2.png')
+  height: 300px
+  padding-top: 15px
+  position: relative
+
+  span.options
+    float: right
+
+    a:hover
+      border-bottom: 2px solid #FFF
+
+  div#logo
+    background-image: url('/logo.png')
+    height: 191px
+    margin-left: 30px
+    margin-top: 15px
+    position: absolute
+    width: 140px
+
+  div#menu
+    position: absolute
+    top: 265px
+
+    li
+      background-image: url('/images/menu.png')
+      display: inline
+      padding: 12px 0
+      margin-right: 2px
+      @include round-corners(8px, 8px, 0, 0)
+
+      a
+        padding: 12px 30px
+        @include round-corners(8px, 8px, 0, 0)
+
+    li a.current
+      background-image: url('/images/menu_current.png')
+
+
+  div#header-bottom
+    background-image: url('/images/menu_current.png')
+    height: 10px
+    position: absolute
+    bottom: 0
+    width: 100%
+
+
+div#main
+  margin-left: 0
+  margin-right: 30px
+  width: 690px
+
+
+div#right-sidebar
+  margin-right: 0
+  width: 240px
+
+  div#tag-menu
+    background-image: url('/images/menu_current.png')
+    padding: 10px 20px
+    @include round-corners(5px, 5px, 5px, 5px)
+    @include enable-ie-css3
+  
+    li
+      color: $default-color
+      list-style: square
+      margin-left: 30px
+      margin-bottom: 10px
+
+
+div#footer
+  background-image: url('/images/footer.png')
+  height: 300px
+  position: relative
+
+  div#footer-top
+    background-image: url('/images/footer-border.png')
+    border-bottom: 1px solid #303030
+    height: 10px
+
+  div#footer-bottom
+    background-image: url('/images/footer-border.png')
+    border-top: 1px solid #303030
+    height: 30px
+    position: absolute
+    bottom: 0
+    width: 100%
+
+  p#copy
+    float: left
+    padding-top: 7px
+
+  p#powered
+    float: right
+    padding-top: 7px
+
+
+// =============
+// Announcements
+// =============
+
+
+div#announcements
+  border: 3px solid #828C66
+  float: right
+  height: 200px
+  position: absolute
+  right: 0
+  top: 30px
+  width: 750px
+  @include box-shadow(0, 0, 5px, #222)
+  @include enable-ie-css3
+
+  a
+    display: block
+  
+  a:hover
+    border: none
+
+
+div.announcement-tail
+  display: none
+
+
+div#announcement-numbers
+  background: url("/images/dark_transparency.png")
+  cursor: default
+  padding: 12px
+  position: absolute
+  right: 0
+  @include round-corners(0, 0, 0, 5px)
+  @include enable-ie-css3
+
+  a
+    display: inline-block
+
+
+div.announcement img
+  height: 200px
+  width: 750px
+
+
+div.announcement-text
+  background: url("/images/dark_transparency.png")
+  bottom: 0
+  padding: 14px
+  position: absolute
+  right: 0
+  width: 300px
+  @include round-corners(5px, 0, 0, 0)
+  @include enable-ie-css3
+
+  p.title
+    padding: 0 0 15px
+
+
+
+div.meta
+  background-image: url('/images/menu_current.png')
+  margin: 0
+  @include round-corners(5px, 5px, 5px, 5px)
+  @include enable-ie-css3
+  color: #FFF
+  @include text-shadow(1px, 1px, 0, #222)
+
+  a
+    color: #FFF
+    @include text-shadow(1px, 1px, 0, #222)
+
+
+div.textile-body
+  margin: 0

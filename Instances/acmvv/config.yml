@@ -1,0 +1,8 @@
+---
+  theme: none
+  default_locale: pt
+  title: ACMVV
+  site_name: ACMVV
+  site_header: Associação Cultural e Musical de Vila Verde
+  announcement_size: "920x200#"
+  force_locale: "true"
