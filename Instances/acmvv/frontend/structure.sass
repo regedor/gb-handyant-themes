@@ -1,15 +1,5 @@
 body
   background-image: url('/images/body.png')
-  color: #5A5845
-
-
-h2.title
-
-  a
-    color: #333
-
-  a:hover
-    color: #828C66
 
 
 div.wrapper
@@ -48,10 +38,12 @@ div#header
       padding: 12px 0
       margin-right: 2px
       @include round-corners(8px, 8px, 0, 0)
+      @include enable-ie-css3
 
       a
         padding: 12px 30px
         @include round-corners(8px, 8px, 0, 0)
+        @include enable-ie-css3
 
     li a.current
       background-image: url('/images/menu_current.png')
@@ -89,7 +81,7 @@ div#right-sidebar
 
 
 div#footer
-  background-image: url('/images/footer.png')
+  background-image: url('/images/footer2.png')
   height: 300px
   position: relative
 
@@ -172,6 +164,10 @@ div.announcement-text
 
   p.title
     padding: 0 0 15px
+
+
+
+
 
 
 
