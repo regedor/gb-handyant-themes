@@ -27,6 +27,10 @@
       <%= render :partial => 'announcements/announcement' %>
 
       <div id="menu"><%= frontend_navigation_content %></div>
+
+      <div id="facebook-icon" class="social-icon"></div>
+      <div id="twitter-icon" class="social-icon"></div>
+      <div id="youtube-icon" class="social-icon"></div>
     </div>
 
     <div id="header-bottom"></div>
@@ -42,12 +46,30 @@
     </div>
 
     <div id="right-sidebar">
+      <div id="logos-de-lodo" style="margin-bottom: 15px;">
+        <img style="border-radius: 5px; margin-right: 15px;" src="/images/amvv.jpg" height="100px" width="110px">
+        <img style="border-radius: 5px;" src="/images/gefp.jpg" height="140px" width="110px">
+      </div>
+
       <%= tag_menu_widget(@tags) if params[:action] == 'index' and params[:controller] == 'posts' %>
     </div>
   </div>
 
   <div id="footer">
     <div id="footer-top"></div>
+
+    <div class="wrapper">
+      <p id="support-text">Co-financiado pela FSE e Estado Português:</p>
+
+      <div id="support-logos">
+        <div id="poph-logo" class="support-logo"></div>
+        <div id="qren-logo" class="support-logo"></div>
+        <div id="fse-logo" class="support-logo"></div>
+        <div id="brp-logo" class="support-logo"></div>
+        <div id="me-logo" class="support-logo"></div>
+        <div id="vvm-logo" class="support-logo"></div>
+      </div>
+    </div>
 
     <div id="footer-bottom">
       <div class="wrapper">
