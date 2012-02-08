@@ -22,11 +22,11 @@ div#header
 
   div#logo
     background-image: url('/logo.png')
-    height: 191px
+    height: 200px
     margin-left: 30px
     margin-top: 15px
     position: absolute
-    width: 140px
+    width: 147px
 
   div#menu
     position: absolute
@@ -60,7 +60,12 @@ div#header
 div#main
   margin-left: 0
   margin-right: 30px
-  width: 690px
+  width: 680px
+
+div#content
+  background-image: url('/images/stack.png')
+  background-repeat: no-repeat
+  background-position: 96% 99%
 
 
 div#right-sidebar
@@ -81,7 +86,7 @@ div#right-sidebar
 
 
 div#footer
-  background-image: url('/images/footer2.png')
+  background-image: url('/images/footer.png')
   height: 300px
   position: relative
 
@@ -92,7 +97,7 @@ div#footer
 
   div#footer-bottom
     background-image: url('/images/footer-border.png')
-    border-top: 1px solid #303030
+    border-top: 1px solid #000
     height: 30px
     position: absolute
     bottom: 0
@@ -105,6 +110,40 @@ div#footer
   p#powered
     float: right
     padding-top: 7px
+
+  p#support-text
+    margin: 12px 0
+
+  div#support-logos
+
+    div.support-logo
+      display: inline-block
+      height: 110px
+      margin-left: 25px
+      width: 110px
+      @include opacity(0.9)
+      @include round-corners(5px, 5px, 5px, 5px)
+      @include enable-ie-css3
+
+    div#poph-logo
+      background-image: url('/images/supporters/1_poph.png')
+
+    div#qren-logo
+      background-image: url('/images/supporters/2_qren.png')
+
+    div#fse-logo
+      background-image: url('/images/supporters/3_fse.png')
+
+    div#brp-logo
+      background-image: url('/images/supporters/4_brp.png')
+
+    div#me-logo
+      background-image: url('/images/supporters/5_me.png')
+
+    div#vvm-logo
+      background-image: url('/images/supporters/6_vvm.png')
+
+
 
 
 // =============
@@ -169,6 +208,48 @@ div.announcement-text
 
 
 
+
+div.social-icon
+  @include opacity(0.3)
+  @include transition(opacity, 0.3s, ease-in-out, 0s)
+  @include enable-ie-css3
+
+
+div.social-icon:hover
+  @include opacity(0.6)
+  @include enable-ie-css3
+
+
+div#facebook-icon
+  background-image: url('/images/facebook-icon.png')
+  height: 32px
+  position: absolute
+  right: 72px
+  top: 250px
+  width: 32px
+
+div#twitter-icon
+  background-image: url('/images/twitter-icon.png')
+  height: 32px
+  position: absolute
+  right: 36px
+  top: 250px
+  width: 32px
+
+div#youtube-icon
+  background-image: url('/images/youtube-icon.png')
+  height: 32px
+  position: absolute
+  right: 0
+  top: 250px
+  width: 32px
+
+
+div#archives
+  margin: 0
+
+  a:hover
+    text-decoration: underline
 
 
 div.meta
