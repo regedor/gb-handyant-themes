@@ -8,7 +8,6 @@ div#menu
     @include enable-ie-css3
 
   a:hover
-    color: #FFD700
     text-decoration: underline
 
   a.current
@@ -16,6 +15,11 @@ div#menu
 
   a.current:hover
     text-decoration: none
+
+
+h2.title a:hover
+  border-bottom: 3px solid $default-color
+  color: $text-color
 
 
 div#right-sidebar
