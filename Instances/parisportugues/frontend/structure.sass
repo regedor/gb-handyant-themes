@@ -1,11 +1,17 @@
 body
-  background-color: $frontend-background-color
-
-/*background-image: url("/images/vichy.png")*/
+  background-image: url("/images/bg.png")
 
 
-h2.title a:hover
-  color: #FFF
+h2.title
+  color: $default-color
+  font-size: 18px !important
+  margin-bottom: 0
+
+
+body > div.wrapper
+  border-left: 1px solid #444
+  border-right: 1px solid #444
+  position: relative
 
 
 div.wrapper
@@ -13,49 +19,100 @@ div.wrapper
   margin: auto
   width: 960px
 
-/*@include box-shadow(0, 0, 6px, #666)*/
-/*border-left: 1px solid #444*/
-/*border-right: 1px solid #444*/
-
 
 div#header
-  border-bottom: 30px solid #99A846
-  height: 195px
-  margin-bottom: 20px
+  margin-bottom: 60px
   position: relative
 
   span.options
     background-color: #A01818
     display: block
-    padding: 7px 10px 8px
+    height: 40px
+    left: -10px
+    padding: 0 25px
+    position: absolute
     text-align: right
+    width: 930px
 
-  div#logo
-    background-image: url("/logo.png")
-    background-repeat: no-repeat
-    float: left
-    height: 156px
-    margin: 11px 0 0
-    width: 300px
+    a
+      display: inline-block
+      margin-top: 12px
+
+  span.options:before, span.options:after
+    border-color: transparent
+    border-style: solid
+    content: ''
+    position: absolute
+    top: 40px
+
+  span.options:before
+    border-width: 0 10px 10px 0
+    border-right-color: #650F0F
+    left: 0
+
+  span.options:after
+    border-width: 0 0 10px 10px
+    border-left-color: #650F0F
+    right: 0
+
+  a#logo-container
+    display: inline-block
+
+    div#logo
+      background-image: url("/logo.png")
+      background-repeat: no-repeat
+      float: left
+      height: 156px
+      margin: 40px 20px 0
+      width: 300px
+
+  div#menu
+    background-color: $default-color
+    height: 40px
+    left: -10px
+    position: absolute
+    width: 980px
+
+    ul
+      margin: 0 15px
+
+      li
+        display: inline
+
+      a
+        border: none
+        display: inline-block
+        padding: 12px 15px
+
+  div#menu:before, div#menu:after
+    border-color: transparent
+    border-style: solid
+    content: ''
+    position: absolute
+    top: 40px
+
+  div#menu:before
+    border-width: 0 10px 10px 0
+    border-right-color: #576028
+    left: 0
+
+  div#menu:after
+    border-width: 0 0 10px 10px
+    border-left-color: #576028
+    right: 0
 
 
 div#left-sidebar
+  background-color: #F2F5F2
   float: left
-  width: 135px
+  height: 500px
+  margin-left: 20px
+  width: 115px
 
   h2.title
     border-top: 3px solid #A01818
     margin-bottom: 10px
     padding-top: 5px
-
-  div#menu
-    height: 185px
-
-    ul li
-      margin: 0 0 5px
-
-      a
-        border: none
 
 
 div#main
@@ -68,9 +125,9 @@ div#main
 div#right-sidebar
   float: right
   width: 175px
-  margin: 0
+  margin: 0 20px 0 0
 
-  h2
+  h2.title
     border-top: 3px solid #A01818
     margin-bottom: 10px
     padding-top: 5px
@@ -98,12 +155,88 @@ div#right-sidebar
 
 
 div#footer
-  border-top: 30px solid #99A846
-  clear: both
-  padding: 20px 0
+  background-color: $default-color
+  height: 40px
+  left: -10px
+  position: absolute
+  width: 980px
 
   a:hover
     border-bottom: 2px solid $default-color
+
+  p
+    margin-top: 12px
+
+
+div#footer:before, div#footer:after
+  border-color: transparent
+  border-style: solid
+  bottom: 40px
+  content: ''
+  position: absolute
+
+
+div#footer:before
+  border-width: 10px 10px 0 0
+  border-right-color: #576028
+  left: 0
+
+
+div#footer:after
+  border-width: 10px 0 0 10px
+  border-left-color: #576028
+  right: 0
+
+
+// =============
+// Announcements
+// =============
+
+
+div#announcements
+  border-bottom: 3px solid $default-color
+  border-top: 3px solid #A01818
+  height: 160px
+  overflow: hidden
+  margin-bottom: 20px
+  position: relative
+  width: 589px
+
+  a
+    display: inline-block
+
+  a:hover
+    border: none
+    display: inline-block
+
+
+div.announcement-tail
+  display: none
+
+
+div#announcement-numbers
+  background: url("/images/dark_transparency.png")
+  cursor: default
+  padding: 12px
+  position: absolute
+  left: 0
+
+
+div.announcement img
+  height: 160px
+  width: 589px
+
+
+div.announcement-text
+  background: url("/images/dark_transparency.png")
+  bottom: 0
+  padding: 14px
+  position: absolute
+  right: 0
+  width: 300px
+
+  p.title
+    padding: 0 0 15px
 
 
 // =====
@@ -112,6 +245,7 @@ div#footer
 
 
 div.meta
+  margin-bottom: 15px
   text-align: right
 
 
@@ -123,85 +257,116 @@ div.meta
 div.post
   margin-bottom: 5px
 
-  h3
-    display: inline
-    font-size: 12px
-
-    a
-      color: #586128
-
-  h3:hover a
-    text-decoration: underline
-
   a.post-comments
     background-image: url('/images/icons/comment.png')
     background-repeat: no-repeat
-    margin-left: 10px
+    margin-left: 5px
     padding-left: 18px
 
   a.post-comments:hover
     color: $default-color
 
   img
-    height: 200px
-    width: 284px
+    height: 180px
+    margin-bottom: 10px
+    width: 264px
 
 
 div.post.first
-  margin-bottom: 4px
 
   h3
-    display: inline-block
-    font-size: 16px
-    margin: 10px 0 0 10px
+    display: inline
+    font-size: 17px
+    font-family: Verdana
+    letter-spacing: -1px
 
     a
       color: $text-color
+
+  h3:hover
+    text-decoration: underline
 
   a.post-image
     display: block
 
 
 div.global-category
-  background-color: #F2F5F2
   float: left
   margin-bottom: 20px
   margin-right: 20px
-  min-height: 405px
+  position: relative
   width: 284px
 
-  h2
-    background-color: #BABF56
-    font-size: 18px
-    margin-bottom: 0
-    padding-left: 10px
-    padding-top: 5px
+  div.global-category-body
+    background-color: #F2F5F2
+    min-height: 405px
+    padding: 10px
+
+  h2.title
+    border-bottom: 3px solid #A01818
+
+    a
+      display: block
+      border-bottom: none !important
+
+  h2:hover
+    border-bottom: 3px solid $default-color
+
+    a
+      color: #576028
+
+  span#posts-archive
+    background-color: $default-color
+    padding: 10px
+    position: absolute
+    bottom: 0
+    right: -10px
+    @include text-shadow(1px, 1px, 0, #576028)
+    @include enable-ie-css3
 
     a
       color: #FFF
-      border-bottom: none !important
 
-    a:hover
-      text-decoration: underline
-
-  span#posts-archive
-    float: right
-    margin-bottom: 10px
-    margin-right: 10px
+  span#posts-archive:after
+    border-color: transparent
+    border-style: solid
+    bottom: 35px
+    content: ''
+    position: absolute
+    border-width: 10px 0 0 10px
+    border-left-color: #576028
+    right: 0
 
   span#posts-archive:hover
     text-decoration: underline
-
-  p
-    margin: 10px 10px 15px
 
   p:hover
     text-decoration: underline
 
   ul
-    margin-left: 13px
+    margin: 10px 0
 
     li
       color: $default-color
-      list-style: square
-      margin-left: 15px
+      height: 16px
+      margin-bottom: 3px
+
+    h4
+      display: inline
+      font-size: 12px
+
+      a
+        color: #586128
+
+    h4:hover
+      text-decoration: underline
+
+    h4.franca
+      background-image: url('/images/flags/fr.png')
+      background-repeat: no-repeat
+      padding-left: 20px
+
+    h4.portugal
+      background-image: url('/images/flags/pt.png')
+      background-repeat: no-repeat
+      padding-left: 20px

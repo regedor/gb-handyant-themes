@@ -15,6 +15,8 @@ h2.title, h3.archives-month-title
 
 span.options
   color: #FFF
+  @include text-shadow(1px, 1px, 0, #000)
+  @include enable-ie-css3
 
   a
     color: #FFF
@@ -24,20 +26,27 @@ span.options
 
 
 div#menu
+  @include text-shadow(1px, 1px, 0, #BABF56)
+  @include enable-ie-css3
 
   a
-    color: #586128
+    color: #576028
     font-size: 15px
-    font-weight: bold
 
   a:hover
     text-decoration: underline
 
   a.current
-    color: #A01818
+    color: #FFF
+    @include text-shadow(1px, 1px, 0, #576028)
+    @include enable-ie-css3
 
   a.current:hover
     text-decoration: none
+
+
+div.global-category h2 a
+  color: $default-color
 
 
 div#left-sidebar, div#right-sidebar
@@ -49,9 +58,13 @@ div#left-sidebar, div#right-sidebar
 
 
 div#footer
-  color: #454545
+  color: #FFF
   text-align: center
+  @include text-shadow(1px, 1px, 0, #576028)
+  @include enable-ie-css3
 
   a
-    color: #A01818
+    color: #576028
     font-weight: bold
+    @include text-shadow(1px, 1px, 0, #BABF56)
+    @include enable-ie-css3
