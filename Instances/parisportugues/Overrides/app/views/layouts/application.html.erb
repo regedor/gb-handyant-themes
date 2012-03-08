@@ -34,9 +34,10 @@
       </div>
 
       <div id="main">
-        <h2 class="title announcement">Destaques</h2>
-
-        <%= render :partial => 'announcements/announcement' %>
+        <% if @page || request.env['PATH_INFO'] == "/" %>
+          <h2 class="title announcement">Destaques</h2>
+          <%= render :partial => 'announcements/announcement' %>
+        <% end %>
 
         <% if request.env['PATH_INFO'] == "/" %>
           <%= category_news_grid %>
