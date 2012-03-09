@@ -34,7 +34,9 @@
       </div>
 
       <div id="main">
-        <%= render :partial => 'announcements/announcement' %>
+        <% if @page || request.env['PATH_INFO'] == "/" %>
+          <%= render :partial => 'announcements/announcement' %>
+        <% end %>
 
         <% if request.env['PATH_INFO'] == "/" %>
           <%= category_news_grid %>
