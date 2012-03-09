@@ -90,49 +90,66 @@ div#content
 
 
 div#announcements
-  background-color: #FFF
   height: 250px
   margin-bottom: 20px
-  overflow: hidden
   position: relative
   width: 850px
   @include box-shadow(0, 0, 4px, #111)
   @include enable-ie-css3
 
-  a
-    display: block
-     
-  a:hover
-    border: none
+  div.announcements-container
+    height: 100%
+    width: 100%
+
+  a.prev
+    background-image: url('/images/prev.png')
+    height: 60px
+    position: absolute
+    left: 25px
+    top: 100px
+    width: 60px
+    z-index: 21
+    @include opacity(0)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  a.next
+    background-image: url('/images/next.png')
+    height: 60px
+    position: absolute
+    right: 25px
+    top: 100px
+    width: 60px
+    z-index: 21
+    @include opacity(0)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  ul.pagination
+    position: absolute
+    text-align: center
+    top: 220px
+    width: 100%
+    z-index: 21
+
+    li
+      display: inline
+      margin: 0 2px
+
+    a
+      background-image: url('/images/pagination_off.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+
+    li.current a
+      background-image: url('/images/pagination_on.png')
 
 
-div.announcement-tail
-  display: none
+div#announcements:hover
 
-
-div#announcement-numbers
-  background: url("/images/dark_transparency.png")
-  cursor: default
-  padding: 12px
-  position: absolute
-  right: 0
-
-  a
-    display: inline-block
-
-
-div.announcement img
-  height: 250px
-  width: 850px
-
-
-div.announcement-text
-  background: url("/images/dark_transparency.png")
-  bottom: 20px
-  padding: 14px
-  position: absolute
-  right: 0
-  width: 300px
-
-  p.title
-    padding: 0 0 15px
+  a.prev, a.next
+    display: inline
+    @include opacity(1)
+    @include enable-ie-css3

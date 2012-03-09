@@ -1,4 +1,4 @@
-<%= render :partial => 'shared/layout_head' %>
+<%= render :partial => 'shared/layout_head', :locals => { :sentir_saude_slider => true } %>
 
 <body>
   <div class="wrapper">
@@ -17,7 +17,7 @@
       <div id="menu"><%= frontend_navigation_content %></div>
     </div>
 
-    <%= render :partial => 'announcements/announcement' %>
+    <%= render :partial => 'announcements/sentir_saude' %>
 
     <div id="content" class="selfclear">
       <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
