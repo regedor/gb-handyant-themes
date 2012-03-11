@@ -1,101 +1,87 @@
 body
-  @include linear-gradient(#0B779F, #FFF)
-  @include enable-ie-css3
-
-
-div#header
-  margin: 15px auto 40px
-  padding-right: 20px
-  width: 880px
-
-  span.options
-    display: block
-    text-align: right
-
-    a:hover
-      border-bottom: 2px solid #FFF
+  background-color: #266B99
+  background-image: url('/images/bg.png')
 
 
 div.wrapper
-  background-color: #FFF
   margin: auto
-  width: 900px
-  @include box-shadow(0, 0, 6px, #222)
-  @include round-corners(5px, 5px, 5px, 5px)
-  @include enable-ie-css3
+  width: 850px
 
-  div#top-panel
-    height: 242px
-    position: relative
 
-    div#logo
-      background-image: url('/logo.png')
-      float: left
-      height: 125px
-      margin: 58px 0 58px 20px
-      width: 283px
+div#header
+  position: relative
+
+  div#options
+    position: absolute
+    right: 20px
+    top: 17px
+    @include opacity(0.8)
+    @include enable-ie-css3
+
+    a.admin-icon
+      background-image: url('/images/gear.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+  
+    a.login-icon
+      background-image: url('/images/padlock_closed.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+  
+    a.logout-icon
+      background-image: url('/images/padlock_open.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+
+  div#logo
+    background-image: url('/logo.png')
+    float: left
+    height: 125px
+    margin: 58px 0 58px 20px
+    width: 283px
 
   div#menu
-    margin: 0 20px
-    border-bottom: 1px solid #A3A5A8
-  
+    height: 50px
+    margin: 20px 0
+    -webkit-box-shadow: 0 0 4px #111, inset 0 1px 0 #FFF
+    -moz-box-shadow: 0 0 4px #111, inset 0 1px 0 #FFF
+    box-shadow: 0 0 4px #111, inset 0 1px 0 #FFF
+    @include linear-gradient(#EDEDED, #DBDBDB)
+    @include round-corners(5px, 5px, 5px, 5px)
+    @include enable-ie-css3
+
     ul
-      margin: 15px 0
-  
+      padding: 17px 0
+
       li
         display: inline
         margin-right: 2px
-        padding: 15px 0
-        @include linear-gradient(#359AB9, #006483)
-        @include round-corners(5px, 5px, 0, 0)
-        @include enable-ie-css3
+        padding: 16px 0
 
         a
           border: none
           padding: 15px 20px
 
-        a:hover, a.current
-          @include linear-gradient(#09759D, #006282)
-          @include round-corners(5px, 5px, 0, 0)
-          @include enable-ie-css3
 
-  div#main
-    width: 690px
+div#content
+  background-color: #FFF
+  margin-bottom: 50px
+  -webkit-box-shadow: 0 0 4px #111, inset 0 0 50px rgba(0, 0, 0, 0.1)
+  -moz-box-shadow: 0 0 4px #111, inset 0 0 50px rgba(0, 0, 0, 0.1)
+  box-shadow: 0 0 4px #111, inset 0 0 50px rgba(0, 0, 0, 0.1)
 
-  div#right-sidebar
-    width: 150px
+  div#footer
+    clear: both
+    margin: 40px 0 20px
 
-  div#bottom-panel
-    background-image: url('/images/bottom_panel.png')
-    background-color: #09759D
-    background-repeat: no-repeat
-    height: 160px
-    padding-top: 40px
-    @include round-corners(0px, 0px, 5px, 5px)
-    @include enable-ie-css3
-
-    div#bottom-panel-left
-      float: left
-
-    div#bottom-panel-center
-      float: left
-
-    div#bottom-panel-right
-      float: right
-
-    div.bottom-panel-page
-      border-left: 1px solid #3299B8
-      height: 120px
-      margin: 20px
-      padding: 0 10px
-      width: 237px
-
-
-div#footer
-  margin: 40px 0 20px
-
-  a:hover
-    border-bottom: 2px solid $default-color
+    a:hover
+      border-bottom: 2px solid $default-color
 
 
 // =============
@@ -104,49 +90,66 @@ div#footer
 
 
 div#announcements
-  border: 1px solid #000
-  float: right
-  height: 200px
-  margin: 20px
-  overflow: hidden
+  height: 250px
+  margin-bottom: 20px
   position: relative
-  width: 555px
-
-  a
-    display: block
-     
-  a:hover
-    border: none
-
-
-div.announcement-tail
-  display: none
-
-
-div#announcement-numbers
-  cursor: default
-  padding: 12px
-  position: absolute
-  right: 0
-
-  a
-    display: inline-block
-
-
-div.announcement img
-  height: 200px
-  width: 555px
-
-
-div.announcement-text
-  background: url("/images/dark_transparency.png")
-  bottom: 20px
-  padding: 14px
-  position: absolute
-  right: 0
-  width: 300px
-  @include round-corners(5px, 0, 0, 5px)
+  width: 850px
+  @include box-shadow(0, 0, 4px, #111)
   @include enable-ie-css3
 
-  p.title
-    padding: 0 0 15px
+  div.announcements-container
+    height: 100%
+    width: 100%
+
+  a.prev
+    background-image: url('/images/prev.png')
+    height: 60px
+    position: absolute
+    left: 25px
+    top: 100px
+    width: 60px
+    z-index: 21
+    @include opacity(0)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  a.next
+    background-image: url('/images/next.png')
+    height: 60px
+    position: absolute
+    right: 25px
+    top: 100px
+    width: 60px
+    z-index: 21
+    @include opacity(0)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  ul.pagination
+    position: absolute
+    text-align: center
+    top: 220px
+    width: 100%
+    z-index: 21
+
+    li
+      display: inline
+      margin: 0 2px
+
+    a
+      background-image: url('/images/pagination_off.png')
+      display: inline-block
+      height: 14px
+      text-indent: -9999px
+      width: 14px
+
+    li.current a
+      background-image: url('/images/pagination_on.png')
+
+
+div#announcements:hover
+
+  a.prev, a.next
+    display: inline
+    @include opacity(1)
+    @include enable-ie-css3

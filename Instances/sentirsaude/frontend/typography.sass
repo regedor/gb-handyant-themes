@@ -6,15 +6,6 @@ h3.archives-month-title
   font-size: 20px
 
 
-span.options
-  color: #FFF
-  @include text-shadow(1px, 1px, 0, #006282)
-  @include enable-ie-css3
-
-  a
-    color: #FFF
-
-
 div.announcement-text
   color: #FFF
 
@@ -39,13 +30,18 @@ div#announcement-numbers
 
 
 div#menu
+  font-size: 15px
+  @include text-shadow(1px, 1px, 0, #F5F5F5)
+  @include enable-ie-css3
 
   ul li a
-    color: #FFF
-    font-weight: bold
+    color: #333
 
   a:hover
     text-decoration: underline
+
+  a.current
+    color: #175A87
 
   a.current:hover
     text-decoration: none
@@ -77,12 +73,6 @@ div#archives
 
 ul.archives-month
   font-size: 14px
-
-
-div#bottom-panel
-  color: #FFF
-  @include text-shadow(1px, 1px, 0, #006282)
-  @include enable-ie-css3
 
 
 div#footer

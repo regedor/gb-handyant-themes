@@ -20,7 +20,9 @@
         <% end %>
       </span>
 
-      <a href="/"><div id="logo"></div></a>
+      <a href="/" id="logo-container"><div id="logo"></div></a>
+
+      <div id="menu"><%= frontend_navigation_content %></div>
     </div>
 
     <div id="content" class="selfclear wrapper">
@@ -29,10 +31,13 @@
       <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
 
       <div id="left-sidebar">
-        <div id="menu"><%= frontend_navigation_content %></div>
       </div>
 
       <div id="main">
+        <% if @page || request.env['PATH_INFO'] == "/" %>
+          <%= render :partial => 'announcements/announcement' %>
+        <% end %>
+
         <% if request.env['PATH_INFO'] == "/" %>
           <%= category_news_grid %>
         <% else %>
