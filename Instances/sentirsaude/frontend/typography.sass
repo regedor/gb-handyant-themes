@@ -76,12 +76,15 @@ ul.archives-month
 
 
 div#footer
-  color: #444
-  text-align: center
+
+  p#footer-info
+    color: #FFF
+    text-align: center
+    @include text-shadow(1px, 1px, 0, #000)
+    @include enable-ie-css3
 
   a
-    color: $default-color
-    font-weight: bold
+    color: #CCC
 
 
 // ========

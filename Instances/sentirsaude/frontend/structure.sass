@@ -76,12 +76,45 @@ div#content
   -moz-box-shadow: 0 0 4px #111, inset 0 0 50px rgba(0, 0, 0, 0.1)
   box-shadow: 0 0 4px #111, inset 0 0 50px rgba(0, 0, 0, 0.1)
 
+  div#main
+    margin-bottom: 0
+
   div#footer
+    background-image: url('/images/footer.png')
     clear: both
-    margin: 40px 0 20px
+    height: 290px
+    position: relative
+    width: 850px
+
+    p#footer-info
+      background-color: #454545
+      bottom: 15px
+      margin: 0 20px
+      padding: 10px 0
+      position: absolute
+      width: 810px
+      -webkit-box-shadow: inset 1px 1px 1px #222
+      -moz-box-shadow: inset 1px 1px 1px #222
+      box-shadow: inset 1px 1px 1px #222
+      @include round-corners(5px, 5px, 5px, 5px)
+      @include text-shadow(1px, 1px, 0, #222)
+      @include enable-ie-css3
+
+    div.footer-page
+      background-image: url('/images/line.png')
+      background-repeat: no-repeat
+      display: inline-block
+      height: 140px
+      margin-top: 80px
+      padding: 0 20px
+      vertical-align: top
+      width: 240px
 
     a:hover
       border-bottom: 2px solid $default-color
+
+    div.footer-page:first-child
+      background-image: none
 
 
 // =============
@@ -105,8 +138,8 @@ div#announcements
     background-image: url('/images/prev.png')
     height: 60px
     position: absolute
-    left: 25px
-    top: 100px
+    left: 16px
+    top: 175px
     width: 60px
     z-index: 21
     @include opacity(0)
@@ -117,8 +150,8 @@ div#announcements
     background-image: url('/images/next.png')
     height: 60px
     position: absolute
-    right: 25px
-    top: 100px
+    right: 16px
+    top: 175px
     width: 60px
     z-index: 21
     @include opacity(0)
