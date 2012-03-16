@@ -76,6 +76,8 @@ ul.archives-month
 
 
 div#footer
+  @include text-shadow(1px, 1px, 0, #FFF)
+  @include enable-ie-css3
 
   p#footer-info
     color: #FFF
@@ -85,6 +87,9 @@ div#footer
 
   a
     color: #CCC
+
+  a:hover
+    color: $default-color
 
 
 // ========

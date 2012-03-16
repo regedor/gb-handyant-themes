@@ -93,9 +93,7 @@ div#content
       padding: 10px 0
       position: absolute
       width: 810px
-      -webkit-box-shadow: inset 1px 1px 1px #222
-      -moz-box-shadow: inset 1px 1px 1px #222
-      box-shadow: inset 1px 1px 1px #222
+      @include inset-box-shadow(1px, 1px, 1px, #222)
       @include round-corners(5px, 5px, 5px, 5px)
       @include text-shadow(1px, 1px, 0, #222)
       @include enable-ie-css3
@@ -109,9 +107,6 @@ div#content
       padding: 0 20px
       vertical-align: top
       width: 240px
-
-    a:hover
-      border-bottom: 2px solid $default-color
 
     div.footer-page:first-child
       background-image: none
