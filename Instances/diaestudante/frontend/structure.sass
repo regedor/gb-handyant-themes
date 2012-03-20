@@ -76,59 +76,73 @@ div#right-sidebar
   margin: 15px 34px 0 0
   width: 165px
 
-  div#organization
+  h2.title
+    background-image: url('/images/square_light_blue.png')
+    margin-bottom: 15px
+    padding: 13px 15px 12px
 
-    h2.title
-      background-image: url('/images/square_light_blue.png')
-      color: #EBEBB7
-      font-size: 13px
-      margin-bottom: 0
-      padding: 13px 15px 12px
-      text-transform: uppercase
+  div#organization-logos
+    margin-bottom: 15px
 
-    div#organization-logos
-      padding: 15px 0
+  div.organization-logo
+    background-color: #FFF
+    display: inline-block
+    height: 75px
+    margin-bottom: 10px
+    width: 75px
+    @include opacity(0.4)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
 
-    div.organization-logo
-      background-color: #FFF
-      display: inline-block
-      height: 75px
-      margin-bottom: 10px
-      width: 75px
-      @include opacity(0.4)
-      @include transition(opacity, 0.2s, ease-in-out, 0s)
-      @include enable-ie-css3
+  div.organization-logo:hover
+    @include opacity(1)
+    @include enable-ie-css3
 
-    div.organization-logo:hover
-      @include opacity(1)
-      @include enable-ie-css3
+  div#aac-logo
+    background-image: url("/images/aac.png")
+    margin-right: 10px
 
-    div#aac-logo
-      background-image: url("/images/aac.png")
+  div#aauav-logo
+    background-image: url("/images/aauav.png")
 
-    div#aauav-logo
-      background-image: url("/images/aauav.png")
+  div#aaum-logo
+    background-image: url("/images/aaum.png")
+    margin-right: 10px
 
-    div#aaum-logo
-      background-image: url("/images/aaum.png")
+  div#aautad-logo
+    background-image: url("/images/aautad.png")
 
-    div#aautad-logo
-      background-image: url("/images/aautad.png")
+  div#aefct-logo
+    background-image: url("/images/aefct.png")
 
-    div#aefct-logo
-      background-image: url("/images/aefct.png")
+  div#uevora-logo
+    background-image: url("/images/uevora.png")
 
-    div#uevora-logo
-      background-image: url("/images/uevora.png")
+  div#fap-logo
+    background-image: url("/images/fap.png")
+    margin-right: 10px
 
-    div#fap-logo
-      background-image: url("/images/fap.png")
+  div#fnaeesp-logo
+    background-image: url("/images/fnaeesp.png")
+    margin-right: 10px
 
-    div#fnaeesp-logo
-      background-image: url("/images/fnaeesp.png")
+  div#fnespc-logo
+    background-image: url("/images/fnespc.png")
 
-    div#fnespc-logo
-      background-image: url("/images/fnespc.png")
+  div#web-development a
+    background-image: url('/images/gb.png')
+    display: block
+    height: 84px
+    margin: auto
+    text-indent: -9999px
+    width: 120px
+    @include opacity(0.4)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  div#web-development a:hover
+    @include opacity(1)
+    @include enable-ie-css3
 
 
 div#archives
@@ -169,7 +183,7 @@ div.post
   div.post-image
     display: inline-block
     float: none
-    width: 100%
+    margin: 0 20px 15px 0
 
   div.meta
     background-color: transparent
@@ -197,6 +211,9 @@ div.post
     li.edit-link a
       color: #EBEBB7
       padding-right: 10px
+
+    li.edit-link a:hover
+      text-decoration: underline
 
     li.edit-link a:hover
       border-bottom: none
