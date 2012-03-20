@@ -1,6 +1,6 @@
 body
   color: $text-color
-  font: 13px Helvetica, Arial, Sans-Serif
+  font: 13px 'Helvetica Neue', Helvetica, Arial, Sans-Serif
 
 
 a, a:active, a:link, a:visited
@@ -10,6 +10,10 @@ a, a:active, a:link, a:visited
 
 h2.title
   font-size: 24px
+  margin: 0 0 15px
+
+  a:hover
+    color: $default-color
 
 
 hr
@@ -86,11 +90,12 @@ div#right-sidebar
       font-weight: bold
 
 
-h2.title, h3.archives-month-title 
+h3.archives-month-title
+  font-size: 20px
   margin: 0 0 15px
 
   a:hover
-    border-bottom: 3px solid $default-color
+    border-bottom: 2px solid $default-color
 
 
 div#archives
@@ -98,11 +103,7 @@ div#archives
   margin: 0 10px
 
   a:hover
-    border-bottom: 3px solid $default-color
-
-
-h3.archives-month-title
-  font-size: 20px
+    border-bottom: 2px solid $default-color
 
 
 div.pagination
@@ -189,7 +190,7 @@ div#flash
   padding: 15px 0
   position: fixed
   width: 100%
-  z-index: 1
+  z-index: 2
 
   div.message
     margin: 0 0 0 30px
@@ -262,6 +263,7 @@ div.meta
   background-color: #EEE
   margin: 0 10px
   padding: 10px
+  text-align: right
 
   a:hover
     border-bottom: 2px solid $default-color
