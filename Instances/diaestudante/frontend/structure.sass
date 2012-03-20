@@ -1,6 +1,7 @@
 body
   background-color: #EBE8CE
   background-image: url('/images/bg.png')
+  text-align: justify
 
 
 div.wrapper
@@ -68,17 +69,75 @@ div#header
 
 
 div#main
-  margin: 15px 34px
+  margin: 15px 20px 15px 34px
+  width: 707px
+
+
+div#right-sidebar
+  margin: 15px 34px 0 0
+  width: 165px
+
+  div#organization
+
+    h2.title
+      background-image: url('/images/square_light_blue.png')
+      color: #EBEBB7
+      font-size: 13px
+      margin-bottom: 0
+      padding: 13px 15px 12px
+      text-transform: uppercase
+
+    div#organization-logos
+      padding: 15px 0
+
+    div.organization-logo
+      background-color: #FFF
+      display: inline-block
+      height: 75px
+      margin-bottom: 10px
+      width: 75px
+      @include opacity(0.4)
+      @include transition(opacity, 0.2s, ease-in-out, 0s)
+      @include enable-ie-css3
+
+    div.organization-logo:hover
+      @include opacity(1)
+      @include enable-ie-css3
+
+    div#aac-logo
+      background-image: url("/images/aac.png")
+
+    div#aauav-logo
+      background-image: url("/images/aauav.png")
+
+    div#aaum-logo
+      background-image: url("/images/aaum.png")
+
+    div#aautad-logo
+      background-image: url("/images/aautad.png")
+
+    div#aefct-logo
+      background-image: url("/images/aefct.png")
+
+    div#uevora-logo
+      background-image: url("/images/uevora.png")
+
+    div#fap-logo
+      background-image: url("/images/fap.png")
+
+    div#fnaeesp-logo
+      background-image: url("/images/fnaeesp.png")
+
+    div#fnespc-logo
+      background-image: url("/images/fnespc.png")
 
 
 div#archives
-  margin-bottom: 15px
+  margin: 0 0 15px
 
   a
-    background-image: url('/images/square_dark_blue.png')
-    padding: 10px 12px
-    @include round-corners(15px, 15px, 15px, 15px)
-    @include enable-ie-css3
+    background-image: url('/images/square_light_blue.png')
+    padding: 13px 15px 12px
 
   a:hover
     background-image: url('/images/square_red.png')
@@ -99,11 +158,11 @@ div.post
   position: relative
 
   h2.title
-    margin-left: 165px
+    margin-left: 166px
 
   div.textile-body
     margin: 0
-    margin-left: 165px
+    margin-left: 166px
 
   div.post-image
     display: inline-block

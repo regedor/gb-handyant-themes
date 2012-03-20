@@ -7,7 +7,7 @@
 
       <a id="site-title" href="/">Dia do Estudante</a>
 
-      <p id="light-blue-bar">50º Aniversário - 24 de Março</p>
+      <p id="light-blue-bar"><span class="left">50º Aniversário</span><span class="right">23 e 24 de Março</span></p>
 
       <div id="navigation"><%= frontend_navigation_content %></div>
 
@@ -30,6 +30,23 @@
 
       <div id="main">
         <%= yield %>
+      </div>
+
+      <div id="right-sidebar">
+        <div id="organization">
+          <h2 class="title"><%= t('organization.title') %></h2>
+          <div id="organization-logos">
+            <a href="http://www.fap.pt/"><div id="fap-logo" class="organization-logo"></div></a>
+            <a href="http://aautad.utad.pt"><div id="aautad-logo" class="organization-logo"></div></a>
+            <a href="http://aaum.pt"><div id="aaum-logo" class="organization-logo"></div></a>
+            <a href="http://aauav.pt"><div id="aauav-logo" class="organization-logo"></div></a>
+            <a href="http://fnaeesp.blogspot.pt/"><div id="fnaeesp-logo" class="organization-logo"></div></a>
+            <a href="http://www.fnespc.org/"><div id="fnespc-logo" class="organization-logo"></div></a>
+            <a href="http://aac.pt"><div id="aac-logo" class="organization-logo"></div></a>
+            <a href="http://www.uevora.pt/"><div id="uevora-logo" class="organization-logo"></div></a>
+            <a href="http://ae.fct.unl.pt/"><div id="aefct-logo" class="organization-logo"></div></a>
+          </div>
+        </div>
       </div>
     </div>
 
