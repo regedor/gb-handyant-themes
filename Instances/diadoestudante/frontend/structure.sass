@@ -23,6 +23,7 @@ div#header
     width: 223px
 
   a#site-title
+    background-color: $default-color
     background-image: url('/images/site_title.png')
     height: 133px
     position: absolute
@@ -38,6 +39,9 @@ div#header
     right: 34px
     top: 149px
     width: 624px
+
+    span.right
+      float: right
 
   div#navigation
     background-color: #495C54
@@ -76,71 +80,76 @@ div#right-sidebar
   margin: 15px 34px 0 0
   width: 165px
 
-  h2.title
+  h3
+    background-color: #51A088
     background-image: url('/images/square_light_blue.png')
     margin-bottom: 15px
     padding: 13px 15px 12px
 
-  div#organization-logos
+  div.block
     margin-bottom: 15px
 
-  div.organization-logo
-    background-color: #FFF
+
+div#organization
+
+  a.organization-logo
     display: inline-block
     height: 75px
     margin-bottom: 10px
     width: 75px
     @include opacity(0.4)
-    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include transition(opacity, 0.3s, ease-in-out, 0s)
     @include enable-ie-css3
 
-  div.organization-logo:hover
+  a.organization-logo:hover
     @include opacity(1)
     @include enable-ie-css3
 
-  div#aac-logo
+  a#aac-logo
     background-image: url("/images/aac.png")
     margin-right: 10px
 
-  div#aauav-logo
+  a#aauav-logo
     background-image: url("/images/aauav.png")
 
-  div#aaum-logo
+  a#aaum-logo
     background-image: url("/images/aaum.png")
     margin-right: 10px
 
-  div#aautad-logo
+  a#aautad-logo
     background-image: url("/images/aautad.png")
 
-  div#aefct-logo
+  a#aefct-logo
     background-image: url("/images/aefct.png")
 
-  div#uevora-logo
+  a#uevora-logo
     background-image: url("/images/uevora.png")
 
-  div#fap-logo
+  a#fap-logo
     background-image: url("/images/fap.png")
     margin-right: 10px
 
-  div#fnaeesp-logo
+  a#fnaeesp-logo
     background-image: url("/images/fnaeesp.png")
     margin-right: 10px
 
-  div#fnespc-logo
+  a#fnespc-logo
     background-image: url("/images/fnespc.png")
 
-  div#web-development a
+
+div#web-development
+
+  a#gb-logo
     background-image: url('/images/gb.png')
     display: block
     height: 84px
     margin: auto
-    text-indent: -9999px
     width: 120px
     @include opacity(0.4)
-    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include transition(opacity, 0.3s, ease-in-out, 0s)
     @include enable-ie-css3
 
-  div#web-development a:hover
+  a#gb-logo:hover
     @include opacity(0.7)
     @include enable-ie-css3
 
@@ -149,10 +158,12 @@ div#archives
   margin: 0 0 15px
 
   a
+    background-color: #51A088
     background-image: url('/images/square_light_blue.png')
     padding: 13px 15px 12px
 
   a:hover
+    background-color: $default-color
     background-image: url('/images/square_red.png')
     border-bottom: none
 
@@ -166,13 +177,13 @@ div#footer
 
 
 
+div.textile-body
+  margin: 0
 
 div.post
   position: relative
 
   h2.title
-    font-family: Georgia, "Times New Roman", Times, serif
-    font-size: 25px
     margin-left: 166px
 
   div.textile-body
