@@ -41,9 +41,11 @@
       <%= yield %>
     </div>
 
-    <div id="right-sidebar">
-      <%= tag_menu_widget(@tags) if params[:action] == 'index' and params[:controller] == 'posts' %>
-    </div>
+    <% if params[:action] == 'index' and params[:controller] == 'posts' %>
+      <div id="right-sidebar">
+         <%= tag_menu_widget(@tags) %>
+      </div>
+    <% end %>
   </div>
 
   <%= render :partial => 'shared/footer' %>

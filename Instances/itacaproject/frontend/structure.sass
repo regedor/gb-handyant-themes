@@ -3,6 +3,10 @@ body
   position: relative
 
 
+h2 a:hover
+  color: $default-color !important
+
+
 div.wrapper
   margin: auto
   width: 960px
@@ -45,12 +49,13 @@ div#menu
 
 
 div#right-sidebar
+  margin-top: 0
 
   div.block
     border: 1px solid #3F4F5E
     margin-bottom: 20px
 
-    h2.title
+    h2
       padding: 8px 15px
 
     li
@@ -67,9 +72,14 @@ div#content
   @include enable-ie-css3
 
 
+div#main
+  margin-top: 0
+  position: relative
+
+
 div#footer
   border-top: 1px solid #3F4F5E
-  padding: 40px 0
+  padding: 20px 0
   @include linear-gradient(#020202, #0A1017)
   @include enable-ie-css3
 
@@ -84,6 +94,7 @@ div#announcements
   height: 200px
   margin: auto
   overflow: hidden
+  margin-bottom: 20px
   position: relative
   width: 920px
   @include box-shadow(0, 0, 10px, #111)
