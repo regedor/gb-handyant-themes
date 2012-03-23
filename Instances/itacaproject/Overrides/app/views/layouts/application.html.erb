@@ -37,13 +37,15 @@
 
     <%= render :partial => 'announcements/announcement' %>
 
-    <div id="main">
+    <div id="main" class="<%= (params[:action] == 'index' and params[:controller] == 'posts') ? "double" : "single" %>">
       <%= yield %>
     </div>
 
-    <div id="right-sidebar">
-      <%= tag_menu_widget(@tags) if params[:action] == 'index' and params[:controller] == 'posts' %>
-    </div>
+    <% if params[:action] == 'index' and params[:controller] == 'posts' %>
+      <div id="right-sidebar">
+         <%= tag_menu_widget(@tags) %>
+      </div>
+    <% end %>
   </div>
 
   <%= render :partial => 'shared/footer' %>

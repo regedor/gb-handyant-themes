@@ -42,22 +42,37 @@ div#menu
     text-decoration: none
 
 
-div#right-sidebar
+div#associations h2
+  color: #FFF
+  font-size: 14px
+  @include text-shadow(1px, 1px, 0, #222)
+  @include enable-ie-css3
+
+
+div#tag-menu
   color: #FFF
   @include text-shadow(1px, 1px, 0, #222)
   @include enable-ie-css3
 
   h2
-    font-size: 18px
+    font-size: 14px
 
   a
     color: #FFF
 
   a:hover
-    border-bottom: 2px solid $default-color
+    border-bottom: 2px solid #7F8A68
 
   a.selected
     font-weight: bold
+
+
+div#archives
+
+  a
+    color: #FFF
+    @include text-shadow(1px, 1px, 0, #222)
+    @include enable-ie-css3
 
 
 div#footer
@@ -68,7 +83,7 @@ div#footer
   @include enable-ie-css3
 
   a
-    color: #C52626
+    color: $default-color
 
   a:hover
     text-decoration: underline
