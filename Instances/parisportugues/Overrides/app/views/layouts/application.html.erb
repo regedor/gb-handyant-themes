@@ -31,6 +31,7 @@
       <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
 
       <div id="left-sidebar">
+        <%= culinary_widget %>
       </div>
 
       <div id="main">
