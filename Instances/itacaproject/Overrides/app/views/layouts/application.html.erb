@@ -37,7 +37,7 @@
 
     <%= render :partial => 'announcements/announcement' %>
 
-    <div id="main">
+    <div id="main" class="<%= (params[:action] == 'index' and params[:controller] == 'posts') ? "double" : "single" %>">
       <%= yield %>
     </div>
 
