@@ -1,0 +1,81 @@
+div#recipes
+  h2.title
+    font-size: 22px !important
+    margin-bottom: 20px
+
+
+div#recipe
+  margin-right: 20px
+
+  h2.title
+    font-size: 22px !important
+
+  img#recipe-image
+    border: 1px solid #444
+    display: inline-block
+    height: 200px
+    margin: 20px 20px 20px 0
+    width: 200px
+    @include box-shadow(2px, 2px, 2px, #777)
+    @include enable-ie-css3
+
+  div#recipe-header
+    display: inline-block
+    margin-top: 20px
+    vertical-align: top
+
+    h3.name
+      font-family: PTSansRegular
+      font-size: 18px
+      margin-bottom: 20px
+
+    span
+      margin-bottom: 4px
+
+    span.category
+      display: inline-block
+      margin-bottom: 20px
+
+    span.number-of-people
+      background-image: url('/images/number_of_people.png')
+      background-repeat: no-repeat
+      display: inline-block
+      font-size: 14px
+      height: 20px
+      padding-left: 25px
+      padding-top: 2px
+      vertical-align: bottom
+      width: 20px
+
+    span.duration-in-minutes
+      background-image: url('/images/duration_in_minutes.png')
+      background-repeat: no-repeat
+      display: inline-block
+      font-size: 14px
+      height: 20px
+      padding-left: 25px
+      padding-top: 2px
+      vertical-align: bottom
+      width: 20px
+
+    span.difficulty
+      background-image: url('/images/difficulty.png')
+      background-repeat: no-repeat
+      display: inline-block
+      font-size: 14px
+      height: 20px
+      padding-left: 25px
+      padding-top: 3px
+      vertical-align: bottom
+      width: 20px
+
+  ul#ingredients
+    list-style: disc
+    margin: 0 0 20px 16px
+
+    li
+      margin-bottom: 5px
+
+  p#preparation
+    margin-bottom: 20px
+    text-align: justify

@@ -1,0 +1,17 @@
+div#recipes-of-the-day
+  text-align: center
+
+  a
+    display: block
+    margin-bottom: 15px
+
+    img
+      border: 1px solid #444
+      display: block
+      margin: 10px auto
+      @include box-shadow(2px, 2px, 2px, #777)
+      @include enable-ie-css3
+
+  a:hover
+    span.recipe-title
+      color: $default-color

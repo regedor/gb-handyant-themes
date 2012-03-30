@@ -1,4 +1,4 @@
-<%= render :partial => 'shared/layout_head', :locals => { :clocks => true } %>
+<%= render :partial => 'shared/layout_head', :locals => { :sentir_saude_slider => true, :clocks => true } %>
 
 <body>
   <div class="wrapper">
@@ -31,12 +31,12 @@
       <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
 
       <div id="left-sidebar">
-        <%= culinary_widget %>
+        <%= recipes_of_the_day_widget %>
       </div>
 
       <div id="main">
         <% if @page || request.env['PATH_INFO'] == "/" %>
-          <%= render :partial => 'announcements/announcement' %>
+          <%= render :partial => 'announcements/sentir_saude' %>
         <% end %>
 
         <% if request.env['PATH_INFO'] == "/" %>

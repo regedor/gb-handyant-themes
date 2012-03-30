@@ -103,9 +103,7 @@ div#header
 
 
 div#left-sidebar
-  background-color: #F2F5F2
   float: left
-  height: 500px
   margin-left: 20px
   width: 115px
 
@@ -194,49 +192,67 @@ div#footer:after
 
 
 div#announcements
-  border-bottom: 3px solid $default-color
-  border-top: 3px solid #A01818
-  height: 160px
-  overflow: hidden
+  height: 200px
   margin-bottom: 20px
   position: relative
   width: 589px
 
-  a
-    display: inline-block
+  div.announcements-container
+    height: 100%
+    width: 100%
 
-  a:hover
-    border: none
-    display: inline-block
+  a.prev
+    background-image: url('/images/prev.png')
+    height: 60px
+    position: absolute
+    left: 16px
+    top: 75px
+    width: 60px
+    z-index: 21
+    @include opacity(0)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  a.next
+    background-image: url('/images/next.png')
+    height: 60px
+    position: absolute
+    right: 16px
+    top: 75px
+    width: 60px
+    z-index: 21
+    @include opacity(0)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  ul.pagination
+    position: absolute
+    text-align: center
+    top: 170px
+    width: 100%
+    z-index: 21
+
+    li
+      display: inline
+      margin: 0 2px
+
+    a
+      background-image: url('/images/pagination_off.png')
+      display: inline-block
+      height: 14px
+      text-indent: -9999px
+      width: 14px
+
+    li.current a
+      background-image: url('/images/pagination_on.png')
 
 
-div.announcement-tail
-  display: none
+div#announcements:hover
 
-
-div#announcement-numbers
-  background: url("/images/dark_transparency.png")
-  cursor: default
-  padding: 12px
-  position: absolute
-  left: 0
-
-
-div.announcement img
-  height: 160px
-  width: 589px
-
-
-div.announcement-text
-  background: url("/images/dark_transparency.png")
-  bottom: 0
-  padding: 14px
-  position: absolute
-  right: 0
-  width: 300px
-
-  p.title
-    padding: 0 0 15px
+  a.prev, a.next
+    display: inline
+    @include opacity(1)
+    @include enable-ie-css3
 
 
 // =====
@@ -347,20 +363,19 @@ div.global-category
     background-image: url('/images/flags/fr.png')
     background-position: 0 50%
     background-repeat: no-repeat
-    padding-left: 20px
+    padding-left: 25px
 
   h3.portugal, h4.portugal
     background-image: url('/images/flags/pt.png')
     background-position: 0 50%
     background-repeat: no-repeat
-    padding-left: 20px
+    padding-left: 25px
 
   ul
     margin: 10px 0
 
     li
       color: $default-color
-      height: 16px
       margin-bottom: 3px
 
     h4
