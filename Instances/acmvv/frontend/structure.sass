@@ -17,9 +17,6 @@ div#header
   span.options
     float: right
 
-    a:hover
-      border-bottom: 2px solid #FFF
-
   div#logo
     background-image: url('/logo.png')
     height: 200px
@@ -73,7 +70,7 @@ div#content
 
 div#right-sidebar
   margin-right: 0
-  width: 240px
+  width: 250px
 
   h2
     background-color: #7F8A68
@@ -90,7 +87,7 @@ div#right-sidebar
       background-image: url('/images/amvv.png')
       display: inline-block
       height: 129px
-      margin-right: 15px
+      margin-right: 25px
       text-indent: -9999px
       width: 110px
       @include opacity(0.7)
@@ -288,16 +285,26 @@ div#youtube-icon
   width: 32px
 
 
-div.meta
-  background-color: #7F8A68
-  background-image: url('/images/menu_current.png')
-  color: #FFF
-  margin: 0
-  @include round-corners(5px, 5px, 5px, 5px)
-  @include text-shadow(1px, 1px, 0, #222)
-  @include enable-ie-css3
 
-  a
+div.post
+
+  div.textile-body
+    margin: 0
+
+  div.meta
+    background-color: #7F8A68
+    background-image: url('/images/menu_current.png')
     color: #FFF
+    margin: 0
+    @include round-corners(5px, 5px, 5px, 5px)
     @include text-shadow(1px, 1px, 0, #222)
     @include enable-ie-css3
+
+    a
+      color: #FFF
+      @include text-shadow(1px, 1px, 0, #222)
+      @include enable-ie-css3
+
+    a:hover
+      border-bottom: none
+      text-decoration: underline

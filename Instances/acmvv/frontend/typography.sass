@@ -1,5 +1,5 @@
 body
-  color: #5A5845
+  color: #3D3C2B
 
 
 h2.title
@@ -20,6 +20,9 @@ div#header
 
     a
       color: #FFF
+
+    a:hover
+      text-decoration: underline
 
   span.site-title
     color: #FFF
@@ -61,7 +64,7 @@ div#tag-menu
     color: #FFF
 
   a:hover
-    border-bottom: 2px solid #7F8A68
+    text-decoration: underline
 
   a.selected
     font-weight: bold
@@ -73,6 +76,10 @@ div#archives
     color: #FFF
     @include text-shadow(1px, 1px, 0, #222)
     @include enable-ie-css3
+
+  a:hover
+    border-bottom: none
+    text-decoration: underline
 
 
 div#footer
