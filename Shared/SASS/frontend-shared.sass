@@ -71,7 +71,7 @@ div#main
 
 
 div#right-sidebar
-  float: right
+  display: inline-block
   margin: 20px 20px 20px 0
   width: 200px
 
@@ -257,10 +257,6 @@ div.post-image
     border: none
 
 
-div.entrybody
-  margin: 0 10px
-
-
 div.meta
   clear: both
   background-color: #EEE
@@ -301,7 +297,8 @@ div.avatar
   margin-right: 20px
 
   img
-    border: 1px solid #999
+    background-color: #FFF
+    padding: 4px
 
 
 span.comment-meta
@@ -309,14 +306,18 @@ span.comment-meta
   display: block
 
 
-div.new-comment textarea
-  height: 100px
-  max-width: 99%
-  width: 500px
+div#new-comment
+
+  form
+    margin: 0 10px
+
+    textarea
+      height: 100px
+      width: 80%
 
 
 ol#comment-list
-  margin: 20px 0
+  margin: 0 10px 20px
 
   p
     padding: $content-margin 0 0 72px
