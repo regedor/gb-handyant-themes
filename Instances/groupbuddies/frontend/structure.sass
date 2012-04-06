@@ -44,3 +44,26 @@ div#header
       background-repeat: no-repeat
       height: 7px
       width: 7px
+
+
+div#footer
+  height: 300px
+  position: relative
+  @include linear-gradient(#4FADE5, #2593D3)
+  @include enable-ie-css3
+
+  p#info
+    background-color: #93C9E8
+    bottom: 0
+    color: #FFF
+    font-family: Verdana
+    font-size: 13px
+    letter-spacing: -1px
+    padding: 12px 0
+    position: absolute
+    width: 100%
+    @include text-shadow(1px, 1px, 0, #1E6792)
+    @include enable-ie-css3
+
+    a
+      color: #FFF
