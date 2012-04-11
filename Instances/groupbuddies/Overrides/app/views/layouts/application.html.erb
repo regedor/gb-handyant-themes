@@ -21,8 +21,10 @@
 
       <%= tag_menu_widget(@tags) %>
     </div>
+  </div>
 
-    <%= render :partial => 'shared/footer' %>
+  <div id="footer">
+    <p id="info">© <%= Time.now.year %> <%= link_to 'Group Buddies', 'http://www.groupbuddies.com' %>. Powered by the Handy Ant GMS.</p>
   </div>
 </body>
 </html>

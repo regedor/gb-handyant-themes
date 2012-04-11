@@ -1,0 +1,71 @@
+<%= render :partial => 'shared/layout_head', :locals => { :sentir_saude_slider => true } %>
+
+<body>
+  <div id="header">
+    <div id="header-top">
+      <div class="wrapper">
+        <div id="social-networks">
+          <a id="facebook" href="http://www.facebook.com/youngminhoenterprise">YME - Facebook</a>
+          <a id="twitter" href="">YME - Twitter</a>
+        </div>
+
+        <div id="options">
+          <% if logged_in? %>
+             <% if permitted_to? :read, :admin_dashboard %>
+               <%= link_to t('navigation.administration'), admin_root_path, :class => 'admin-icon' %>
+             <% end %>
+             <%= link_to t('user_session.bar.logout'), user_logout_path, :class => 'logout-icon' %>
+           <% else %>
+             <%= link_to t("user_session.bar.signin"), new_user_session_path, :class => 'login-icon' %>
+           <% end %>
+        </div>
+
+        <div id="contact">
+          <span id="phone-number">+351 919 007 690</span>
+          <span id="email">contact@yme.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <a id="logo" href="/">yme</a>
+
+      <div id="menu"><%= frontend_navigation_content %></div>
+
+      <p id="business-statement">Welcome! We are Young Minho Enterprise.</p>
+    </div>
+  </div>
+
+  <%= render :partial => 'announcements/sentir_saude' %>
+
+  <div id="content" class="selfclear">
+    <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
+    <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
+    <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
+
+    <div class="wrapper">
+      <div id="main">
+        <%= yield %>
+      </div>
+
+      <div id="right-sidebar">
+        <%= tag_menu_widget(@tags) if params[:action] == 'index' and params[:controller] == 'posts' %>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="wrapper">
+      <!--[if lt IE 9]>
+        <p><%= t 'footer.browser_warning' %></p>
+      <![endif]-->
+
+      <% if in_dev? %>
+        <p>rendered in <%= Time.now-@start_time %> seconds</p>
+      <% end %>
+    </div>
+
+    <p><%= t 'footer.default_message', :year => Time.now.year, :site_name => configatron.site_name, :site_url => configatron.site_url %></p>
+  </div>
+</body>
+</html>

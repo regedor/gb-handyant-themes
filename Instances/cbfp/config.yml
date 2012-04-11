@@ -1,0 +1,9 @@
+---
+  theme: none
+  default_locale: pt
+  title: Centro de Biologia Funcional de Plantas
+  site_name: Centro de Biologia Funcional de Plantas
+  site_header: Centro de Biologia Funcional de Plantas
+  announcement_size: "910x270#"
+  post_image_size: "640x200#"
+  force_locale: "true"

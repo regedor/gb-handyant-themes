@@ -1,0 +1,9 @@
+---
+  theme: none
+  default_locale: pt
+  title: Young Minho Enterprise
+  site_name: Young Minho Enterprise
+  site_header: Young Minho Enterprise
+  announcement_size: "930x300#"
+  post_image_size: "650x200#"
+  force_locale: "true"

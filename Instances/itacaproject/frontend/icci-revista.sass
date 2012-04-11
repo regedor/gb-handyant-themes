@@ -1,0 +1,59 @@
+div#icci-revista
+  font-family: 'PTSansNarrow'
+
+  div.left-sidebar
+    display: inline-block
+
+    a.logo
+      background-image: url('/images/icci.png')
+      border-bottom: none
+      display: block
+      height: 204px
+      margin-bottom: 50px
+      text-indent: -9999px
+      width: 180px
+
+    ul.menu
+      font-family: 'PTSansNarrow'
+      font-size: 18px
+      text-align: right
+      width: 180px
+      list-style-type: none
+      margin: 0
+
+      li
+        margin: 0
+        padding: 5px 0
+
+        a
+          border-bottom: none
+          display: block
+          @include text-shadow(1px, 1px, 0, #222)
+          @include enable-ie-css3
+
+        a:hover
+          color: #88ABD2 !important
+
+        a.current
+          color: #88ABD2 !important
+
+  div.thumbnail
+    display: inline-block
+    margin-left: 20px
+    vertical-align: top
+
+  div.thumbnail a
+    background-image: url('/icci-revista/current.png')
+    border-bottom: none
+    color: #000 !important
+    display: inline-block
+    font-size: 18px
+    height: 460px
+    padding: 10px
+    width: 384px
+
+  div.page
+    display: inline-block
+    margin-left: 20px
+    vertical-align: top
+    width: 685px

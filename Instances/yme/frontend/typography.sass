@@ -1,0 +1,67 @@
+@font-face
+  font-family: 'Noir-et-Blanc Bold'
+  src: url('/fonts/noir_et_blanc_bold.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
+@font-face
+  font-family: 'PTSans Regular'
+  src: url('/fonts/PTN57F.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
+h2.title
+  font-size: 16px
+
+
+div#header-top
+  color: #2E2E2E
+  font-family: Verdana
+
+
+a#logo
+  color: #2E2E2E
+  font-family: 'Noir-et-Blanc'
+  font-size: 110px
+  @include text-shadow(0, 1px, 0, #FFF)
+  @include enable-ie-css3
+
+
+div#menu
+
+  a
+    font-family: Verdana
+    font-size: 15px
+    text-transform: lowercase
+
+
+p#business-statement
+  color: #444
+  font-family: 'PTSans Regular'
+  font-size: 28px
+  font-weight: bold
+  text-align: center
+  @include text-shadow(0, 1px, 0, #FFF)
+  @include enable-ie-css3
+
+
+div#right-sidebar
+
+  h2
+    color: #F3F3F3
+    font-size: 14px
+    @include text-shadow(1px, 1px, 0, #222)
+    @include enable-ie-css3
+
+
+div#archives
+  font-size: 12px
+
+  a
+    text-decoration: underline
+
+  a:hover
+    border-bottom: none
+    text-decoration: none

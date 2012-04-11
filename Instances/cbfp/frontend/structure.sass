@@ -1,0 +1,248 @@
+body
+  background-image: url('/images/bg.png')
+
+
+div.wrapper
+  width: 940px
+  margin: auto
+
+
+div#header
+  background-image: url('/images/header.png')
+  background-repeat: no-repeat
+  background-position: 0 30px
+  height: 45px
+  margin: 40px 0
+  position: relative
+
+  a.site-title
+    position: absolute
+
+  div#menu
+    position: absolute
+    right: 0
+    top: 5px
+
+    a
+      padding-bottom: 10px
+
+    li
+      display: inline-block
+      margin-left: 40px
+
+  div#options
+    position: absolute
+    right: 0
+    top: 56px
+    @include opacity(0.8)
+    @include enable-ie-css3
+
+    a.admin-icon
+      background-image: url('/images/gear.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+  
+    a.login-icon
+      background-image: url('/images/padlock_closed.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+  
+    a.logout-icon
+      background-image: url('/images/padlock_open.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+
+
+div#main
+  margin: 0
+
+
+div#right-sidebar
+  margin: 0 0 40px 40px
+
+  div#tag-menu
+    background-color: #F4F4F4
+    border: 1px solid #F7F7F7
+    box-shadow: inset 0 0 40px #E5E5E5, 0 0 5px #CACACA
+    margin-bottom: 40px
+    padding: 20px
+
+    h2.title
+      background-image: url('/images/tag_menu.png')
+      background-position: 0 50%
+      background-repeat: no-repeat
+      padding-left: 24px
+
+    ul
+      padding-left: 2px
+
+    li
+      background-image: url('/images/disc.png')
+      background-position: 0 50%
+      background-repeat: no-repeat
+      margin-bottom: 5px
+      padding-left: 18px
+
+
+div.post
+  background-color: #F4F4F4
+  border: 1px solid #F7F7F7
+  box-shadow: inset 0 0 40px #E5E5E5, 0 0 5px #CACACA
+  margin-bottom: 40px
+  padding: 20px
+
+  h2
+    background-image: url('/images/post.png')
+    background-position: 0 40%
+    background-repeat: no-repeat
+    padding-left: 24px
+
+  p
+    display: inline-block
+    vertical-align: top
+
+  div.post-image
+    display: inline-block
+    float: none
+
+    img
+      background-color: #FFF
+      border: 1px solid #FBFBFB
+      padding: 10px
+      box-shadow: inset 0 0 20px #E5E5E5, 0 0 5px #CACACA
+
+  div.textile-body
+    border-bottom: 1px solid #DADADA
+    margin: 0
+    padding-bottom: 10px
+
+  div.meta
+    background-color: transparent
+    border-top: 1px solid #FFF
+    font-size: 12px
+    margin: 0
+    padding: 20px 0 0
+    text-align: left
+
+    a
+      text-decoration: underline
+
+    a:hover
+      border-bottom: none
+      text-decoration: none
+
+    li
+      display: inline-block
+
+    li.date
+      background-image: url('/images/date.png')
+      background-repeat: no-repeat
+      margin-right: 10px
+      padding-left: 20px
+
+    li.comments
+      background-image: url('/images/comments.png')
+      background-repeat: no-repeat
+      padding-left: 20px
+
+    li.tags
+      background-image: url('/images/tag.png')
+      background-repeat: no-repeat
+      float: right
+      padding-left: 20px
+
+
+div#new-comment
+  background-color: #F4F4F4
+  border: 1px solid #F7F7F7
+  box-shadow: inset 0 0 40px #E5E5E5, 0 0 5px #CACACA
+  margin: 0 0 0 40px
+  padding: 20px
+
+  form
+    margin: 0
+
+  textarea
+    max-width: 612px
+    width: 612px !important
+
+
+ol#comment-list
+  margin: 0 0 0 40px
+
+  hr
+    display: none
+
+  li
+    background-color: #F4F4F4
+    border: 1px solid #F7F7F7
+    box-shadow: inset 0 0 40px #E5E5E5, 0 0 5px #CACACA
+    margin-bottom: 20px
+    padding: 20px
+
+
+div#footer
+  margin: 40px 0
+
+
+// =============
+// Announcements
+// =============
+
+
+div#announcements
+  background-color: #FFF
+  border: 1px solid #FBFBFB
+  height: 270px
+  overflow: hidden
+  margin: 0 auto 40px
+  padding: 15px
+  position: relative
+  width: 910px
+  box-shadow: inset 0 0 30px #E5E5E5, 0 0 5px #CACACA
+
+  a
+    display: inline-block
+
+  a:hover
+    border: none
+    display: inline-block
+
+
+div.announcement-tail
+  display: none
+
+
+div#announcement-numbers
+  background: url("/images/dark_transparency.png")
+  cursor: default
+  padding: 12px
+  position: absolute
+  left: 0
+  @include round-corners(0, 0, 10px, 0)
+  @include enable-ie-css3
+
+
+div.announcement img
+  height: 250px
+  width: 920px
+
+
+div.announcement-text
+  background: url("/images/dark_transparency.png")
+  bottom: 0
+  padding: 14px
+  position: absolute
+  right: 0
+  width: 300px
+  @include round-corners(10px, 0, 0, 0)
+  @include enable-ie-css3
+
+  p.title
+    padding: 0 0 15px

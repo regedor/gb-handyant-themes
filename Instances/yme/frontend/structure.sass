@@ -1,0 +1,357 @@
+body
+  background-color: #F3F3F3
+  border-top: 3px solid #000
+
+
+div.wrapper
+  margin: auto
+  position: relative
+  width: 930px
+
+
+div#header-top
+  background-color: #E7E7E7
+  height: 40px
+  position: relative
+  z-index: 1
+  @include box-shadow(0, 0, 10px, #AAA)
+
+  div#social-networks
+    display: inline-block
+    position: absolute
+    left: 0
+    top: 8px
+
+    a#facebook
+      background-image: url('/images/facebook_icon_off.png')
+      display: inline-block
+      height: 23px
+      margin-right: 5px
+      text-indent: -9999px
+      width: 23px
+
+    a#facebook:hover
+      background-image: url('/images/facebook_icon_on.png')
+
+    a#twitter
+      background-image: url('/images/twitter_icon_off.png')
+      display: inline-block
+      height: 23px
+      text-indent: -9999px
+      width: 23px
+
+    a#twitter:hover
+      background-image: url('/images/twitter_icon_on.png')
+
+  div#options
+    background-color: #222
+    display: inline-block
+    height: 20px
+    padding: 5px
+    position: absolute
+    left: 380px
+    top: -36px
+    width: 100px
+    @include round-corners(0, 0, 10px, 10px)
+    @include transition(top, 0.2s, ease-in-out, 0s)
+
+    a.admin-icon
+      background-image: url('/images/gear.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+
+    a.login-icon
+      background-image: url('/images/padlock_closed.png')
+      display: inline-block
+      height: 23px
+      text-indent: -9999px
+      width: 23px
+
+    a.logout-icon
+      background-image: url('/images/padlock_open.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+
+  div#options:hover
+    top: 0
+
+  div#contact
+    display: inline-block
+    position: absolute
+    right: 0px
+    top: 8px
+
+    span#phone-number
+      background-image: url('/images/phone_off.png')
+      background-repeat: no-repeat
+      display: inline-block
+      height: 23px
+      padding-left: 25px
+      padding-top: 4px
+      margin-right: 10px
+
+    span#email
+      background-image: url('/images/mail_off.png')
+      background-repeat: no-repeat
+      display: inline-block
+      height: 23px
+      padding-left: 26px
+      padding-top: 4px
+
+
+div#header
+  margin-bottom: 30px
+
+  a#logo
+    display: inline-block
+    margin-top: -20px
+    height: 138px // opera fix
+
+  div#menu
+    display: inline-block
+    position: absolute
+    right: 0
+    top: 60px
+    width: 100%
+
+    ul
+      position: absolute
+      right: 0
+
+      li
+        display: inline
+
+        a
+          color: #444
+          margin-left: 10px
+          padding: 10px 15px
+          @include text-shadow(0, 1px, 0, #FFF)
+          @include round-corners(5px, 5px, 5px, 5px)
+          @include enable-ie-css3
+
+        a.current
+          background-color: #222
+          background-image: url('/images/menu.png')
+          color: #F3F3F3
+          text-shadow: none
+
+        a:hover
+          background-color: $default-color
+          background-image: url('/images/menu_hover.png')
+          color: #F3F3F3
+          text-shadow: none
+
+        a.current:hover
+          background-color: #222
+          background-image: url('/images/menu.png')
+          text-shadow: none
+
+  p#business-statement
+    margin: 10px 0 40px
+
+
+div#content
+  background-color: #444
+
+
+div#main
+  float: left
+  margin: 40px 30px 0 0
+  width: 670px
+
+
+div#right-sidebar
+  background-color: #292929
+  background-image: url('/images/bg.png')
+  margin: 40px 0 0
+  width: 230px
+
+  h2
+    background-color: $default-color
+    background-image: url('/images/menu_hover.png')
+    margin-bottom: 0
+    padding: 10px 15px
+
+  div#tag-menu
+
+    ul
+
+      li
+        border-top: 1px solid #999
+        margin: 0 15px
+        padding: 10px 0
+
+      li:first-child
+        border-top: none
+
+      a:hover
+        color: $default-color
+
+
+div#archives
+  background-color: #292929
+  background-image: url('/images/bg.png')
+  margin: 40px 0
+  padding: 10px 15px
+
+
+div#footer
+  background-color: #292929
+  background-image: url('/images/bg.png')
+  height: 200px
+  position: relative
+
+  p
+    background-color: #222
+    bottom: 0
+    padding: 10px 0
+    position: absolute
+    text-align: center
+    width: 100%
+
+    a
+      color: $default-color
+
+    a:hover
+      text-decoration: underline
+
+
+// =============
+// Announcements
+// =============
+
+
+div#announcements
+  background-image: url('/images/slider-shadow.png')
+  background-position: 0 60px
+  background-repeat: no-repeat
+  height: 300px
+  margin: auto
+  padding-bottom: 60px
+  position: relative
+  width: 930px
+
+  div.announcements-container
+    height: 100%
+    width: 100%
+
+  a.prev
+    background-image: url('/images/prev.png')
+    height: 60px
+    position: absolute
+    left: 16px
+    top: 125px
+    width: 60px
+    z-index: 21
+    @include opacity(0)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  a.next
+    background-image: url('/images/next.png')
+    height: 60px
+    position: absolute
+    right: 16px
+    top: 125px
+    width: 60px
+    z-index: 21
+    @include opacity(0)
+    @include transition(opacity, 0.2s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  ul.pagination
+    position: absolute
+    text-align: center
+    top: 270px
+    width: 100%
+    z-index: 21
+
+    li
+      display: inline
+      margin: 0 2px
+
+    a
+      background-image: url('/images/pagination_off.png')
+      display: inline-block
+      height: 14px
+      text-indent: -9999px
+      width: 14px
+
+    li.current a
+      background-image: url('/images/pagination_on.png')
+
+
+div#announcements:hover
+
+  a.prev, a.next
+    display: inline
+    @include opacity(1)
+    @include enable-ie-css3
+
+
+
+
+
+
+div#new-comment
+
+  form
+    margin: 0
+
+    textarea
+      max-width: 666px
+      width: 666px
+
+  ul
+    display: inline-block
+
+
+div.post:first-child
+  margin-top: 0
+
+
+div.post
+  margin: 60px 0 0
+
+  h2.title
+    border-bottom: 1px solid #999
+    padding-bottom: 7px
+    text-transform: uppercase
+
+  div.post-image
+    background-color: #FFF
+    margin: 0 0 15px
+    padding: 10px
+
+  p
+    font-size: 13px
+    line-height: 1.6em
+    text-align: justify
+
+  div.textile-body
+    margin: 0
+
+  div.meta
+    background-color: #292929
+    background-image: url('/images/bg.png')
+    font-size: 12px
+    margin: 0
+    padding: 15px
+
+    a
+      border-bottom: none
+      text-decoration: underline
+
+    a:hover
+      text-decoration: none
+
+    li
+      display: inline-block
+      margin-left: 10px
+
+    li.date
+      color: $default-color

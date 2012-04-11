@@ -2,5 +2,9 @@ div#gallery-widget
   min-height: 170px !important
 
   img.thumb
+    border: 1px solid #444
     display: block
     margin: auto
+    padding: 0
+    @include box-shadow(2px, 2px, 2px, #777)
+    @include enable-ie-css3

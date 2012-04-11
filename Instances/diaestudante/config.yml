@@ -1,8 +1,0 @@
----
-  theme: none
-  default_locale: pt
-  title: Dia do Estudante
-  site_name: Dia do Estudante
-  site_header: Dia do Estudante
-  announcement_size: "850x250#"
-  force_locale: "true"

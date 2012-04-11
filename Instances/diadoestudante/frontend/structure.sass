@@ -1,0 +1,249 @@
+body
+  background-color: #EBE8CE
+  background-image: url('/images/bg.png')
+
+
+div.wrapper
+  background-image: url('/images/content.png')
+  margin: auto
+  padding-bottom: 15px
+  width: 960px
+
+
+div#header
+  height: 243px
+  position: relative
+
+  a#logo
+    background-image: url('/logo.png')
+    height: 173px
+    left: 34px
+    position: absolute
+    top: 15px
+    width: 223px
+
+  a#site-title
+    background-color: $default-color
+    background-image: url('/images/site_title.png')
+    height: 133px
+    position: absolute
+    right: 34px
+    top: 15px
+    width: 654px
+
+  p#light-blue-bar
+    background-color: #51A088
+    background-image: url('/images/square_light_blue.png')
+    padding: 12px 15px
+    position: absolute
+    right: 34px
+    top: 149px
+    width: 624px
+
+    span.right
+      float: right
+
+  div#navigation
+    background-color: #495C54
+    background-image: url('/images/square_dark_blue.png')
+    height: 40px
+    left: 34px
+    position: absolute
+    top: 203px
+    width: 892px
+
+    li
+      border-right: 1px solid #EBEBB7
+      display: inline-block
+      padding: 13px 0 12px
+
+      a
+        padding: 13px 15px 12px
+
+    li a.current
+      background-color: $default-color
+      background-image: url('/images/square_red.png')
+
+  div#options
+    display: inline
+    position: absolute
+    right: 49px
+    top: 215px
+
+
+div#main
+  margin: 15px 20px 15px 34px
+  width: 707px
+
+
+div#right-sidebar
+  margin: 15px 34px 0 0
+  width: 165px
+
+  h3
+    background-color: #51A088
+    background-image: url('/images/square_light_blue.png')
+    margin-bottom: 15px
+    padding: 13px 15px 12px
+
+  div.block
+    margin-bottom: 15px
+
+
+div#organization
+
+  a.organization-logo
+    display: inline-block
+    height: 75px
+    margin-bottom: 10px
+    width: 75px
+    @include opacity(0.4)
+    @include transition(opacity, 0.3s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  a.organization-logo:hover
+    @include opacity(1)
+    @include enable-ie-css3
+
+  a#aac-logo
+    background-image: url("/images/aac.png")
+    margin-right: 10px
+
+  a#aauav-logo
+    background-image: url("/images/aauav.png")
+
+  a#aaum-logo
+    background-image: url("/images/aaum.png")
+    margin-right: 10px
+
+  a#aautad-logo
+    background-image: url("/images/aautad.png")
+
+  a#aefct-logo
+    background-image: url("/images/aefct.png")
+
+  a#uevora-logo
+    background-image: url("/images/uevora.png")
+
+  a#fap-logo
+    background-image: url("/images/fap.png")
+    margin-right: 10px
+
+  a#fnaeesp-logo
+    background-image: url("/images/fnaeesp.png")
+    margin-right: 10px
+
+  a#fnespc-logo
+    background-image: url("/images/fnespc.png")
+
+
+div#web-development
+
+  a#gb-logo
+    background-image: url('/images/gb.png')
+    display: block
+    height: 84px
+    margin: auto
+    width: 120px
+    @include opacity(0.4)
+    @include transition(opacity, 0.3s, ease-in-out, 0s)
+    @include enable-ie-css3
+
+  a#gb-logo:hover
+    @include opacity(0.7)
+    @include enable-ie-css3
+
+
+div#archives
+  margin: 0 0 15px
+
+  a
+    background-color: #51A088
+    background-image: url('/images/square_light_blue.png')
+    padding: 13px 15px 12px
+
+  a:hover
+    background-color: $default-color
+    background-image: url('/images/square_red.png')
+    border-bottom: none
+
+
+div#footer
+  background-color: #495C54
+  background-image: url('/images/square_dark_blue.png')
+  margin: 0 34px
+  padding: 15px 0 12px
+
+
+
+
+div.textile-body
+  margin: 0
+
+
+ol#comment-list
+  margin: 0 0 20px 165px
+
+
+div#new-comment
+  margin-left: 165px
+
+  form
+    margin: 0
+
+hr
+  background-color: #51A088
+
+
+div.avatar img
+  border: none
+
+
+div.post
+  position: relative
+
+  h2.title
+    margin-left: 166px
+
+  div.textile-body
+    margin: 0
+    margin-left: 166px
+    text-align: justify
+
+  div.post-image
+    display: inline-block
+    float: none
+    margin: 0 20px 15px 0
+
+  div.meta
+    background-color: transparent
+    background-image: url('/images/meta.png')
+    height: 137px
+    left: 0
+    margin: 0
+    padding: 0
+    position: absolute
+    top: 0
+    width: 146px
+
+    li.date
+      width: 85px
+      padding-top: 45px
+      font-size: 13px
+      text-transform: uppercase
+      margin: 0 0 0 20px
+      letter-spacing: -1px
+      color: #EBEBB7
+
+    li.comments, li.tags
+      display: none
+
+    li.edit-link a
+      color: #EBEBB7
+      padding-right: 10px
+
+    li.edit-link a:hover
+      text-decoration: underline
+
+    li.edit-link a:hover
+      border-bottom: none
