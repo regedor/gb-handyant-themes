@@ -160,7 +160,7 @@ div#footer
   width: 980px
 
   a:hover
-    border-bottom: 2px solid $default-color
+    text-decoration: underline
 
   p
     margin-top: 12px
@@ -270,17 +270,19 @@ div.meta
 
 
 
+a.post-comments
+  background-image: url('/images/icons/comment.png')
+  background-repeat: no-repeat
+  margin-left: 5px
+  padding-left: 18px
+
+
+a.post-comments:hover
+  color: $default-color
+
+
 div.post
   margin-bottom: 5px
-
-  a.post-comments
-    background-image: url('/images/icons/comment.png')
-    background-repeat: no-repeat
-    margin-left: 5px
-    padding-left: 18px
-
-  a.post-comments:hover
-    color: $default-color
 
   img
     height: 180px
@@ -315,7 +317,7 @@ div.global-category
 
   div.global-category-body
     background-color: #F2F5F2
-    min-height: 405px
+    min-height: 435px
     padding: 10px
 
   h2.title
@@ -325,11 +327,8 @@ div.global-category
       display: block
       border-bottom: none !important
 
-  h2:hover
-    border-bottom: 3px solid $default-color
-
-    a
-      color: #576028
+  h2.title:hover
+    border-bottom: 3px solid #99A846
 
   span#posts-archive
     background-color: $default-color
@@ -346,7 +345,7 @@ div.global-category
   span#posts-archive:after
     border-color: transparent
     border-style: solid
-    bottom: 35px
+    bottom: 38px
     content: ''
     position: absolute
     border-width: 10px 0 0 10px
@@ -376,7 +375,6 @@ div.global-category
 
     li
       color: $default-color
-      margin-bottom: 3px
 
     h4
       display: inline
