@@ -1,0 +1,60 @@
+<%= render :partial => 'shared/layout_head', :locals => { :sentir_saude_slider => true, :clocks => true, :voting => true } %>
+
+<body>
+  <div class="wrapper">
+    <div id="header">
+      <a href="/" id="logo"><%= configatron.site_header %></a>
+
+      <%= render :partial => 'widgets/weather', :locals => { :left_location_code => '742676', :right_location_code => '615702' } %>
+
+      <div id="navigation"><%= frontend_navigation_content %></div>
+
+      <span id="time"><%= l Time.now, :format => "%a %d de %B, %Y" %></span>
+
+      <a id="home" href="/">Home</a>
+
+      <div id="options">
+        <% if logged_in? %>
+          <% if permitted_to? :read, :admin_dashboard %>
+            <%= link_to t('navigation.administration'), admin_root_path, :class => 'admin-icon' %>
+          <% end %>
+          <%= link_to t('user_session.bar.logout'), user_logout_path, :class => 'logout-icon' %>
+        <% else %>
+          <%= link_to t("user_session.bar.signin"), new_user_session_path, :class => 'login-icon' %>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="content" class="selfclear wrapper">
+      <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
+      <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
+      <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
+
+      <div id="main">
+        <% if request.env['PATH_INFO'] == "/" %>
+          <%= category_news_grid %>
+
+          <%= render :partial => 'shared/event_calendar', :locals => { :year => Time.now.year, :month => Time.now.month } %>
+
+          <%= recipes_of_the_day_widget %>
+
+          <%= render :partial => 'widgets/gallery' %>
+
+          <div id="maps">
+            <h2 class="title">Mapas</h2>
+            <a href="/mapa-de-portugal"><div id="map-pt"></div></a>
+            <a href="/mapa-de-franca"><div id="map-fr"></div></a>
+          </div>
+
+        <%= link_to t('departments.link'), departments_path %>
+
+        <% else %>
+          <%= yield %>
+        <% end %>
+      </div>
+    </div>
+
+    <%= render :partial => 'shared/footer' %>
+  </div>
+</body>
+</html>

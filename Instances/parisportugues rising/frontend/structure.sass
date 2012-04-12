@@ -1,0 +1,285 @@
+body
+  background-color: #F2F2F2
+
+
+div.wrapper
+  margin: auto
+  width: 960px
+
+
+div#header
+  margin-top: 20px
+  position: relative
+
+  a#logo
+    background-image: url('/logo.png')
+    display: block
+    height: 172px
+    margin: auto
+    text-indent: -9999px
+    width: 330px
+
+  div#navigation
+    border-top: 4px solid #424242
+    border-bottom: 4px solid #424242
+    padding: 5px 0
+
+    a.current
+      color: #A4151B
+
+    a.current:hover
+      color: #A4151B
+
+    a:hover
+      color: $default-color
+
+    ul
+
+      li
+        display: inline-block
+        margin: 7px 10px 3px
+
+  span#time
+    display: inline-block
+    font-size: 14px
+    margin-top: 5px
+    text-transform: uppercase
+
+  a#home
+    background-image: url('/images/home.png')
+    bottom: 35px
+    display: block
+    height: 15px
+    position: absolute
+    width: 16px
+    text-indent: -9999px
+
+  div#options
+    bottom: 35px
+    position: absolute
+    right: 0
+    @include opacity(0.8)
+    @include enable-ie-css3
+
+    a.admin-icon
+      background-image: url('/images/gear.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+
+    a.login-icon
+      background-image: url('/images/padlock_closed.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+
+    a.logout-icon
+      background-image: url('/images/padlock_open.png')
+      display: inline-block
+      height: 16px
+      text-indent: -9999px
+      width: 16px
+
+
+div#main
+  float: none
+  margin: 15px 0 0
+  width: 100%
+
+
+div.global-category:nth-child(1),
+div.global-category:nth-child(2),
+div.global-category:nth-child(3)
+  display: inline-block
+  margin-bottom: 30px
+  margin-left: 12px
+  min-height: 430px
+  position: relative
+  vertical-align: top
+  width: 310px
+
+  h2.title
+    font-size: 16px
+    font-weight: bold
+    letter-spacing: -1px
+    margin-bottom: 0
+    position: absolute
+    text-transform: uppercase
+    top: 0
+
+    a
+      background-color: #A4151B
+      color: #FFF
+      display: block
+      padding: 10px 15px 7px
+
+    a:hover
+      text-decoration: underline
+
+  h3
+    font-size: 20px
+    font-weight: bold
+    letter-spacing: -1px
+    padding: 15px
+    position: absolute
+    top: 130px
+    text-transform: uppercase
+    @include text-shadow(1px, 1px, 2px, #000)
+    @include enable-ie-css3
+
+    a
+      color: #FFF
+
+  h4
+    display: inline
+    letter-spacing: -1px
+    font-family: 'PT Sans Regular'
+    font-size: 15px
+    padding-right: 12px
+
+    a:hover
+      text-decoration: underline
+
+  h4.franca
+    background-image: url('/images/flags/fr.png')
+    background-position: 0 30%
+    background-repeat: no-repeat
+    padding-left: 22px
+
+  h4.portugal
+    background-image: url('/images/flags/pt.png')
+    background-position: 0 30%
+    background-repeat: no-repeat
+    padding-left: 22px
+
+  ul li
+    margin-bottom: 4px
+
+  a.post-comments
+    background-image: url('/images/icons/comment.png')
+    background-repeat: no-repeat
+    padding-left: 20px
+
+  a.post-comments:hover
+    text-decoration: underline
+
+  div.first.post
+    border-bottom: 2px solid #424242
+    margin: 0 0 15px
+    padding: 0 0 15px
+
+  div.post
+    margin: 0
+
+    a.post-image
+      display: inline-block
+      margin-bottom: 15px
+      @include box-shadow(0, 0, 10px, #C9C9C9)
+      @include enable-ie-css3
+
+    p
+      font-family: 'PT Sans Regular'
+      font-size: 15px
+      letter-spacing: -1px
+      line-height: 1.3em
+
+    p:hover
+      text-decoration: underline
+
+
+span#posts-archive
+  background-color: #424242
+  display: block
+  letter-spacing: -1px
+  font-family: 'PT Sans Regular'
+  font-size: 15px
+  margin-top: 10px
+  padding: 10px 15px 6px
+  text-align: right
+
+  a
+    color: #FFF
+
+  a:hover
+    text-decoration: underline
+
+
+div.global-category:first-child
+  margin-left: 0
+
+
+div.global-category:nth-child(4)
+  float: left
+  height: 210px
+  margin-bottom: 30px
+  margin-left: 0
+  position: relative
+
+  h2.title
+    display: none
+
+  h3
+    letter-spacing: -1px
+    font-family: 'PT Sans Regular'
+    font-size: 24px
+    margin-bottom: 15px
+
+    a:hover
+      text-decoration: underline
+
+  h4
+    display: inline
+    letter-spacing: -1px
+    font-family: 'PT Sans Regular'
+    font-size: 15px
+    padding-right: 12px
+
+    a:hover
+      text-decoration: underline
+
+  a.post-comments
+    background-image: url('/images/icons/comment.png')
+    background-repeat: no-repeat
+    padding-left: 20px
+
+  a.post-comments:hover
+    text-decoration: underline
+
+  div.post
+
+    a.post-image
+      float: left
+      margin-right: 15px
+      @include box-shadow(0, 0, 10px, #C9C9C9)
+      @include enable-ie-css3
+
+    p
+      letter-spacing: -1px
+      font-family: 'PT Sans Regular'
+      font-size: 16px
+      width: 770px
+
+    p:hover
+      text-decoration: underline
+
+  span#posts-archive
+    bottom: 0
+    display: inline-block
+    position: absolute
+    right: 0
+    width: 415px
+
+
+div#footer
+  border-top: 4px solid #424242
+  font-size: 14px
+  padding: 15px 0
+  text-transform: uppercase
+
+  a
+    color: #A4151B
+
+  a:hover
+    text-decoration: underline

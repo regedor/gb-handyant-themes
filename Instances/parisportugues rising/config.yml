@@ -1,0 +1,10 @@
+---
+  theme: none
+  default_locale: pt
+  title: Paris Português
+  site_name: Paris Português
+  site_header: Paris Português
+  announcement_size: "589x200#"
+  post_image_size: "310x210#"
+  force_locale: "true"
+  has_gallery: "true"

@@ -1,0 +1,56 @@
+div#recipes-of-the-day
+  display: inline-block
+  margin-bottom: 30px
+  width: 770px
+
+  h2
+    background-color: #A4151B
+    color: #FFF
+    letter-spacing: -1px
+    font-size: 16px
+    font-weight: bold
+    padding: 10px 15px 7px
+    text-transform: uppercase
+
+  a#starter
+    margin-left: 15px
+
+  a
+    display: inline-block
+    height: 140px
+    margin-left: 50px
+    width: 140px
+    @include round-corners(100px, 100px, 100px, 100px)
+    @include box-shadow(0, 0, 10px, #C9C9C9)
+    @include enable-ie-css3
+
+    img
+      height: 140px
+      width: 140px
+      @include round-corners(100px, 100px, 100px, 100px)
+      @include enable-ie-css3
+
+    span.recipe-title
+      display: inline-block
+      letter-spacing: -1px
+      font-family: 'PT Sans Regular'
+      font-size: 16px
+      margin-top: 15px
+      text-align: center
+      width: 100%
+
+  a:hover span.recipe-title
+    color: $default-color
+
+  span.plus
+    background-image: url('/images/plus.png')
+    display: inline-block
+    height: 35px
+    margin-top: 55px
+    margin-left: 40px
+    text-indent: -9999px
+    vertical-align: top
+    width: 35px
+
+  span.plus:last-child
+    display: none

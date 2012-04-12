@@ -1,0 +1,88 @@
+div#event-calendar
+  display: inline-block
+  height: 210px
+  margin-left: 15px
+  width: 175px
+
+  h2.title
+    background-color: #A4151B
+    color: #FFF
+    letter-spacing: -1px
+    font-size: 16px
+    font-weight: bold
+    margin-bottom: 5px
+    padding: 10px 15px 7px
+    text-transform: uppercase
+
+
+div.ec-calendar
+  margin-bottom: 20px
+  cursor: default
+  font-family: 'PT Sans Regular'
+
+  td, th
+    color: #454545
+    height: 25px
+    position: relative
+    text-align: center
+    vertical-align: middle
+    width: 25px
+
+  th
+    font-size: 11px
+
+  th.ec-month-name
+    font-size: 13px
+    text-transform: uppercase
+    width: 115px
+
+  th.ec-month-nav
+    width: 30px
+
+    a:hover
+      color: $default-color
+
+  th.ec-day-name
+    width: 25px
+
+  td.ec-today-header
+    border: 1px solid #999
+    height: 23px
+    width: 23px
+    @include round-corners(3px, 3px, 3px, 3px)
+    @include enable-ie-css3
+
+  td.has-events
+    color: #6F171B
+
+  td div.events
+    position: relative
+
+    ul
+      background-color: #FFF
+      border: 1px solid #999
+      display: none
+      padding: 15px
+      position: absolute
+      width: 140px
+      z-index: 1
+      @include round-corners(3px, 3px, 3px, 3px)
+      @include enable-ie-css3
+
+    li a
+      display: block
+      text-align: justify
+
+    li a:hover
+      color: #6F171B
+      text-decoration: underline
+
+    li span
+      color: #99A846
+      display: block
+      margin-bottom: 5px
+      text-align: left
+
+
+  td:hover div.events ul
+    display: block
