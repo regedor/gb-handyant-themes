@@ -1,9 +1,11 @@
 <%= render :partial => 'shared/layout_head' %>
 
 <body>
-  <div class="wrapper">
-    <div id="header">
-      <a class="site-title" href="/"><%= configatron.site_header %></a>
+  <div id="header">
+    <div class="wrapper">
+      <a id="site-title" href="/"><%= configatron.site_header %></a>
+
+      <a id="logo" href="/"><%= configatron.site_header %></a>
 
       <div id="menu"><%= frontend_navigation_content %></div>
 
@@ -18,24 +20,26 @@
         <% end %>
       </div>
     </div>
+  </div>
+
+  <div id="content" class="selfclear wrapper">
+    <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
+    <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
+    <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
 
     <%= render :partial => 'announcements/sentir_saude' %>
 
-    <div id="content" class="selfclear">
-      <%= '<div id="flash"><div class="message notice"><p>'+ flash[:notice] +'</p></div></div>' unless flash[:notice].blank? %>
-      <%= '<div id="flash"><div class="message error"><p>'+ flash[:error] +'</p></div></div>' unless flash[:error].blank? %>
-      <%= '<script>jQuery("#flash").hide().toggle("fade", {}, 2500).delay(4000).toggle("slide", { direction: "down" }, 1500);</script>' unless flash[:notice].blank? and flash[:error].blank? %>
-
+    <% if params[:action] == 'index' and params[:controller] == 'posts' %>
       <div id="main">
-        <%= yield %>
+        <div class="textile-body"><%= find_content_page('main_statement') %></div>
       </div>
+    <% end %>
 
-      <div id="right-sidebar">
-        <%= tag_menu_widget(@tags) if params[:action] == 'index' and params[:controller] == 'posts' %>
-      </div>
+    <div id="sidebar">
+      <%= yield %>
     </div>
-
-    <%= render :partial => 'shared/footer' %>
   </div>
+
+  <%= render :partial => 'shared/footer' %>
 </body>
 </html>
