@@ -1,0 +1,92 @@
+a.site-title
+  color: #474747
+  font-family: Verdana
+  font-size: 18px
+  letter-spacing: -1px
+  @include text-shadow(1px, 1px, 0, #F4F4F4)
+  @include enable-ie-css3
+
+
+div#menu
+  font-family: Verdana
+  text-transform: uppercase
+  letter-spacing: -1px
+  @include text-shadow(1px, 1px, 0, #F4F4F4)
+  @include enable-ie-css3
+
+  li
+    line-height: 1em
+
+  a
+    color: #474747
+
+  a:hover
+    border-bottom: 6px solid $default-color
+
+  a.current
+    color: $default-color
+    border-bottom: 6px solid $default-color
+
+
+div#tag-menu
+  @include text-shadow(1px, 1px, 0, #FFF)
+  @include enable-ie-css3
+
+  h2
+    color: $text-color
+    font-size: 18px
+
+  a:hover
+    text-decoration: underline
+
+  ul
+    @include text-shadow(1px, 1px, 0, #FFF)
+    @include enable-ie-css3
+
+
+div.post
+  color: #555
+  @include text-shadow(1px, 1px, 0, #FFF)
+  @include enable-ie-css3
+
+  h2
+    color: $text-color
+    font-size: 18px
+
+  p
+    font-size: 13px
+
+
+div#archives
+  font-size: 13px
+  margin: 0
+  @include text-shadow(1px, 1px, 0, #FFF)
+  @include enable-ie-css3
+
+  a
+    text-decoration: underline
+
+  a:hover
+    border: none
+    text-decoration: none
+
+
+div#new-comment
+
+  h2
+    font-size: 18px
+    @include text-shadow(1px, 1px, 0, #FFF)
+    @include enable-ie-css3
+
+
+div#footer
+  text-align: center
+  @include text-shadow(1px, 1px, 0, #FFF)
+  @include enable-ie-css3
+
+  a
+    text-decoration: underline
+
+  a:hover
+    color: $default-color
+    text-decoration: none

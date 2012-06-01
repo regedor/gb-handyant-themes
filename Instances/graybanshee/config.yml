@@ -1,0 +1,9 @@
+---
+  theme: none
+  default_locale: pt
+  title: Untitled
+  site_name: Untitled
+  site_header: Untitled
+  announcement_size: "910x270#"
+  post_image_size: "640x200#"
+  force_locale: "true"
