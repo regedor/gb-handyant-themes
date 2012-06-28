@@ -33,11 +33,18 @@
       <div id="main">
         <div class="textile-body"><%= find_content_page('main_statement') %></div>
       </div>
-    <% end %>
 
-    <div id="sidebar">
-      <%= yield %>
-    </div>
+      <div id="sidebar">
+        <%= yield %>
+      </div>
+    <% else %>
+      <div id="main">
+        <%= yield %>
+      </div>
+
+      <div id="sidebar">
+      </div>
+    <% end %>
   </div>
 
   <%= render :partial => 'shared/footer' %>
